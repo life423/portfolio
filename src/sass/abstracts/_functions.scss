@@ -1,0 +1,23 @@
+@use "sass:math";
+@use "sass:map";
+
+// Function to convert px to rem
+@function px-to-rem($px, $base-font-size: 16) {
+  @return #{math.div($px, $base-font-size)}rem;
+}
+
+@function spacing($step) {
+  @return map.get($spacing, $step);
+}
+
+@function font-size($step) {
+  @return map.get($font-sizes, $step);
+}
+
+@function project-tile-width($step) {
+  @return map.get($project-tile-widths, $step);
+}
+
+@function project-tile-height($step) {
+  @return map.get($project-tile-heights, $step);
+}

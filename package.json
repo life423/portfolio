@@ -1,0 +1,52 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My professional web development portfolio showcasing my skills and projects.",
+  "main": "app.mjs",
+  "type": "module",
+  "scripts": {
+    "styles": "gulp styles",
+    "images": "gulp images",
+    "watch": "gulp watch",
+    "build": "gulp",
+    "test": "gulp test",
+    "start": "npm run build && npm run watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/life423/portfolio.git"
+  },
+  "author": "Drew Clark",
+  "license": "ISC",
+  "keywords": [
+    "web development",
+    "full stack development",
+    "responsive design",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "React",
+    "Node.js",
+    "API development",
+    "clean code"
+  ],
+  "bugs": {
+    "url": "https://github.com/life423/portfolio/issues"
+  },
+  "homepage": "https://drewclark.io",
+  "dependencies": {
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.63.6"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify-es": "^3.0.0",
+    "gulp-util": "^3.0.8"
+  }
+}

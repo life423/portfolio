@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: $font-main; // Set a base font family
+  line-height: map-get($line-height, base); // Set a base line height
+}
+
+a {
+  text-decoration: none; // Removes the underline from all links
+  color: inherit; // Ensures links will use the current text color
+}
+
+img {
+  max-width: 100%; // Ensures images won't exceed their container's width
+  height: auto; // Keeps the aspect ratio of images
+}

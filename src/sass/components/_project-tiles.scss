@@ -1,0 +1,86 @@
+.projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 0 auto;
+  height: 100%;
+  background: linear-gradient(to right, rgba($gradient-start, 0.2), rgba($gradient-end, 0.2)), url("../../assets/img/life.jpeg");
+  background-size: cover;
+  background-position: 50% 44%;
+  
+
+
+
+
+  &__tile {
+    background-color: $blue-light;
+    @include tile-size(3, 5);
+    @include margin-padding(2.4, 2.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.07s ease;
+    border-radius: 1rem;
+
+    &--slideInLeft {
+      animation: slideInLeft 1s ease-in-out 0.5s both;
+    }
+
+    &--slideInRight {
+      animation: slideInRight 1s ease-in-out 0.5s both;
+    }
+
+    &--slideInTop {
+      animation: slideInTop 1s ease-in-out 0.5s both;
+    }
+
+    &--slideInBottom {
+      animation: slideInBottom 1s ease-in-out 0.5s both;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    @include respond("large-desktop") {
+      @include tile-size(2, 2);
+    }
+
+    @include respond("desktop") {
+      @include tile-size(1, 1);
+    }
+
+    @include respond("laptop") {
+      @include tile-size(3, 3);
+    }
+  }
+}
+
+@include respond("phone") {
+  .projects {
+    gap: 4.8rem;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    padding: 0 2.4rem;
+
+    &__tile {
+      flex-direction: column;
+      height: 32rem;
+      width: 100%;
+
+      &:first-child {
+        margin-top: 4.8rem;
+      }
+
+      &:last-child {
+        margin-bottom: 4.8rem;
+      }
+    }
+  }
+}
+

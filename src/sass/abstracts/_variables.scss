@@ -1,0 +1,125 @@
+// Base Colors
+$blue: #2874a6;
+$gray: #808b96;
+$green: #229954;
+$white: #f2f3f4;
+$navy-blue: #34495e;
+$black: #000;
+
+
+$background-color: #28b42f;
+$gradient-start: #7ed56f;
+$gradient-end: #66bb6a;
+
+// Color Shades
+$blue-lighter: lighten(blue, 40%);
+$blue-light: lighten($blue, 20%);
+$blue-dark: darken($blue, 20%);
+$gray-light: lighten($gray, 20%);
+$gray-dark: darken($gray, 20%);
+$green-light: lighten($green, 40%);
+$green-dark: darken($green, 10%);
+$white-light: lighten($white, 20%);
+$white-dark: darken($white, 20%);
+
+//Github Icon Color
+$github: #181717;
+
+// Fonts
+$font-main: "Lato", sans-serif;
+$font-size-base: 62.5%; // 1rem = 10px
+
+// Line Heights
+$line-height: (
+  large: 1.7,
+  base: 1.5,
+  heading: 1.2,
+  heading-small: 1.1,
+);
+
+// Transitions
+$transition-base: all 0.3s ease-in-out;
+
+// Border Radius
+$border-radius: (
+  base: 4px,
+);
+
+// Breakpoints
+$breakpoint: (
+  xs: 20rem,
+  sm: 36rem,
+  md: 48rem,
+  lg: 62rem,
+  xl: 75rem,
+);
+
+// Spacing - 8pt Grid System
+$spacing: (
+  1: 0.8rem,
+  2: 1.6rem,
+  3: 2.4rem,
+  4: 3.2rem,
+  5: 4rem,
+  6: 4.8rem,
+  7: 5.6rem,
+  8: 6.4rem,
+  9: 7.2rem,
+  10: 8rem,
+  11: 8.8rem,
+  12: 9.6rem,
+  13: 10.4rem,
+  14: 11.2rem,
+  15: 12rem,
+  16: 12.8rem,
+  17: 13.6rem,
+  18: 14.4rem,
+  19: 15.2rem,
+  20: 16rem,
+);
+
+// Font Sizes
+$font-sizes: (
+  1: 1rem,
+  2: 1.6rem,
+  3: 2.4rem,
+  4: 3.2rem,
+  5: 4rem,
+  6: 4.8rem,
+  7: 5.6rem,
+  8: 6.4rem,
+  9: 7.2rem,
+  10: 8rem,
+  11: 9rem,
+  12: 10rem,
+  13: 11rem,
+  14: 12rem,
+  15: 13rem,
+  16: 14rem,
+);
+
+$font-weights: (
+  light: 300,
+  normal: 400,
+  bold: 700,
+);
+
+//default width for projects__tile
+$project-tile-width: 30rem;
+$project-tile-height: 30rem;
+
+$project-tile-widths: (
+  1: 22rem,
+  2: 24rem,
+  3: 32rem,
+  4: 40rem,
+  5: 48rem,
+);
+
+$project-tile-heights: (
+  1: 22rem,
+  2: 24rem,
+  3: 32rem,
+  4: 40rem,
+  5: 48rem,
+);

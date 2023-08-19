@@ -1,0 +1,54 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+
+  padding: spacing(1) 0; 
+  background-color: $navy-blue; 
+
+  &__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: spacing(3); 
+    color: $gradient-end; // Assuming you have this variable
+    font-size: font-size(4);
+
+    &--link {
+      transition: $transition-base; // Assuming you have this variable
+      font-size: font-size(4); // Assuming you have a font-size function
+
+      &:hover {
+        transform: scale(1.2) rotate(10deg); 
+        box-shadow: 0 0 10px $gradient-start;
+      }
+    }
+
+    &--icon {
+      color: $gradient-end; 
+      transition: $transition-base;
+      &:hover {
+        color: $white; 
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: spacing(2); 
+    color: $white; 
+  }
+
+  .footer__text {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(1); 
+    font-size: font-size(2); 
+    transition: color 0.2s ease; 
+
+    &:hover {
+      color: $gradient-start;
+    }
+  }
+}
+
