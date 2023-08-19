@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: spacing(3) spacing(6);
+  padding: spacing(1) spacing(4);
   position: relative;
 
   @include respond("phone") {
@@ -44,22 +44,6 @@
     text-decoration: none;
   }
 
-  // &__toggler {
-  //   display: none;
-  //   width: 2rem;
-  //   height: 2rem;
-  //   padding: 0;
-  //   z-index: 10;
-  //   cursor: pointer;
-  //   background: transparent;
-  //   border: none;
-  //   flex-direction: column;
-  //   justify-content: space-around;
-
-  //   @include respond("phone") {
-  //     display: flex;
-  //   }
-  // }
   &__toggler {
     display: none;
     width: 2rem;
@@ -136,7 +120,7 @@
   }
 
   &__item {
-    font-size: font-size(4);
+    font-size: font-size(3);
     color: $white;
     text-decoration: none;
     transition: $transition-base;
