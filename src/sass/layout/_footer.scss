@@ -37,6 +37,11 @@
   &__copyright {
     font-size: spacing(2); 
     color: $white; 
+
+    &--symbol{
+      color: $gradient-start;
+      margin-right:3px;
+    }
   }
 
   .footer__text {
@@ -48,6 +53,12 @@
 
     &:hover {
       color: $gradient-start;
+    }
+
+    &:last-child {
+      display: flex;
+      flex-direction: row;
+      
     }
   }
 }
