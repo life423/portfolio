@@ -7,13 +7,16 @@
   padding: spacing(3) spacing(6);
   position: relative;
 
+  @include respond("phone") {
+    padding: spacing(3);
+    align-items: stretch;
+  }
   &__logo {
     max-width: 5.6rem;
     height: auto;
     flex: 1;
     position: relative;
     z-index: 1;
-    
   }
 
   &__header {
@@ -41,6 +44,22 @@
     text-decoration: none;
   }
 
+  // &__toggler {
+  //   display: none;
+  //   width: 2rem;
+  //   height: 2rem;
+  //   padding: 0;
+  //   z-index: 10;
+  //   cursor: pointer;
+  //   background: transparent;
+  //   border: none;
+  //   flex-direction: column;
+  //   justify-content: space-around;
+
+  //   @include respond("phone") {
+  //     display: flex;
+  //   }
+  // }
   &__toggler {
     display: none;
     width: 2rem;
@@ -48,20 +67,23 @@
     padding: 0;
     z-index: 10;
     cursor: pointer;
-    background: transparent;
-    border: none;
-    flex-direction: column;
-    justify-content: space-around;
 
     @include respond("phone") {
-      display: flex;
+      display: block;
     }
   }
 
   &__icon {
-    font-size: font-size(4);
-    // color: $white;
-    color: $gradient-start;
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+    &--times{
+      display: none;
+    }
+    @include respond("phone") {
+      color: $gradient-start;
+      font-size: font-size(4);
+    }
   }
 
   &__list {
@@ -101,8 +123,7 @@
       align-items: center;
       // justify-content: center;
       justify-content: center;
-      flex-direction: column; 
-       
+      flex-direction: column;
     }
   }
 
