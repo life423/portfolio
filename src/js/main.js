@@ -34,6 +34,9 @@ window.addEventListener("resize", () => {
     const navListHeight = navList.getBoundingClientRect().height;
     const headerHeight = header.getBoundingClientRect().height;
     main.style.transform = `translateY(${navListHeight - headerHeight}px)`;
+  } else {
+    main.style.transform = "";
+    
   }
 });
 
