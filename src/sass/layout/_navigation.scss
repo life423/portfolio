@@ -82,7 +82,7 @@
     position: relative; // Add this line to create a positioning context
     @include list-styling;
     padding-bottom: spacing(1);
-    overflow: hidden;
+    // overflow: hidden;
 
     &::after {
       content: "";
@@ -95,8 +95,9 @@
         transparent
       ); // Gradient from green to transparent
       position: absolute;
-      top: 100%; // Position it right below the links
+      top: 81%; // Position it right below the links
       left: 3%; // Align it to the left
+      
     }
 
     @include respond("phone") {
