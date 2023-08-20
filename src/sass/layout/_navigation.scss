@@ -62,6 +62,10 @@
       color: $gradient-start;
       font-size: font-size(6);
 
+      &--times{
+        font-size: font-size(7);
+      }
+
       &--bars{
         transform: translateY(px-to-rem(-8));
       }
