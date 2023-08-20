@@ -45,14 +45,7 @@ $border-radius: (
   base: 4px,
 );
 
-// Breakpoints
-// $breakpoint: (
-//   xs: 20rem,
-//   sm: 36rem,
-//   md: 48rem,
-//   lg: 62rem,
-//   xl: 75rem,
-// );
+
 
 // Spacing - 8pt Grid System
 $spacing: (
@@ -81,8 +74,11 @@ $spacing: (
 // Font Sizes
 $font-sizes: (
   1: 1rem,
+  1.5: 1.4rem,
   2: 1.6rem,
+  2.5: 2rem, 
   3: 2.4rem,
+  3.5: 2.8rem, 
   4: 3.2rem,
   5: 4rem,
   6: 4.8rem,
