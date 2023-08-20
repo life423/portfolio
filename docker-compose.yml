@@ -1,7 +1,9 @@
-version: '3'
+version: "3.9"
 services:
-  web:
-    build: .
-    image: portfolio:1.3
+  webapp: # the name of your service
+    build:
+      context: . # Docker Build context
+      dockerfile: Dockerfile # Dockerfile path
+    image: your-image-name:tag # image name and tag
     ports:
-      - "8080:80"
+      - "3000:80" # port mapping
