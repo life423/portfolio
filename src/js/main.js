@@ -6,8 +6,9 @@ const nav = document.querySelector(".nav");
 const header = document.querySelector(".header");
 const main = document.querySelector(".main");
 
-
-
+// Select the icon elements
+const barsIcon = document.querySelector(".nav__icon--bars");
+const timesIcon = document.querySelector(".nav__icon--times");
 
 navToggler.addEventListener("click", () => {
   const navListHeight = navList.getBoundingClientRect().height;
