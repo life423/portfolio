@@ -30,18 +30,13 @@ navToggler.addEventListener("click", () => {
 });
 
 window.addEventListener("resize", () => {
-  if (window.matchMedia("(max-width: 600px)").matches) {
-    /* The viewport is less than, or equal to, 600 pixels wide */
-    /* implement your mobile-specific JavaScript code here */
-  } else {
-    /* The viewport is greater than 600 pixels wide */
-    /* implement your desktop-specific JavaScript code here */
-  }
-
   if (nav.classList.contains("nav-active")) {
     const navListHeight = navList.getBoundingClientRect().height;
     const headerHeight = header.getBoundingClientRect().height;
     main.style.transform = `translateY(${navListHeight - headerHeight}px)`;
+  } else {
+    main.style.transform = "";
+    
   }
 });
 
