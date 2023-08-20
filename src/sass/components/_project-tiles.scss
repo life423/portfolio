@@ -14,7 +14,6 @@
   background-size: cover;
   background-position: 50% 44%;
 
-  
   &__tile {
     background-color: $blue-light;
     @include tile-size(3);
@@ -33,16 +32,30 @@
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.3);
     }
 
-    @include respond("laptop") {
+    @include respond("ultrawide") {
       @include tile-size(3);
     }
 
-    @include respond("desktop") {
-      @include tile-size(1);
+    @include respond("large-desktop") {
+      @include tile-size(2.5);
     }
 
-    @include respond("large-desktop") {
+    @include respond("desktop") {
       @include tile-size(2);
+    }
+
+    @include respond("laptop") {
+      @include tile-size(1.5);
+      flex-basis: auto; // Reset flex-basis
+      flex-direction: column;
+      //makes the cards in a 2 by 2 grid with this width and min-height
+      width: 34%; 
+      min-height: 38.9rem; 
+    }
+
+    @include respond("tablet"){
+      width: 40%;
+      min-height: 32.9rem;
     }
   }
 }
@@ -57,8 +70,8 @@
 
     &__tile {
       flex-direction: column;
-      height: 32rem;
-      width: 100%;
+      min-height: 40rem;
+      width: 85%;
 
       &:first-child {
         margin-top: 4.8rem;

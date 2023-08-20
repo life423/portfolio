@@ -106,26 +106,28 @@ $project-tile-height: 30rem;
 
 $ratio: 0.716;
 
+// Project Tile Widths
 $project-tile-widths: (
   1: 10rem,
-  // 100px
+  1.5: 15rem,
   2: 20rem,
-  // 200px
+  2.5: 25rem,
   3: 30rem,
-  // 300px
+  3.5: 35rem,
   4: 40rem,
-  // 400px
-  5: 50rem // 500px,
+  4.5: 45rem,
+  5: 50rem
 );
 
+// Project Tile Heights
 $project-tile-heights: (
   1: 13.97rem,
-  // Approximately 139.7px
+  1.5: 20.9605rem, // Midway between 13.97rem and 27.94rem
   2: 27.94rem,
-  // Approximately 279.4px
+  2.5: 34.925rem, // Midway between 27.94rem and 41.91rem
   3: 41.91rem,
-  // Approximately 419.1px
+  3.5: 48.895rem, // Midway between 41.91rem and 55.88rem
   4: 55.88rem,
-  // Approximately 558.8px
-  5: 69.85rem // Approximately 698.5px,
+  4.5: 62.865rem, // Midway between 55.88rem and 69.85rem
+  5: 69.85rem
 );
