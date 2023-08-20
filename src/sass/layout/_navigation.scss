@@ -4,12 +4,8 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: spacing(1) spacing(4);
-  position: relative;
-
   @include respond("phone") {
     padding: spacing(3);
-    align-items: stretch;
   }
   &__logo {
     max-width: 5.6rem;
@@ -46,14 +42,11 @@
 
   &__toggler {
     display: none;
-    width: 2rem;
-    height: 2rem;
-    padding: 0;
     z-index: 10;
     cursor: pointer;
 
     @include respond("phone") {
-      display: block;
+      display: flex;
     }
   }
 
@@ -64,9 +57,14 @@
     &--times{
       display: none;
     }
+
     @include respond("phone") {
       color: $gradient-start;
-      font-size: font-size(4);
+      font-size: font-size(6);
+
+      &--bars{
+        transform: translateY(px-to-rem(-8));
+      }
     }
   }
 
