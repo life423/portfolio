@@ -1,21 +1,20 @@
 html {
   font-size: $font-size-base;
   height: 100%;
-  
 }
 
-body::before{
+body::before {
   pointer-events: none;
 }
 
 body {
   position: relative;
-  height: 100vh;
+  min-height: 100%;
   color: $gray-dark;
-  
+
   // Create the gradient background
   background: linear-gradient(to right, $gradient-start, $gradient-end);
-  
+
   // Add pseudo-element to create the opacity effect
   &::before {
     content: "";
@@ -24,7 +23,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, 0.0); // White color with 0.3 opacity
+    background-color: rgba(255, 255, 255, 0); // White color with 0.3 opacity
   }
 }
 .container {
@@ -37,7 +36,7 @@ body {
 
   @include respond("phone") {
     //height of the container not 100% of the viewport
-    height:fit-content;
+    height: auto;
   }
 }
 
@@ -49,4 +48,3 @@ body {
   @include flex-align(center, center);
   transition: all 0.3s ease-in-out;
 }
-

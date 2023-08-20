@@ -22,7 +22,10 @@ navToggler.addEventListener("click", () => {
     timesIcon.style.display = "none";
   } else {
     nav.classList.add("nav-active");
-    main.style.transform = `translateY(${navListHeight - headerHeight}px)`;
+    main.style.transform = `translateY(${Math.min(
+      navListHeight,
+      window.innerHeight - headerHeight
+    )}px)`;
     navList.style.transform = "translateY(0)";
     barsIcon.style.display = "none";
     timesIcon.style.display = "block";
@@ -33,7 +36,10 @@ window.addEventListener("resize", () => {
   if (nav.classList.contains("nav-active")) {
     const navListHeight = navList.getBoundingClientRect().height;
     const headerHeight = header.getBoundingClientRect().height;
-    main.style.transform = `translateY(${navListHeight - headerHeight}px)`;
+    main.style.transform = `translateY(${Math.min(
+      navListHeight,
+      window.innerHeight - headerHeight
+    )}px)`;
   } else {
     main.style.transform = "";
     //remove transform from navList
@@ -49,7 +55,12 @@ main.addEventListener("transitionend", function () {
 
 window.addEventListener("DOMContentLoaded", (event) => {
   const tiles = document.querySelectorAll(".projects__tile");
-  const animations = ["slideInLeft", "slideInRight", "slideInTop", "slideInBottom"];
+  const animations = [
+    "slideInLeft",
+    "slideInRight",
+    "slideInTop",
+    "slideInBottom",
+  ];
 
   tiles.forEach((tile) => {
     let randomIndex = Math.floor(Math.random() * animations.length);
@@ -57,4 +68,3 @@ window.addEventListener("DOMContentLoaded", (event) => {
     tile.classList.add("projects__tile--" + animation);
   });
 });
-
