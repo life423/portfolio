@@ -1,3 +1,4 @@
+@use "sass:map";
 // Base Colors
 $blue: #2874a6;
 $gray: #808b96;
@@ -107,18 +108,28 @@ $font-weights: (
 $project-tile-width: 30rem;
 $project-tile-height: 30rem;
 
+$ratio: 0.716;
+
 $project-tile-widths: (
-  1: 22rem,
-  2: 24rem,
-  3: 32rem,
+  1: 10rem,
+  // 100px
+  2: 20rem,
+  // 200px
+  3: 30rem,
+  // 300px
   4: 40rem,
-  5: 48rem,
+  // 400px
+  5: 50rem // 500px,
 );
 
 $project-tile-heights: (
-  1: 22rem,
-  2: 24rem,
-  3: 32rem,
-  4: 40rem,
-  5: 48rem,
+  1: 13.97rem,
+  // Approximately 139.7px
+  2: 27.94rem,
+  // Approximately 279.4px
+  3: 41.91rem,
+  // Approximately 419.1px
+  4: 55.88rem,
+  // Approximately 558.8px
+  5: 69.85rem // Approximately 698.5px,
 );

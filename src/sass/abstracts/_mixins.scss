@@ -71,9 +71,9 @@
   list-style: none;
 }
 
-@mixin tile-size($width, $height) {
-  width: project-tile-width($width);
-  height: project-tile-height($height);
+@mixin tile-size($step) {
+  width: project-tile-width($step);
+  height: project-tile-height($step);
 }
 
 @mixin margin-padding($margin, $padding) {

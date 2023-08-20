@@ -9,15 +9,11 @@
   background-size: cover;
   background-position: 50% 44%;
   
-
-
-
-
   &__tile {
     background-color: $blue-light;
-    @include tile-size(3, 5);
+    @include tile-size(3);
     @include margin-padding(2.4, 2.4);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19), 0 .6rem .6rem rgba(0, 0, 0, 0.23);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,16 +42,16 @@
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.3);
     }
 
-    @include respond("large-desktop") {
-      @include tile-size(2, 2);
+    @include respond("laptop") {
+      @include tile-size(3);
     }
 
     @include respond("desktop") {
-      @include tile-size(1, 1);
+      @include tile-size(1);
     }
 
-    @include respond("laptop") {
-      @include tile-size(3, 3);
+    @include respond("large-desktop") {
+      @include tile-size(2);
     }
   }
 }
@@ -83,4 +79,3 @@
     }
   }
 }
-
