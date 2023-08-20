@@ -24,9 +24,9 @@
       $gradient-start,
       $background-color
     );
-    background-clip: text; // Clipping the background to the text
-    color: transparent; // Making the text color transparent to show the background
-    font-size: font-size(4); // Assuming font-size is a mixin or function
+    background-clip: text; 
+    color: transparent; 
+    font-size: font-size(4); 
     letter-spacing: 3px;
   }
 
