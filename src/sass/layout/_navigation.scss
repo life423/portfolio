@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  max-width: 90%;
+  max-width: 96%;
 
   @include respond("phone") {
     padding: spacing(1);
@@ -75,7 +75,7 @@
   }
 
   &__list {
-    flex: 0 0 40%;
+    flex: 0 0 48%;
     display: flex;
     justify-content: space-around;
     column-gap: font-size(3);
