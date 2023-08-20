@@ -5,40 +5,31 @@
   align-items: center;
   flex: 1 0 auto;
   height: 100%;
-  background: linear-gradient(to right, rgba($gradient-start, 0.2), rgba($gradient-end, 0.2)), url("../../assets/img/life.jpeg");
+  background: linear-gradient(
+      to right,
+      rgba($gradient-start, 0.2),
+      rgba($gradient-end, 0.2)
+    ),
+    url("../../assets/img/life.jpeg");
   background-size: cover;
   background-position: 50% 44%;
+
   
   &__tile {
     background-color: $blue-light;
     @include tile-size(3);
     @include margin-padding(2.4, 2.4);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19), 0 .6rem .6rem rgba(0, 0, 0, 0.23);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19),
+      0 0.6rem 0.6rem rgba(0, 0, 0, 0.23);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: all 0.07s ease;
     border-radius: 1rem;
-
-    &--slideInLeft {
-      animation: slideInLeft 1s ease-in-out 0.5s both;
-    }
-
-    &--slideInRight {
-      animation: slideInRight 1s ease-in-out 0.5s both;
-    }
-
-    &--slideInTop {
-      animation: slideInTop 1s ease-in-out 0.5s both;
-    }
-
-    &--slideInBottom {
-      animation: slideInBottom 1s ease-in-out 0.5s both;
-    }
+    transition: $transition-base;
 
     &:hover {
-      transform: scale(1.05);
+      transform: translateY(-0.5rem) scale(1.02);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.3);
     }
 

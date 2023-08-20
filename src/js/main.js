@@ -36,7 +36,8 @@ window.addEventListener("resize", () => {
     main.style.transform = `translateY(${navListHeight - headerHeight}px)`;
   } else {
     main.style.transform = "";
-    
+    //remove transform from navList
+    navList.style.transform = "";
   }
 });
 
@@ -48,16 +49,12 @@ main.addEventListener("transitionend", function () {
 
 window.addEventListener("DOMContentLoaded", (event) => {
   const tiles = document.querySelectorAll(".projects__tile");
-  const animations = [
-    "--slideInLeft",
-    "--slideInRight",
-    "--slideInTop",
-    "--slideInBottom",
-  ];
+  const animations = ["slideInLeft", "slideInRight", "slideInTop", "slideInBottom"];
 
   tiles.forEach((tile) => {
     let randomIndex = Math.floor(Math.random() * animations.length);
     let animation = animations[randomIndex];
-    tile.classList.add("projects__tile" + animation);
+    tile.classList.add("projects__tile--" + animation);
   });
 });
+

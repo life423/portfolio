@@ -62,14 +62,14 @@
 
     @include respond("phone") {
       color: $gradient-start;
-      font-size: font-size(6);
+      font-size: font-size(5);
 
       &--times {
-        font-size: font-size(7);
+        font-size: font-size(6);
       }
 
       &--bars {
-        transform: translateY(px-to-rem(-8));
+        transform: translateY(px-to-rem(0));
       }
     }
   }
@@ -106,10 +106,9 @@
       height: calc(100vh - 8rem);
       position: absolute;
       background-color: $navy-blue;
-      transition: transform 0.3s ease-in-out;
+      transition: $transition-base;
       transform: translateY(-100%);
-      align-items: center;
-      // justify-content: center;
+      align-items: center;      
       justify-content: center;
       flex-direction: column;
     }
