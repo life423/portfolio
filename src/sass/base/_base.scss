@@ -33,6 +33,7 @@ body {
 }
 
 .main {
+  position: relative;
   background-color: $blue-lighter;
   flex-grow: 1;
   width: 100%;
