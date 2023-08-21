@@ -11,24 +11,21 @@ body {
   position: relative;
   min-height: 100%;
   color: $gray-dark;
-
+  
   // Create the gradient background
   background: linear-gradient(to right, $gradient-start, $gradient-end);
 
-  // Add pseudo-element to create the opacity effect
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0); // White color with 0.3 opacity
+
+  @include respond("phone") {
+    //height of the body not 100% of the viewport
+    height: auto;
+    position:static;
   }
 }
+
 .container {
   background-color: $white;
-  max-width: 1600px;
+  width: 100%;
   height: 100vh;
   margin: 0 auto;
   display: flex;
@@ -43,7 +40,7 @@ body {
 .main {
   background-color: $blue-lighter;
   flex-grow: 1;
-  max-width: 100%;
+  width: 100%;
   overflow-x: hidden;
   @include flex-align(center, center);
   transition: all 0.3s ease-in-out;
