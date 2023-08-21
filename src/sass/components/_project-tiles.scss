@@ -25,11 +25,24 @@
     justify-content: center;
     text-align: center;
     border-radius: 1rem;
+    transform-style: preserve-3d;
     transition: $transition-base;
 
     &:hover {
-      transform: translateY(-0.5rem) scale(1.02);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.3);
+      transform: rotateY(180deg);
+    }
+
+    &__front,
+    &__back {
+      // Absolutely position the front and back of the card to stack them on top of each other.
+      position: absolute;
+
+      // This makes the back of the card face the correct way when the card flips.
+      backface-visibility: hidden;
+    }
+
+    &__back {
+      transform: rotateY(180deg);
     }
 
     @include respond("ultrawide") {
@@ -49,11 +62,11 @@
       flex-basis: auto; // Reset flex-basis
       flex-direction: column;
       //makes the cards in a 2 by 2 grid with this width and min-height
-      width: 34%; 
-      min-height: 38.9rem; 
+      width: 34%;
+      min-height: 38.9rem;
     }
 
-    @include respond("tablet"){
+    @include respond("tablet") {
       width: 40%;
       min-height: 32.9rem;
     }
