@@ -11,28 +11,23 @@ body {
   position: relative;
   min-height: 100%;
   color: $gray-dark;
-  
-  // Create the gradient background
   background: linear-gradient(to right, $gradient-start, $gradient-end);
 
-
   @include respond("phone") {
-    //height of the body not 100% of the viewport
     height: auto;
-    position:static;
+    position: static;
   }
 }
 
 .container {
   background-color: $white;
-  width: 100%;
+  max-width: 1600px;
   height: 100vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 
   @include respond("phone") {
-    //height of the container not 100% of the viewport
     height: auto;
   }
 }
