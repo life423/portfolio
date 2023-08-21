@@ -41,3 +41,19 @@
     opacity: 1;
   }
 }
+
+.slideInLeft {
+  animation: slideInLeft 2s;
+}
+
+.slideInRight {
+  animation: slideInRight 2s;
+}
+
+.slideInTop {
+  animation: slideInTop 2s;
+}
+
+.slideInBottom {
+  animation: slideInBottom 2s;
+}

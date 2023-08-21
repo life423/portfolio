@@ -65,6 +65,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
   tiles.forEach((tile) => {
     let randomIndex = Math.floor(Math.random() * animations.length);
     let animation = animations[randomIndex];
-    tile.classList.add("projects__tile--" + animation);
+    tile.classList.add(animation);
   });
 });
+
+
