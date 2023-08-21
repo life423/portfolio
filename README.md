@@ -2,6 +2,8 @@
 
 Welcome to the repository for my portfolio website, a showcase of my skills and best work as a web developer and software engineer. Here's an overview of what you'll find inside:
 
+[Visit my portfolio website here](https://drewclark.io)
+
 ## JavaScript Highlights
 
 ### Navigation Toggler
