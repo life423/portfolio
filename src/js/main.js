@@ -69,4 +69,32 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 });
 
+const createFaviconFromH1 = () => {
+  const h1Text = document.querySelector("h1").textContent;
+  const canvas = document.createElement("canvas");
+  canvas.width = 16;
+  canvas.height = 16;
+  const ctx = canvas.getContext("2d");
 
+  // Set the text color to the specified hex value
+  ctx.fillStyle = "#28b42f";
+
+  // You may need to adjust the font size and positioning to fit the text within the favicon
+  ctx.font = "10px Arial";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText(h1Text, 8, 8);
+
+  const link =
+    document.querySelector('link[rel="icon"]') ||
+    document.createElement("link");
+  link.rel = "icon";
+  link.href = canvas.toDataURL("image/x-icon");
+
+  if (!document.querySelector('link[rel="icon"]')) {
+    document.head.appendChild(link);
+  }
+};
+
+// You can call this function to set the favicon
+createFaviconFromH1();
