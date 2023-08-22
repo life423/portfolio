@@ -37,20 +37,16 @@
 
     &__front {
       // Front content styles go here.
-      
     }
 
-     &__back {
+    &__back {
       transform: rotateY(180deg);
       // Back content styles go here.
     }
 
-
-   &:hover {
+    &:hover {
       transform: rotateY(180deg);
     }
-
-   
 
     @include respond("ultrawide") {
       @include tile-size(3);
@@ -66,39 +62,43 @@
 
     @include respond("laptop") {
       @include tile-size(1.5);
-      flex-basis: auto; // Reset flex-basis
-      flex-direction: column;
-      //makes the cards in a 2 by 2 grid with this width and min-height
-      width: 34%;
-      min-height: 38.9rem;
-    }
 
-    @include respond("tablet") {
-      width: 40%;
-      min-height: 32.9rem;
+      flex-basis: 45%; // Adjust this value accordingly
+      flex-direction: column;
+      width: auto; // Once you set the flex-basis, you probably want to let width auto adjust
+      min-height: 38.9rem;
+
+      /* To add some gap between the tiles */
+      margin-right: 5%;
+      margin-bottom: 2rem;
+
+      /* To ensure only two tiles get a right margin */
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
     }
   }
-}
 
-@include respond("phone") {
-  .projects {
-    gap: 4.8rem;
-    align-items: center;
-    justify-content: space-around;
-    width: 80%;
-    padding: 0 2.4rem;
+  @include respond("phone") {
+    .projects {
+      gap: 4.8rem;
+      align-items: center;
+      justify-content: space-around;
+      width: 80%;
+      padding: 0 2.4rem;
 
-    &__tile {
-      flex-direction: column;
-      min-height: 40rem;
-      width: 85%;
+      &__tile {
+        flex-direction: column;
+        min-height: 40rem;
+        width: 85%;
 
-      &:first-child {
-        margin-top: 4.8rem;
-      }
+        &:first-child {
+          margin-top: 4.8rem;
+        }
 
-      &:last-child {
-        margin-bottom: 4.8rem;
+        &:last-child {
+          margin-bottom: 4.8rem;
+        }
       }
     }
   }
