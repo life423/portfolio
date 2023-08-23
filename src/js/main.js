@@ -56,21 +56,6 @@ main.addEventListener("transitionend", function () {
   }
 });
 
-window.addEventListener("DOMContentLoaded", (event) => {
-  const tiles = document.querySelectorAll(".projects__tile");
-  const animations = [
-    "slideInLeft",
-    "slideInRight",
-    "slideInTop",
-    "slideInBottom",
-  ];
-
-  tiles.forEach((tile) => {
-    let randomIndex = Math.floor(Math.random() * animations.length);
-    let animation = animations[randomIndex];
-    tile.classList.add(animation);
-  });
-});
 
 const createFaviconFromH1 = () => {
   const h1Text = document.querySelector("h1").textContent;
