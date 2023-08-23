@@ -5,3 +5,8 @@
 .visible {
   display: block;
 }
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%; // maintain full height of the viewport
+}

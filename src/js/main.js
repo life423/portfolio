@@ -20,6 +20,7 @@ navToggler.addEventListener("click", () => {
     navList.style.transform = "translateY(-100%)";
     barsIcon.style.display = "block";
     timesIcon.style.display = "none";
+     bodyElement.classList.add("no-scroll");
   } else {
     nav.classList.add("nav-active");
     main.style.transform = `translateY(${Math.min(
@@ -29,6 +30,7 @@ navToggler.addEventListener("click", () => {
     navList.style.transform = "translateY(0)";
     barsIcon.style.display = "none";
     timesIcon.style.display = "block";
+    bodyElement.classList.remove("no-scroll");
   }
 });
 
