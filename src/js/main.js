@@ -5,6 +5,7 @@ const navList = document.querySelector(".nav__list");
 const nav = document.querySelector(".nav");
 const header = document.querySelector(".header");
 const main = document.querySelector(".main");
+const bodyElement = document.querySelector(".body")
 
 // Select the icon elements
 const barsIcon = document.querySelector(".nav__icon--bars");
