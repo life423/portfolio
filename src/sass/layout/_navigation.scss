@@ -4,8 +4,9 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  max-width: 93%;
-  
+  max-width: 100%;
+  margin: 0 spacing(3);
+
   &__logo {
     max-width: 5.6rem;
     height: auto;
@@ -21,9 +22,9 @@
       $gradient-start,
       $background-color
     );
-    background-clip: text; 
-    color: transparent; 
-    font-size: font-size(4); 
+    background-clip: text;
+    color: transparent;
+    font-size: font-size(4);
     letter-spacing: 3px;
   }
 
@@ -42,8 +43,8 @@
   &__toggler {
     display: none;
     z-index: 10;
-    cursor: pointer;
-
+    cursor: pointer;    
+    
     @include respond("phone") {
       display: flex;
     }
@@ -53,20 +54,29 @@
     width: 100%;
     height: auto;
     transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center;
+
     &--times {
       display: none;
     }
 
     @include respond("phone") {
       color: $gradient-start;
-      font-size: font-size(5);
 
       &--times {
+        transform: scale(1.2) translateY(-1.2px) translateX(-5px);
         font-size: font-size(6);
+         
       }
 
       &--bars {
-        transform: translateY(px-to-rem(0));
+        // Scale down to make it visually smaller
+        transform: scale(0.8);
+        font-size: font-size(6);
+        
       }
     }
   }
@@ -94,7 +104,6 @@
       position: absolute;
       top: 81%; // Position it right below the links
       left: 3%; // Align it to the left
-      
     }
 
     @include respond("phone") {
@@ -106,7 +115,7 @@
       background-color: $navy-blue;
       transition: $transition-base;
       transform: translateY(-100%);
-      align-items: center;      
+      align-items: center;
       justify-content: center;
       flex-direction: column;
     }
@@ -117,8 +126,8 @@
       .nav__list {
         transform: translateY(0);
 
-        &::after{
-          content:none;
+        &::after {
+          content: none;
         }
       }
     }
