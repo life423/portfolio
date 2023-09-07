@@ -4,7 +4,8 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  max-width: 93%;
+  max-width: 100%;
+  margin: 0 spacing(3);
 
   &__logo {
     max-width: 5.6rem;
@@ -42,8 +43,8 @@
   &__toggler {
     display: none;
     z-index: 10;
-    cursor: pointer;
-
+    cursor: pointer;    
+    
     @include respond("phone") {
       display: flex;
     }
@@ -66,14 +67,16 @@
       color: $gradient-start;
 
       &--times {
-        transform: scale(1.2);
+        transform: scale(1.2) translateY(-1.2px) translateX(-5px);
         font-size: font-size(6);
+         
       }
 
       &--bars {
         // Scale down to make it visually smaller
         transform: scale(0.8);
         font-size: font-size(6);
+        
       }
     }
   }
