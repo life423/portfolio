@@ -47,6 +47,8 @@
 
     @include respond("phone") {
       display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -72,9 +74,9 @@
         font-size: font-size(6);
       }
 
-      &--bars {
-        
+      &--bars {        
         font-size: font-size(6);
+        // transform: scale(1.2);
       }
     }
   }
