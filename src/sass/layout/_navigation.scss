@@ -48,7 +48,7 @@
       display: flex;
     }
   }
-
+//potential problem
   &__icon {
     width: 100%;
     height: auto;
@@ -67,6 +67,7 @@
 
       &--bars {
         transform: translateY(px-to-rem(0));
+        font-size: font-size(6);
       }
     }
   }
