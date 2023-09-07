@@ -43,8 +43,8 @@
   &__toggler {
     display: none;
     z-index: 10;
-    cursor: pointer;    
-    
+    cursor: pointer;
+
     @include respond("phone") {
       display: flex;
     }
@@ -69,14 +69,11 @@
       &--times {
         transform: scale(1.2) translateY(-1.2px) translateX(-5px);
         font-size: font-size(6);
-         
       }
 
       &--bars {
-        // Scale down to make it visually smaller
-        transform: scale(0.8);
-        font-size: font-size(6);
         
+        font-size: font-size(6);
       }
     }
   }
