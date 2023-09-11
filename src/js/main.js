@@ -17,17 +17,17 @@ navToggler.addEventListener("click", () => {
   if (nav.classList.contains("nav-active")) {
     nav.classList.remove("nav-active");
     main.style.transform = "";
-    navList.style.transform = "translateY(-100%)";
+    navList.style.transform = "";
     navList.style.height = ""; // reset height
     barsIcon.style.display = "block";
     timesIcon.style.display = "none";
     bodyElement.classList.remove("no-scroll");
   } else {
     nav.classList.add("nav-active");
-    const translateDistance = window.innerHeight + "px"; // calculate translation distance as height of viewport
-    main.style.transform = `translateY(${translateDistance})`; // move main down
-    navList.style.transform = `translateY(${translateDistance})`; // apply the same translation to the navList
-    navList.style.height = `calc(${translateDistance} + ${headerHeight}px)`; // make navList take up full viewport height plus header height
+    const height = `calc(100vh - ${headerHeight}px)`; // make navList take up the height left after subtracting header height
+    const mainTranslateDistance = height; 
+    navList.style.height = height;
+    main.style.transform = `translateY(${mainTranslateDistance})`; 
     barsIcon.style.display = "none";
     timesIcon.style.display = "block";
     bodyElement.classList.add("no-scroll"); // Prevent scrolling by adding 'no-scroll'
