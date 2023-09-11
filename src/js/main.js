@@ -5,32 +5,30 @@ const navList = document.querySelector(".nav__list");
 const nav = document.querySelector(".nav");
 const header = document.querySelector(".header");
 const main = document.querySelector(".main");
-const bodyElement = document.querySelector(".body")
+const bodyElement = document.querySelector(".body");
 
 // Select the icon elements
 const barsIcon = document.querySelector(".nav__icon--bars");
 const timesIcon = document.querySelector(".nav__icon--times");
 
 navToggler.addEventListener("click", () => {
-  const navListHeight = navList.getBoundingClientRect().height;
   const headerHeight = header.getBoundingClientRect().height;
 
   if (nav.classList.contains("nav-active")) {
     nav.classList.remove("nav-active");
     main.style.transform = "";
-    navList.style.transform = "translateY(-100%)";
-    navList.style.height = ""; // reset height back to default
+    navList.style.transform = "";
+    navList.style.height = ""; // reset height
     barsIcon.style.display = "block";
     timesIcon.style.display = "none";
     bodyElement.classList.remove("no-scroll");
   } else {
     nav.classList.add("nav-active");
-    navList.style.height = "100vh"; // making navList take up full viewport height
-    main.style.transform = `translateY(${Math.min(
-      navListHeight,
-      window.innerHeight - headerHeight
-    )}px)`;
-    navList.style.transform = "translateY(0)";
+    // const height = `calc(100vh - ${0}px)`; // make navList take up the height left after subtracting header height
+    const height = "100vh";
+    const mainTranslateDistance = height;
+    navList.style.height = height;
+    main.style.transform = `translateY(${mainTranslateDistance})`;
     barsIcon.style.display = "none";
     timesIcon.style.display = "block";
     bodyElement.classList.add("no-scroll"); // Prevent scrolling by adding 'no-scroll'
@@ -57,7 +55,6 @@ main.addEventListener("transitionend", function () {
     this.style.transform = "";
   }
 });
-
 
 const createFaviconFromH1 = () => {
   const h1Text = document.querySelector("h1").textContent;
