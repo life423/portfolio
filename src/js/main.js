@@ -25,9 +25,9 @@ navToggler.addEventListener("click", () => {
   } else {
     nav.classList.add("nav-active");
     const height = `calc(100vh - ${headerHeight}px)`; // make navList take up the height left after subtracting header height
-    const mainTranslateDistance = height; 
+    const mainTranslateDistance = height;
     navList.style.height = height;
-    main.style.transform = `translateY(${mainTranslateDistance})`; 
+    main.style.transform = `translateY(${mainTranslateDistance})`;
     barsIcon.style.display = "none";
     timesIcon.style.display = "block";
     bodyElement.classList.add("no-scroll"); // Prevent scrolling by adding 'no-scroll'
