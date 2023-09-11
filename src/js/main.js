@@ -12,22 +12,25 @@ const barsIcon = document.querySelector(".nav__icon--bars");
 const timesIcon = document.querySelector(".nav__icon--times");
 
 navToggler.addEventListener("click", () => {
+  const navListHeight = navList.getBoundingClientRect().height;
   const headerHeight = header.getBoundingClientRect().height;
 
   if (nav.classList.contains("nav-active")) {
     nav.classList.remove("nav-active");
     main.style.transform = "";
-    navList.style.transform = "";
-    navList.style.height = ""; // reset height
+    navList.style.transform = "translateY(-100%)";
+    navList.style.height = ""; // reset height back to default
     barsIcon.style.display = "block";
     timesIcon.style.display = "none";
     bodyElement.classList.remove("no-scroll");
   } else {
     nav.classList.add("nav-active");
-    const height = `calc(100vh - ${headerHeight}px)`; // make navList take up the height left after subtracting header height
-    const mainTranslateDistance = height;
-    navList.style.height = height;
-    main.style.transform = `translateY(${mainTranslateDistance})`;
+    navList.style.height = "100vh"; // making navList take up full viewport height
+    main.style.transform = `translateY(${Math.min(
+      navListHeight,
+      window.innerHeight - headerHeight
+    )}px)`;
+    navList.style.transform = "translateY(0)";
     barsIcon.style.display = "none";
     timesIcon.style.display = "block";
     bodyElement.classList.add("no-scroll"); // Prevent scrolling by adding 'no-scroll'
