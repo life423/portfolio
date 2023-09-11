@@ -5,7 +5,7 @@ const navList = document.querySelector(".nav__list");
 const nav = document.querySelector(".nav");
 const header = document.querySelector(".header");
 const main = document.querySelector(".main");
-const bodyElement = document.querySelector(".body")
+const bodyElement = document.querySelector(".body");
 
 // Select the icon elements
 const barsIcon = document.querySelector(".nav__icon--bars");
@@ -24,7 +24,8 @@ navToggler.addEventListener("click", () => {
     bodyElement.classList.remove("no-scroll");
   } else {
     nav.classList.add("nav-active");
-    const height = `calc(100vh - ${headerHeight}px)`; // make navList take up the height left after subtracting header height
+    // const height = `calc(100vh - ${0}px)`; // make navList take up the height left after subtracting header height
+    const height = "100vh";
     const mainTranslateDistance = height;
     navList.style.height = height;
     main.style.transform = `translateY(${mainTranslateDistance})`;
@@ -54,7 +55,6 @@ main.addEventListener("transitionend", function () {
     this.style.transform = "";
   }
 });
-
 
 const createFaviconFromH1 = () => {
   const h1Text = document.querySelector("h1").textContent;
