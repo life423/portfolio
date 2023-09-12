@@ -17,6 +17,7 @@
     top: 12rem;
     right: 2rem;
     width: 75%;
+    
   }
 
   &__heading-span {
@@ -32,6 +33,7 @@
     font-weight: bold;
 
     &--1 {
+      transform: scaleX(1.05) scaleY(20);
       background-image: linear-gradient(
         to right bottom,
         rgba($green-light, 0.85),

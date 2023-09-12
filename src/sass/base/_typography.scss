@@ -8,6 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  transform: translateY(-1.8rem);
 
   .tile-heading-span {
     line-height: 1.4;
@@ -17,8 +18,8 @@ body {
     box-decoration-break: clone;
     background: linear-gradient(
       90deg,
-      rgba($gradient-green-light),
-      rgba($gradient-green-dark)
+      rgba($gradient-green-lightest, .5),
+      rgba($gradient-green-darkest, .5)
     );
 
     letter-spacing: 1px;
