@@ -109,7 +109,7 @@
 
   @include respond("phone") {
     flex-direction: column;
-    gap: 4.8rem;
+    gap: spacing(6);
 
     &__tile {
       flex-basis: 80%;
@@ -118,11 +118,11 @@
       margin: spacing(3) 0;
 
       &:first-child {
-        margin-top: 4.8rem;
+        margin-top: spacing(6);
       }
 
       &:last-child {
-        margin-bottom: 4.8rem;
+        margin-bottom: spacing(6);
       }
     }
   }
