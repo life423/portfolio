@@ -11,6 +11,15 @@ const bodyElement = document.querySelector(".body");
 const barsIcon = document.querySelector(".nav__icon--bars");
 const timesIcon = document.querySelector(".nav__icon--times");
 
+
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+window.addEventListener("resize", () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+});
+
 navToggler.addEventListener("click", () => {
   const headerHeight = header.getBoundingClientRect().height;
 
