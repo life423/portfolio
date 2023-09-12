@@ -9,9 +9,10 @@ body::before {
 
 body {
   position: relative;
-  min-height: 100%;
+  height: auto; // set body height as auto
   color: $gray-dark;
   background: linear-gradient(to right, $gradient-start, $gradient-end);
+  scrollbar-width: none;
 
   @include respond("phone") {
     height: auto;
