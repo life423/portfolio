@@ -7,7 +7,7 @@ const header = document.querySelector(".header");
 const main = document.querySelector(".main");
 const bodyElement = document.querySelector(".body");
 
-// Select the icon elements
+
 const barsIcon = document.querySelector(".nav__icon--bars");
 const timesIcon = document.querySelector(".nav__icon--times");
 
@@ -18,20 +18,19 @@ navToggler.addEventListener("click", () => {
     nav.classList.remove("nav-active");
     main.style.transform = "";
     navList.style.transform = "";
-    navList.style.height = ""; // reset height
+    navList.style.height = ""; 
     barsIcon.style.display = "block";
     timesIcon.style.display = "none";
     bodyElement.classList.remove("no-scroll");
   } else {
-    nav.classList.add("nav-active");
-    // const height = `calc(100vh - ${0}px)`; // make navList take up the height left after subtracting header height
+    nav.classList.add("nav-active");    
     const height = "100vh";
     const mainTranslateDistance = height;
     navList.style.height = height;
     main.style.transform = `translateY(${mainTranslateDistance})`;
     barsIcon.style.display = "none";
     timesIcon.style.display = "block";
-    bodyElement.classList.add("no-scroll"); // Prevent scrolling by adding 'no-scroll'
+    bodyElement.classList.add("no-scroll"); 
   }
 });
 
@@ -45,7 +44,7 @@ window.addEventListener("resize", () => {
     )}px)`;
   } else {
     main.style.transform = "";
-    //remove transform from navList
+    
     navList.style.transform = "";
   }
 });
@@ -63,10 +62,10 @@ const createFaviconFromH1 = () => {
   canvas.height = 16;
   const ctx = canvas.getContext("2d");
 
-  // Set the text color to the specified hex value
+  
   ctx.fillStyle = "#28b42f";
 
-  // You may need to adjust the font size and positioning to fit the text within the favicon
+  
   ctx.font = "10px Arial";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
@@ -83,5 +82,19 @@ const createFaviconFromH1 = () => {
   }
 };
 
-// You can call this function to set the favicon
+// add event listener for device orientation change
+window.addEventListener('orientationchange', () => {
+    if (nav.classList.contains('nav-active')) {
+        nav.classList.remove('nav-active');
+        main.style.transform = '';
+        barsIcon.style.display = 'block';
+        timesIcon.style.display = 'none';
+        bodyElement.classList.remove('no-scroll');
+
+        // reset height of the navigation list
+        navList.style.height = '';
+    }
+});
+
+
 createFaviconFromH1();
