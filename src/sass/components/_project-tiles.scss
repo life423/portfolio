@@ -62,7 +62,7 @@
       $gradient-start,
       $green-light
     );
-    @include tile-size(3);
+    @include tile-size(4);
     @include margin-padding(2.4, 2.4);
     border-radius: $border-radius;
     box-shadow: $shadow-light, $shadow-dark;
