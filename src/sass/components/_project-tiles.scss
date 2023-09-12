@@ -46,6 +46,13 @@
         @include image-styles;
         height: 21.5rem;
       }
+
+      &__heading { // Adjust as per your requirement
+        background: linear-gradient(to bottom right, rgba($gradient-start, 0.6), rgba($gradient-end, 0.6));
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        padding: 0.2rem; // adjust as necessary
+      }
     }
   }
 
