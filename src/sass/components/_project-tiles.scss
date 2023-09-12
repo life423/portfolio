@@ -96,16 +96,15 @@
     }
   }
 
-  @include respond("tablet") {
-    // flex-direction: column;
-    gap: spacing(4);
-    padding: spacing(3);
-  }
-
   @include respond("tab-land") {
     gap: spacing(4);
     padding: spacing(4);
   }
+
+  @include respond("tablet") {
+    gap: spacing(4);
+    padding: spacing(3) spacing(3);    
+  }  
 
   @include respond("phone") {
     
