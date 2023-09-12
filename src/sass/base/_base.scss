@@ -9,7 +9,7 @@ body::before {
 
 body {
   position: relative;
-  height: auto; // set body height as auto
+  height: auto;
   color: $gray-dark;
   background: linear-gradient(to right, $gradient-start, $gradient-end);
   scrollbar-width: none;
@@ -23,7 +23,7 @@ body {
 .container {
   background-color: $white;
   max-width: 1600px;
-  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   margin: 0 auto;
   display: flex;
@@ -40,6 +40,15 @@ body {
   max-height: calc(var(--vh, 1vh) * 100); /* Add this line */
   @include flex-align(center, center);
   transition: all 0.3s ease-in-out;
+  background-color: red;
+  background: linear-gradient(
+      to right,
+      rgba($gradient-start, 0.2),
+      rgba($gradient-end, 0.2)
+    ),
+    url("../../assets/img/life-background.png");
+  background-size: cover;
+  background-position: 50% 44%;
 }
 
 @include respond("tab-land") {
