@@ -6,10 +6,9 @@
   align-items: center;
   flex: 1 0 auto;
   height: 100%;
- 
 
   &__tile {
-    background-color: $blue-light;
+    background-image: linear-gradient(to bottom right, $gradient-start, $green-light);    
     @include tile-size(3);
     @include margin-padding(2.4, 2.4);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19),
@@ -96,11 +95,10 @@
 
   @include respond("tablet") {
     gap: spacing(4);
-    padding: spacing(3) spacing(3);    
-  }  
+    padding: spacing(3) spacing(3);
+  }
 
   @include respond("phone") {
-    
     gap: spacing(6);
 
     &__tile {

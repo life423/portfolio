@@ -11,16 +11,30 @@ $background-color: #28b42f;
 $gradient-start: #7ed56f;
 $gradient-end: #66bb6a;
 
-// Color Shades
+
+// Blue
 $blue-lighter: lighten(blue, 40%);
 $blue-light: lighten($blue, 20%);
 $blue-dark: darken($blue, 20%);
+
+// Gray
 $gray-light: lighten($gray, 20%);
 $gray-dark: darken($gray, 20%);
-$green-light: lighten($green, 40%);
+
+// Green
+$green-very-light: lighten($green, 60%);
+$green-lighter: lighten($green, 40%);
+$green-light: lighten($green, 50%);
+$green-slightly-light: lighten($green, 5%);
 $green-dark: darken($green, 10%);
+$green-very-dark: darken($green, 30%);
+$green-slightly-dark: darken($green, 5%);
+$green-lighter-dark: lighten($green-dark, 20%);
+
+// White
 $white-light: lighten($white, 20%);
 $white-dark: darken($white, 20%);
+
 
 //Github Icon Color
 $github: #181717;
