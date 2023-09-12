@@ -26,14 +26,13 @@
     // flex: 1 1 auto;
     max-width: 80%;
     color: $green-font;
-    
 
     align-self: center;
-    
+
     line-height: lh(large);
     font-size: font-size(2.5);
     flex: 1;
-    
+
     padding: spacing(3);
   }
 
@@ -91,6 +90,7 @@
     &__back {
       position: absolute;
       backface-visibility: hidden;
+      transform-style: preserve-3d;
     }
 
     &__front {
@@ -126,6 +126,10 @@
       }
     }
     @include respond("large-desktop") {
+    }
+
+    &__back {
+      transform: rotateY(180deg);
     }
   }
 
