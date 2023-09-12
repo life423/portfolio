@@ -5,10 +5,11 @@ body {
 .secondary-heading {
   font-size: font-size(3);
   color: $white;
+  text-transform: uppercase;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  transform: translateY(-6.8rem);
+  transform: translateY(-6.8rem) translateX(-2rem);
 
   .tile-heading-span {
     line-height: 1.4;
@@ -18,8 +19,8 @@ body {
     box-decoration-break: clone;
     background: linear-gradient(
       90deg,
-      rgba($gradient-green-lightest, .5),
-      rgba($gradient-green-darkest, .5)
+      rgba($gradient-green-lightest, .85),
+      rgba($gradient-green-darkest, .58)
     );
 
     letter-spacing: 1px;

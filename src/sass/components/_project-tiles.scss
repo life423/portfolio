@@ -37,9 +37,10 @@
     display: block;
     background: linear-gradient(
       to right bottom,
-      rgba($gradient-start, 0.6),
-      rgba($gradient-end, 0.6)
+      rgba($gradient-start, 0.85),
+      rgba($gradient-end, 0.85)
     );
+    
     padding: 0.4rem 1.2rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
@@ -98,7 +99,7 @@
           url(../../assets/img/lock.png);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         @include image-styles;
-        height: 21.5rem;
+        height: 29.5rem;
       }
 
       &__heading {
