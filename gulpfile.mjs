@@ -46,7 +46,8 @@ function styles() {
     })
     .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemaps.write("."))
-    .pipe(dest("dist/assets/css"));
+    .pipe(dest("dist/assets/css"))
+    .pipe(browserSync.stream()); // <= Added this line
 }
 
 
@@ -55,12 +56,14 @@ function watchFiles() {
     server: {
       baseDir: "./dist",
     },
-    open: false,  // Added this line
+    online: true, // Added this line
+    open: false,
   });
-  watch("src/sass/**/*.scss", styles).on("change", browserSync.reload);
-  watch("src/assets/img/**/*", images).on("change", browserSync.reload);
-  watch("./*.html", series(copyHTML)).on("change", browserSync.reload);
-  watch("src/js/**/*.js", js).on("change", browserSync.reload); // Added this line
+
+  watch("src/sass/**/*.scss", styles);
+  watch("./*.html", series(copyHTML));
+  watch("src/assets/img/**/*", images);
+  watch("src/js/**/*.js", js);
 }
 
 const defaultTask = series(parallel(styles, images, copyHTML, js));
