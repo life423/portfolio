@@ -39,6 +39,8 @@ body {
   flex-grow: 1;
   width: 100%;
   overflow-x: hidden;
+  overflow-y: auto; /* Add this line */
+  max-height: calc(var(--vh, 1vh) * 100); /* Add this line */
   @include flex-align(center, center);
   transition: all 0.3s ease-in-out;
 }

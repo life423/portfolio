@@ -70,10 +70,8 @@ const createFaviconFromH1 = () => {
   canvas.width = 16;
   canvas.height = 16;
   const ctx = canvas.getContext("2d");
-
   
   ctx.fillStyle = "#28b42f";
-
   
   ctx.font = "10px Arial";
   ctx.textAlign = "center";
