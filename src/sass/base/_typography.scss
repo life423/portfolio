@@ -1,8 +1,18 @@
-body{
-    font-family: 'Lato', sans-serif;
+body {
+  font-family: "Lato", sans-serif;
 }
 
-.secondary-heading{
-   @include apply-heading("h4");
-   font-weight: 300;
+.secondary-heading {
+  @include apply-heading("h4");
+  color: white;
+  line-height: 1.4; // Adjust this as needed for vertical spacing between lines
+  display: inline; // To ensure that the background spans the width of the text content
+  -webkit-box-decoration-break: clone; // For Webkit browsers
+  box-decoration-break: clone; // Standard syntax
+  background: linear-gradient(
+    90deg,
+    rgba($gradient-start, 0.6),
+    rgba($gradient-end, 0.6)
+  ); // Replace with your gradient colors
+  padding: 0.5em;
 }

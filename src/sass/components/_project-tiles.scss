@@ -7,10 +7,36 @@
   flex: 1 0 auto;
   height: 100%;
 
-  &__heading{
-    &-1{      
-          background-color: red;
-          color: white;
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  &__heading-span {
+    display: block;
+    background: linear-gradient(
+      to right bottom,
+      rgba($gradient-start, 0.6),
+      rgba($gradient-end, 0.6)
+    );
+    padding: 0.4rem 1.2rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    font-weight: bold;
+
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($green-light, 0.85),
+        rgba($green-dark, 0.85)
+      );
     }
   }
 
@@ -20,7 +46,6 @@
       $gradient-start,
       $green-light
     );
-    
     @include tile-size(3);
     @include margin-padding(2.4, 2.4);
     border-radius: $border-radius;
@@ -29,7 +54,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    border-radius: 1rem;
     transform-style: preserve-3d;
     transition: transform 0.5s ease-in-out;
     will-change: transform;
@@ -55,12 +79,15 @@
         height: 21.5rem;
       }
 
-      &__heading { // Adjust as per your requirement
-        background: linear-gradient(to bottom right, rgba($gradient-start, 0.6), rgba($gradient-end, 0.6));
+      &__heading {
+        background: linear-gradient(
+          to bottom right,
+          rgba($gradient-start, 0.6),
+          rgba($gradient-end, 0.6)
+        );
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
-        padding: 0.2rem; // adjust as necessary
-        
+        padding: 0.2rem;
       }
     }
   }
