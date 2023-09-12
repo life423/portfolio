@@ -6,22 +6,23 @@ $green: #229954;
 $white: #f2f3f4;
 $navy-blue: #34495e;
 $black: #000;
-
+$orange: #F3941E;
 $background-color: #28b42f;
 $gradient-start: #7ed56f;
 $gradient-end: #66bb6a;
+$gradient-green-lightest: #2BE164;
+$gradient-green-darkest: #03A832;
 
-
-// Blue
-$blue-lighter: lighten(blue, 40%);
+// Blue variations
+$blue-lighter: lighten($blue, 40%);
 $blue-light: lighten($blue, 20%);
 $blue-dark: darken($blue, 20%);
 
-// Gray
+// Gray variations
 $gray-light: lighten($gray, 20%);
 $gray-dark: darken($gray, 20%);
 
-// Green
+// Green variations
 $green-very-light: lighten($green, 60%);
 $green-lighter: lighten($green, 40%);
 $green-light: lighten($green, 50%);
@@ -30,6 +31,8 @@ $green-dark: darken($green, 10%);
 $green-very-dark: darken($green, 30%);
 $green-slightly-dark: darken($green, 5%);
 $green-lighter-dark: lighten($green-dark, 20%);
+$gradient-green-light: 43, 225, 100, 0.6;
+$gradient-green-dark: 3, 168, 50, 0.6;
 
 // White
 $white-light: lighten($white, 20%);
