@@ -55,9 +55,7 @@ $line-height: (
 $transition-base: all 0.3s ease-in-out;
 
 // Border Radius
-$border-radius: (
-  base: 4px,
-);
+$border-radius: 4px;
 
 // Spacing - 8pt Grid System
 $spacing: (
@@ -143,3 +141,9 @@ $project-tile-heights: (
   4.5: 62.865rem, // Midway between 55.88rem and 69.85rem
   5: 69.85rem
 );
+
+
+//Shadows
+$shadow-light: 0 1rem 2rem rgba(0, 0, 0, 0.19), 0 0.6rem 0.6rem rgba(0, 0, 0, 0.23);
+
+$shadow-dark: 0 0.6rem 0.6rem rgba(0, 0, 0, 0.23);
