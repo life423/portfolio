@@ -17,7 +17,18 @@
     top: 12rem;
     right: 2rem;
     width: 75%;
-    
+  }
+
+  &__subtitle {
+    font-size: font-size(
+      1.5
+    ); // You might want to adjust this to fit your design
+    color: #396a3b; // Assuming you're using your previously defined $white variable
+    max-width: 80%; // Avoids having the subtitle stretch the full width of its container
+    margin: 0 auto; // Centers the block if the parent has a defined width
+    text-align: left; // Centers the text in the subtitle itself
+    padding-top: 1rem; // Adds some space between the heading and the text
+    line-height: lh(large);
   }
 
   &__heading-span {

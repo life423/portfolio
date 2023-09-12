@@ -25,3 +25,7 @@
 @function get-heading-size($level) {
   @return map-get($heading-sizes, $level);
 }
+
+@function lh($key) {
+  @return map-get($line-height, $key);
+}
