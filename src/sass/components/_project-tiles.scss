@@ -103,6 +103,11 @@
         padding: 0.2rem;
       }
     }
+    @include respond("large-desktop") {
+    }
+  }
+
+  @include respond("desktop") {
   }
 
   @include respond("tab-land") {
