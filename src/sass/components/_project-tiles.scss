@@ -78,6 +78,14 @@
     transform-style: preserve-3d;
     transition: transform 0.5s ease-in-out;
     will-change: transform;
+    // This will ensure the flip happens around the center.
+    transform-origin: center;
+
+    // This will make sure the flip transition is smooth.
+    &:hover {
+      // Rotate the tile 180 degrees around the Y-axis
+      transform: rotateY(180deg);
+    }
 
     &__front,
     &__back {
