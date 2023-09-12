@@ -21,3 +21,7 @@
 @function project-tile-height($step) {
   @return map.get($project-tile-heights, $step);
 }
+
+@function get-heading-size($level) {
+  @return map-get($heading-sizes, $level);
+}
