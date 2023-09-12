@@ -108,7 +108,7 @@
   }
 
   @include respond("phone") {
-    flex-direction: column;
+    
     gap: spacing(6);
 
     &__tile {
