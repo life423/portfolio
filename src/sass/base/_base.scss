@@ -41,3 +41,9 @@ body {
   @include flex-align(center, center);
   transition: all 0.3s ease-in-out;
 }
+
+@include respond('tab-land') {
+  body { 
+    overflow: hidden; 
+  }
+}
