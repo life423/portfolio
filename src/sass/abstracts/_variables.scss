@@ -11,16 +11,30 @@ $background-color: #28b42f;
 $gradient-start: #7ed56f;
 $gradient-end: #66bb6a;
 
-// Color Shades
+
+// Blue
 $blue-lighter: lighten(blue, 40%);
 $blue-light: lighten($blue, 20%);
 $blue-dark: darken($blue, 20%);
+
+// Gray
 $gray-light: lighten($gray, 20%);
 $gray-dark: darken($gray, 20%);
-$green-light: lighten($green, 40%);
+
+// Green
+$green-very-light: lighten($green, 60%);
+$green-lighter: lighten($green, 40%);
+$green-light: lighten($green, 50%);
+$green-slightly-light: lighten($green, 5%);
 $green-dark: darken($green, 10%);
+$green-very-dark: darken($green, 30%);
+$green-slightly-dark: darken($green, 5%);
+$green-lighter-dark: lighten($green-dark, 20%);
+
+// White
 $white-light: lighten($white, 20%);
 $white-dark: darken($white, 20%);
+
 
 //Github Icon Color
 $github: #181717;
@@ -41,9 +55,7 @@ $line-height: (
 $transition-base: all 0.3s ease-in-out;
 
 // Border Radius
-$border-radius: (
-  base: 4px,
-);
+$border-radius: 4px;
 
 // Spacing - 8pt Grid System
 $spacing: (
@@ -129,3 +141,9 @@ $project-tile-heights: (
   4.5: 62.865rem, // Midway between 55.88rem and 69.85rem
   5: 69.85rem
 );
+
+
+//Shadows
+$shadow-light: 0 1rem 2rem rgba(0, 0, 0, 0.19), 0 0.6rem 0.6rem rgba(0, 0, 0, 0.23);
+
+$shadow-dark: 0 0.6rem 0.6rem rgba(0, 0, 0, 0.23);

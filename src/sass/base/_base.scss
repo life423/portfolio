@@ -40,7 +40,6 @@ body {
   max-height: calc(var(--vh, 1vh) * 100); /* Add this line */
   @include flex-align(center, center);
   transition: all 0.3s ease-in-out;
-  background-color: red;
   background: linear-gradient(
       to right,
       rgba($gradient-start, 0.2),

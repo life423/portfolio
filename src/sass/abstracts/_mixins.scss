@@ -81,3 +81,13 @@
   margin: spacing($margin);
   padding: spacing($padding);
 }
+
+@mixin image-styles {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-size: cover;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
