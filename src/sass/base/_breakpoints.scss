@@ -64,8 +64,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     &__tile {
-      @include flex-properties(space-around, center, calc(50% - 16px));
-      min-height: calc(#{$tile-min-height} + 1rem);
+     flex: 0 1 calc(40% - 4.6rem);  // Reduced width
+      min-height: calc(50% + -7rem);
     }
   }
 }
