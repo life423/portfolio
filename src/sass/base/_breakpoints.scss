@@ -62,7 +62,11 @@
   }
   .projects {
     flex-wrap: wrap;
-    justify-content: space-between;
+    
+    justify-content: center;
+    align-content: center;
+    gap: spacing(6);
+    align-content: center;
     &__tile {
      flex: 0 1 calc(40% - 4.6rem);  // Reduced width
       min-height: calc(50% + -7rem);
