@@ -19,18 +19,16 @@
   margin: 0 auto;
 }
 
-// Media Queries
-// Media Queries
 @mixin respond($breakpoint) {
   $breakpoints: (
-    'phone': 600px,      // equivalent to 37.5em for 16px base
-    'tab-port': 900px,   // equivalent to 56.25em for 16px base
-    'tab-land': 1085px,  // equivalent to 75em for 16px base
+    'phone': 600px,
     'tablet': 768px,
+    'tab-port': 900px,
+    'chromebook': 1081px,
     'laptop': 1024px,
-    'big-desktop': 1800px, // equivalent to 112.5em for 16px base
     'desktop': 1415px,
     'large-desktop': 1533px,
+    'big-desktop': 1800px,
     'ultrawide': 1999px,
   );
 
@@ -38,6 +36,8 @@
     @content;
   }
 }
+
+
 
 // Background Image
 @mixin background-image($image) {

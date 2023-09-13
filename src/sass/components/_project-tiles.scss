@@ -9,7 +9,6 @@
   overflow: hidden;
 
   &__heading-1 {
-    // Corrected position
     font-weight: 300;
     text-align: right;
     position: absolute;
@@ -17,9 +16,8 @@
     left: 8rem;
     width: 75%;
     padding: 0.2rem;
-    font-size: font-size(3.5);
+    font-size: font-size(3);
     line-height: 1.4;
-    width: 77%;
   }
 
   &__subheading {
@@ -48,17 +46,12 @@
     line-height: lh(large);
     font-size: font-size(2);
     text-align: left;
-
     flex: 1 1 31%;
   }
 
   &__tile {
     border-radius: $border-radius;
-    background-image: linear-gradient(
-      to bottom right,
-      $green-light,
-      $gradient-end
-    );
+    background-image: linear-gradient(to bottom right, $green-light, $gradient-end);
     @include tile-size(4);
     @include margin-padding(2.4, 2.4);
     box-shadow: $shadow-light, $shadow-dark;
@@ -77,7 +70,6 @@
 
     &__front,
     &__back {
-      // position: absolute;
       backface-visibility: hidden;
       transform-style: preserve-3d;
     }
@@ -85,7 +77,6 @@
     &__front {
       width: 100%;
       height: 100%;
-
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -124,6 +115,7 @@
       width: 75%;
     }
   }
+
   @include respond("large-desktop") {
     body {
       font-size: 75%;
@@ -136,43 +128,30 @@
     }
   }
 
-  @include respond('desktop') {
+  @include respond("desktop") {
     body {
       font-size: 65%;
-    }    
+    }
 
     .projects {
       flex-wrap: wrap;
-    }
 
-    .projects__tile {
-      // @include tile-size(3);
-      width: 30rem;
-      height:48rem;
-      
-      flex: 0 1 calc(35% - 1.5rem);
-    }
+      &__tile {
+        width: 30rem;
+        height: 48rem;
+        flex: 0 1 calc(35% - 1.5rem);
+      }
 
-    .projects__heading-1 {
-      font-size: font-size(2);      
-      top: 18rem;
-      left: 6rem;
-      width: 75%;
-    }    
+      &__heading-1 {
+        font-size: font-size(2);
+        top: 18rem;
+        left: 6rem;
+        width: 75%;
+      }
+    }
   }
 
-  @include respond('tab-land') {
-    .container {
-      max-width: 100%;
-      background-color: red;
-    }
-    .projects{
-      display:flex;
-      flex-direction: row wrap;
-      justify-content: flex-start;
-      align-items: center;
-    }
-  }
+ 
 
   @include respond("tablet") {
     gap: spacing(4);
