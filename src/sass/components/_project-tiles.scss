@@ -8,11 +8,10 @@
   height: 100%;
 
   &__heading-1 {
-    
     font-weight: 300;
-    
+
     text-align: right;
-    
+
     position: absolute;
     top: 21rem;
     left: 8rem;
@@ -27,7 +26,7 @@
     color: $green-font;
     align-self: center;
     line-height: lh(large);
-    font-size: font-size(2.5);    
+    font-size: font-size(2.5);
     text-align: left;
     padding: spacing(3);
   }
@@ -45,7 +44,6 @@
     font-weight: bold;
 
     &--1 {
-      
       // background-image: linear-gradient(
       //   to right bottom,
       //   rgba($green-light, 0.85),
@@ -91,16 +89,13 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      
+
       &--image-1 {
         border-top-left-radius: $border-radius;
         border-top-right-radius: $border-radius;
-        background: linear-gradient(
-          to bottom right,
-          rgba($gradient-start, 0.1),
-          rgba($gradient-end, 0.1)
-        ),
-        url(../../assets/img/lock.png);
+        background-color: rgba($gradient-start, 0.1);
+        background-image: url(../../assets/img/lock.png);        
+        background-blend-mode: lighten;
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         @include image-styles;
         height: 29.5rem;
