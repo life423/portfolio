@@ -21,22 +21,21 @@
 
 @mixin respond($breakpoint) {
   $breakpoints: (
-    'phone': 600px,
-    'tablet': 768px,
-    'tab-port': 900px,
-    'chromebook': 1081px,
-    'laptop': 1024px,
-    'desktop': 1415px,
-    'large-desktop': 1533px,
-    'big-desktop': 1800px,
     'ultrawide': 1999px,
+    'big-desktop': 1800px,
+    'large-desktop': 1533px,
+    'desktop': 1415px,
+    'laptop': 1024px,
+    'chromebook': 1081px,  // 'chromebook' breakpoint here
+    'tab-port': 900px,
+    'tablet': 768px,
+    'phone': 600px
   );
 
   @media only screen and (max-width: map-get($breakpoints, $breakpoint)) {
     @content;
   }
 }
-
 
 
 // Background Image
