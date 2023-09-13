@@ -6,57 +6,46 @@
   align-items: center;
   flex: 1 0 auto;
   height: 100%;
+  overflow: hidden;
 
-  &__heading {
-    font-size: 2.8rem;
+  
+
+  &__heading-1 {
+    // Corrected position
     font-weight: 300;
-    text-transform: uppercase;
     text-align: right;
-    color: $white;
     position: absolute;
-    top: 12rem;
-    right: 2rem;
+    top: 21rem;
+    left: 8rem;
     width: 75%;
+    padding: 0.2rem;
+    font-size: font-size(3.5);
+    line-height: 1.4;
+    width: 77%;
   }
 
-  &__subtitle {
-    position: relative;
-    top: -3.9rem;
+  &__subheading{
+    text-transform: uppercase;
     font-size: font-size(2);
-    // flex: 1 1 auto;
+    max-width: 80%;
+    align-self: center;    
+    flex: 1 1 spacing(13);
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: $green-font;
+    padding-bottom: spacing(2);   
+  }
+
+  &__subtitle {    
     max-width: 80%;
     color: $green-font;
-
     align-self: center;
-
     line-height: lh(large);
-    font-size: font-size(2.5);
-    flex: 1;
-
-    padding: spacing(3);
-  }
-
-  &__heading-span {
-    display: block;
-    background: linear-gradient(
-      to right bottom,
-      rgba($gradient-start, 0.85),
-      rgba($gradient-end, 0.85)
-    );
-
-    padding: 0.4rem 1.2rem;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    font-weight: bold;
-
-    &--1 {
-      transform: scaleX(1.05) scaleY(20);
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($green-light, 0.85),
-        rgba($green-dark, 0.85)
-      );
-    }
+    font-size: font-size(2);
+    text-align: left;
+    padding-bottom: spacing(7);   
+    flex:1;
   }
 
   &__tile {
@@ -68,7 +57,6 @@
     );
     @include tile-size(4);
     @include margin-padding(2.4, 2.4);
-    border-radius: $border-radius;
     box-shadow: $shadow-light, $shadow-dark;
     display: flex;
     align-items: center;
@@ -77,18 +65,15 @@
     transform-style: preserve-3d;
     transition: transform 0.5s ease-in-out;
     will-change: transform;
-    // This will ensure the flip happens around the center.
     transform-origin: center;
 
-    // This will make sure the flip transition is smooth.
     &:hover {
-      // Rotate the tile 180 degrees around the Y-axis
       transform: rotateY(180deg);
     }
 
     &__front,
     &__back {
-      position: absolute;
+      // position: absolute;
       backface-visibility: hidden;
       transform-style: preserve-3d;
     }
@@ -99,33 +84,21 @@
 
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
+
       &--image-1 {
+        flex: 1 0 auto;
+        border-radius: $border-radius;
+        overflow: hidden;
         border-top-left-radius: $border-radius;
         border-top-right-radius: $border-radius;
-        background: linear-gradient(
-            to bottom right,
-            rgba($gradient-start, 0.1),
-            rgba($gradient-end, 0.1)
-          ),
-          url(../../assets/img/lock.png);
+        background-color: rgba($gradient-start, 0.1);
+        background-image: url(../../assets/img/lock.png);
+        background-blend-mode: lighten;
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         @include image-styles;
         height: 29.5rem;
       }
-
-      &__heading {
-        background: linear-gradient(
-          to bottom right,
-          rgba($gradient-start, 0.6),
-          rgba($gradient-end, 0.6)
-        );
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-        padding: 0.2rem;
-      }
-    }
-    @include respond("large-desktop") {
     }
 
     &__back {
@@ -133,7 +106,12 @@
     }
   }
 
+  @include respond("large-desktop") {
+    // Add responsive styles here
+  }
+
   @include respond("desktop") {
+    // Add desktop-specific styles here
   }
 
   @include respond("tab-land") {

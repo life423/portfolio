@@ -1,3 +1,5 @@
+$transition-duration: 0.3s;
+
 html {
   font-size: $font-size-base;
   height: 100%;
@@ -23,7 +25,6 @@ body {
 .container {
   background-color: $white;
   max-width: 2000px;
-  height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   margin: 0 auto;
   display: flex;
@@ -36,10 +37,10 @@ body {
   flex-grow: 1;
   width: 100%;
   overflow-x: hidden;
-  overflow-y: auto; /* Add this line */
-  max-height: calc(var(--vh, 1vh) * 100); /* Add this line */
+  overflow-y: auto;
+  max-height: calc(var(--vh, 1vh) * 100);
   @include flex-align(center, center);
-  transition: all 0.3s ease-in-out;
+  transition: all $transition-duration ease-in-out;
   background: linear-gradient(
       to right,
       rgba($gradient-start, 0.2),
