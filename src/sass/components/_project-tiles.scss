@@ -151,6 +151,12 @@
       left: 6rem;
       width: 75%;
     }
+    .projects {
+      flex-wrap: wrap;
+    }
+    .projects__tile {
+      flex: 0 1 calc(50% - 2rem); // assuming that the leaving 2rem for the gap you want between tiles
+    }
   }
 
   @include respond("tab-land") {
