@@ -19,6 +19,13 @@
     // fix from .projects__title
     @include tile-size(3);
   }
+
+  .projects__heading-1 {
+    font-size: 2rem;
+    top: 16rem;
+    left: 6rem;
+    width: 75%;
+  }
 }
 
 @include respond("large-desktop") {
@@ -30,6 +37,12 @@
   }
   .projects__tile {
     @include tile-size(2.5);
+  }
+  .projects__heading-1 {
+    font-size: 1.6rem;
+    top: 10rem;
+    left: 5rem;
+    width: 75%;
   }
 }
 
