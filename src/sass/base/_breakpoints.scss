@@ -61,14 +61,15 @@
     font-size: 60%;
   }
   .projects {
-    flex-wrap:wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
     &__tile {
       @include flex-properties(space-around, center, calc(50% - 16px));
-      height: $tile-min-height;
-
+      min-height: calc(#{$tile-min-height} + 1rem);
     }
   }
 }
+
 
 
 @include respond("chromebook") {
