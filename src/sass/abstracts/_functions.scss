@@ -2,9 +2,10 @@
 @use "sass:map";
 
 // Function to convert px to rem
-@function px-to-rem($px, $base-font-size: 16) {
+@function px-to-rem($px, $base-font-size: 10) {
   @return #{math.div($px, $base-font-size)}rem;
 }
+
 
 @function spacing($step) {
   @return map.get($spacing, $step);
