@@ -35,9 +35,10 @@
     color: $green-font;
     padding-bottom: spacing(2.5);
 
-    &__1, &__2 {
-    max-width: 80%;
-  }
+    &__1,
+    &__2 {
+      max-width: 80%;
+    }
   }
 
   &__subtitle {
@@ -47,7 +48,7 @@
     line-height: lh(large);
     font-size: font-size(2);
     text-align: left;
-    
+
     flex: 1 1 31%;
   }
 
@@ -109,9 +110,10 @@
   }
 
   @include respond("ultrawide") {
-    font-size: 80%;
-    .projects__tile{
-
+    body {
+      font-size: 80%;
+    }
+    .projects__tile {
       @include tile-size(3.5);
     }
 
@@ -123,10 +125,32 @@
     }
   }
   @include respond("large-desktop") {
+    body {
+      font-size: 75%;
+    }
+    .projects__heading-1 {
+      font-size: font-size(2);
+    }
+    .projects__tile {
+      @include tile-size(3);
+    }
   }
 
   @include respond("desktop") {
-    // Add desktop-specific styles here
+    body {
+      font-size: 65%;
+    }
+    .projects__tile {
+      @include tile-size(3);
+    }
+
+    .projects__heading-1 {
+      font-size: font-size(2);
+      //write the top and left and with so that it is responsive
+      top: 18rem;
+      left: 6rem;
+      width: 75%;
+    }
   }
 
   @include respond("tab-land") {
