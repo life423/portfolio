@@ -6,8 +6,23 @@
   align-items: center;
   flex: 1 0 auto;
   height: 100%;
+  overflow: hidden;
+
+  &__subtitle {
+    // Corrected position
+    position: relative;
+    top: -3.9rem;
+    max-width: 80%;
+    color: $green-font;
+    align-self: center;
+    line-height: lh(large);
+    font-size: font-size(2.5);
+    text-align: left;
+    padding: spacing(3);
+  }
 
   &__heading-1 {
+    // Corrected position
     font-weight: 300;
     text-align: right;
     position: absolute;
@@ -18,34 +33,6 @@
     font-size: font-size(3.5);
     line-height: 1.4;
     width: 77%;
-  }
-
-  &__subtitle {
-    position: relative;
-    top: -3.9rem;
-    
-    max-width: 80%;
-    color: $green-font;
-    align-self: center;
-    line-height: lh(large);
-    font-size: font-size(2.5);
-    text-align: left;
-    padding: spacing(3);
-  }
-
-&__heading-span {
-    display: block;
-    background: linear-gradient(
-      to right bottom,
-      rgba($gradient-start, 0.85),
-      rgba($gradient-end, 0.85)
-    );
-
-    padding: 0.4rem 1.2rem;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    font-weight: bold;
-    
   }
 
   &__tile {
@@ -87,29 +74,18 @@
       justify-content: space-between;
 
       &--image-1 {
+        border-radius: $border-radius;
+        overflow: hidden;
         border-top-left-radius: $border-radius;
         border-top-right-radius: $border-radius;
         background-color: rgba($gradient-start, 0.1);
-        background-image: url(../../assets/img/lock.png);        
+        background-image: url(../../assets/img/lock.png);
         background-blend-mode: lighten;
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         @include image-styles;
         height: 29.5rem;
       }
-
-      &__heading {
-        background: linear-gradient(
-          to bottom right,
-          rgba($gradient-start, 0.6),
-          rgba($gradient-end, 0.6)
-        );
-        -webkit-box-decoration-break: clone;
-        box-decoration-break: clone;
-        padding: 0.2rem;
-      }
     }
-
-    
 
     &__back {
       transform: rotateY(180deg);
@@ -117,8 +93,8 @@
   }
 
   @include respond("large-desktop") {
-      // Add responsive styles here
-    }
+    // Add responsive styles here
+  }
 
   @include respond("desktop") {
     // Add desktop-specific styles here
