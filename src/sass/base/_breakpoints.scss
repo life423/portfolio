@@ -32,16 +32,19 @@
   body {
     font-size: 75%;
   }
+  .projects__subheading {
+    font-size: font-size(1.5);
+  }
   .projects__heading-1 {
     font-size: font-size(1.6);
   }
   .projects__tile {
-    @include tile-size(2.5);
+    @include tile-size(3);
   }
   .projects__heading-1 {
     font-size: 1.6rem;
-    top: 10rem;
-    left: 5rem;
+    top: 16rem;
+    left: 6.5rem;
     width: 75%;
   }
 }
