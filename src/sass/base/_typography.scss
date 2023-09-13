@@ -13,7 +13,7 @@ body {
   overflow: hidden;
 
   .tile-heading-span {
-    line-height: 1.4;
+    // line-height: 1.4;
     display: inline;     
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
@@ -22,7 +22,7 @@ body {
       rgba($gradient-green-lightest, .85),
       rgba($gradient-green-darkest, .85)
     );
-
+    // padding: 1.5px 3px;
     letter-spacing: 1px;
     font-weight: map-get($font-weights, "normal" );
   }

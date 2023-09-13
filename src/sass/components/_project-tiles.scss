@@ -9,19 +9,21 @@
 
   &__heading-1 {
     font-weight: 300;
-
     text-align: right;
-
     position: absolute;
     top: 21rem;
     left: 8rem;
     width: 75%;
+    padding: 0.2rem;
+    font-size: font-size(3.5);
+    line-height: 1.4;
+    width: 77%;
   }
 
   &__subtitle {
     position: relative;
     top: -3.9rem;
-    font-size: font-size(2);
+    
     max-width: 80%;
     color: $green-font;
     align-self: center;
@@ -31,25 +33,19 @@
     padding: spacing(3);
   }
 
-  &__heading-span {
+&__heading-span {
     display: block;
     background: linear-gradient(
       to right bottom,
       rgba($gradient-start, 0.85),
       rgba($gradient-end, 0.85)
     );
+
     padding: 0.4rem 1.2rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     font-weight: bold;
-
-    &--1 {
-      // background-image: linear-gradient(
-      //   to right bottom,
-      //   rgba($green-light, 0.85),
-      //   rgba($green-dark, 0.85)
-      // );
-    }
+    
   }
 
   &__tile {
@@ -84,7 +80,8 @@
 
     &__front {
       width: 100%;
-      height: auto;
+      height: 100%;
+
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -112,14 +109,16 @@
       }
     }
 
-    @include respond("large-desktop") {
-      // Add responsive styles here
-    }
+    
 
     &__back {
       transform: rotateY(180deg);
     }
   }
+
+  @include respond("large-desktop") {
+      // Add responsive styles here
+    }
 
   @include respond("desktop") {
     // Add desktop-specific styles here
