@@ -8,8 +8,6 @@
   height: 100%;
   overflow: hidden;
 
-  
-
   &__heading-1 {
     // Corrected position
     font-weight: 300;
@@ -24,28 +22,28 @@
     width: 77%;
   }
 
-  &__subheading{
+  &__subheading {
     text-transform: uppercase;
     font-size: font-size(2);
     max-width: 80%;
-    align-self: center;    
-    flex: 1 1 spacing(13);
-    display:flex;
+    align-self: center;
+    flex: 1 1 15%;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     color: $green-font;
-    padding-bottom: spacing(2);   
+    padding-bottom: spacing(2);
   }
 
-  &__subtitle {    
+  &__subtitle {
     max-width: 80%;
     color: $green-font;
     align-self: center;
     line-height: lh(large);
     font-size: font-size(2);
     text-align: left;
-    padding-bottom: spacing(7);   
-    flex:1;
+    
+    flex: 1 1 31%;
   }
 
   &__tile {
@@ -87,7 +85,7 @@
       justify-content: center;
 
       &--image-1 {
-        flex: 1 0 auto;
+        flex: 0 1 54%;
         border-radius: $border-radius;
         overflow: hidden;
         border-top-left-radius: $border-radius;
@@ -97,7 +95,6 @@
         background-blend-mode: lighten;
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         @include image-styles;
-        height: 29.5rem;
       }
     }
 
@@ -106,8 +103,14 @@
     }
   }
 
+  @include respond("ultrawide") {
+    font-size: 80%;
+    .projects__tile{
+
+      @include tile-size(3.5);
+    }
+  }
   @include respond("large-desktop") {
-    // Add responsive styles here
   }
 
   @include respond("desktop") {
