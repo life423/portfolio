@@ -139,6 +139,7 @@
 
     .projects {
       flex-wrap: wrap;
+      row-gap: spacing(3);
 
       &__tile {
         width: 30rem;
@@ -156,13 +157,21 @@
   }
 
   @include respond("laptop") {
-    // Your styles...
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(
+        4,
+        1fr
+      ); // creates a grid with 4 equal columns
+      gap: 2rem; // adjust as needed
+      justify-items: center; // centers the content of each grid item
+    }
   }
 
   @include respond("chromebook") {
     // Your styles...
   }
-  
+
   @include respond("tab-port") {
     // Your styles...
   }
