@@ -27,7 +27,7 @@
     font-size: 75%;
   }
   .projects__heading-1 {
-    font-size: font-size(2);
+    font-size: font-size(3);
   }
   .projects__tile {
     @include tile-size(3);
@@ -41,10 +41,9 @@
     flex-wrap: wrap;
     row-gap: spacing(3);
     align-content: center;
-    padding: 10%; // adjust this value as needed
-
+    
     &__tile {
-      @include tile-size(2);
+      @include tile-size(3);
     }
 
     &__heading-1 {
@@ -61,8 +60,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center; // centers items on the line
-    align-content: center;
-    gap: 1rem;
+    align-content: space-around;
+    
     &__tile {
       flex: 0 1 33%; // Assumes 2rem is the total gap you want horizontally
       margin: 1rem; // Half of the total gap you want

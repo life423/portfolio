@@ -1,9 +1,9 @@
 .projects {
   perspective: 1000px;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: space-around;
   flex: 1 0 auto;
   height: 100%;
   overflow: hidden;
