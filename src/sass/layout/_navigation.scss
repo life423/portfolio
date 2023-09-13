@@ -44,12 +44,6 @@
     display: none;
     z-index: 10;
     cursor: pointer;
-
-    @include respond("phone") {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
   }
 
   &__icon {
@@ -64,20 +58,6 @@
 
     &--times {
       display: none;
-    }
-
-    @include respond("phone") {
-      color: $gradient-start;
-
-      &--times {
-        transform: scale(1.2) translateY(-1.2px) translateX(-5px);
-        font-size: font-size(6);
-      }
-
-      &--bars {        
-        font-size: font-size(6);
-        transform: translateY(-3.5px);
-      }
     }
   }
 
@@ -105,32 +85,6 @@
       top: 81%; // Position it right below the links
       left: 3%; // Align it to the left
     }
-
-    @include respond("phone") {
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: calc(100vh - 8rem);
-      position: absolute;
-      background-color: $navy-blue;
-      transition: $transition-base;
-      transform: translateY(-100%);
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
-  }
-
-  &.nav-active {
-    @include respond("phone") {
-      .nav__list {
-        transform: translateY(0);
-
-        &::after {
-          content: none;
-        }
-      }
-    }
   }
 
   &__item {
@@ -142,14 +96,6 @@
     &:hover {
       color: $gradient-start;
       transform: scale(1.05);
-    }
-
-    @include respond("laptop") {
-      font-size: font-size(2.5);
-    }
-
-    @include respond("phone") {
-      padding: spacing(3);
     }
   }
 

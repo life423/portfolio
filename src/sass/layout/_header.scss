@@ -1,9 +1,5 @@
 .header {
   background-color: $navy-blue;
   width: 100%;
-  flex-shrink: 0;  
-  
-  @include respond("phone") {
-    overflow: hidden;
-  }
+  flex-shrink: 0;
 }

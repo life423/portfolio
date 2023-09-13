@@ -14,12 +14,7 @@ body {
   height: auto;
   color: $gray-dark;
   background: linear-gradient(to right, $gradient-start, $gradient-end);
-  scrollbar-width: none;
-
-  @include respond("phone") {
-    height: auto;
-    position: static;
-  }
+  scrollbar-width: none;  
 }
 
 .container {
@@ -51,8 +46,3 @@ body {
   background-position: 50% 44%;
 }
 
-@include respond("tab-land") {
-  body {
-    overflow: hidden;
-  }
-}
