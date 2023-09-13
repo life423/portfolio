@@ -3,31 +3,27 @@ body {
 }
 
 .secondary-heading {
-  font-size: font-size(3);
+  font-size: font-size(3.5);
   color: $white;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  position:relative;
-  top: -8rem;
-  left: -2rem;
-  //cut off the part of the element that goes outside the tile
+  position:relative;  
   overflow: hidden;
 
   .tile-heading-span {
     line-height: 1.4;
-    display: inline;
-    padding: 0.2em 0.5em; // Padding around text to give the background some space
+    display: inline;     
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     background: linear-gradient(
       90deg,
       rgba($gradient-green-lightest, .85),
-      rgba($gradient-green-darkest, .58)
+      rgba($gradient-green-darkest, .85)
     );
 
     letter-spacing: 1px;
-    font-weight: 400;
+    font-weight: map-get($font-weights, "normal" );
   }
 }

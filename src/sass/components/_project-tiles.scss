@@ -7,15 +7,15 @@
   flex: 1 0 auto;
   height: 100%;
 
-  &__heading {
-    font-size: 2.8rem;
+  &__heading-1 {
+    
     font-weight: 300;
-    text-transform: uppercase;
+    
     text-align: right;
-    color: $white;
+    
     position: absolute;
-    top: 12rem;
-    right: 2rem;
+    top: 21rem;
+    left: 8rem;
     width: 75%;
   }
 
@@ -27,8 +27,7 @@
     color: $green-font;
     align-self: center;
     line-height: lh(large);
-    font-size: font-size(2.5);
-    flex: 1;
+    font-size: font-size(2.5);    
     text-align: left;
     padding: spacing(3);
   }
@@ -46,12 +45,12 @@
     font-weight: bold;
 
     &--1 {
-      // transform: scaleX(1.05) scaleY(20);
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($green-light, 0.85),
-        rgba($green-dark, 0.85)
-      );
+      
+      // background-image: linear-gradient(
+      //   to right bottom,
+      //   rgba($green-light, 0.85),
+      //   rgba($green-dark, 0.85)
+      // );
     }
   }
 
@@ -117,10 +116,6 @@
         box-decoration-break: clone;
         padding: 0.2rem;
       }
-    }
-
-    @include respond("ultrawide") {
-      @include tile-size(3.5);
     }
 
     @include respond("large-desktop") {
