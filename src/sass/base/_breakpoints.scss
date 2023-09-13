@@ -1,3 +1,4 @@
+
 @include respond("ultrawide") {
   body {
     font-size: 80%;
@@ -18,7 +19,7 @@
   .projects__tile {
     // fix from .projects__title
     @include tile-size(3.5);
-    background-color: red;
+    
   }
 }
 
@@ -27,7 +28,7 @@
     font-size: 75%;
   }
   .projects__heading-1 {
-    font-size: font-size(2.5rem);
+    font-size: font-size(1.6remY);
   }
   .projects__tile {
     @include tile-size(3.5);
