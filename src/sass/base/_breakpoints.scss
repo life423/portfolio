@@ -18,7 +18,7 @@
 @include respond("big-desktop") {
   .projects__tile {
     // fix from .projects__title
-    @include tile-size(3.5);
+    @include tile-size(3);
     
   }
 }
@@ -28,10 +28,10 @@
     font-size: 75%;
   }
   .projects__heading-1 {
-    font-size: font-size(1.6remY);
+    font-size: font-size(1.6);
   }
   .projects__tile {
-    @include tile-size(3.5);
+    @include tile-size(2.5);
   }
 }
 
@@ -44,7 +44,7 @@
     align-content: center;
     
     &__tile {
-      @include tile-size(3);
+      @include tile-size(2);
     }
 
     &__heading-1 {
@@ -61,8 +61,8 @@
     font-size: 60%;
   }
   .projects {
-    flex-wrap: wrap;
-    
+    flex: 0 0 auto;
+    flex-wrap: wrap;    
     justify-content: center;
     align-content: center;
     gap: spacing(6);
