@@ -96,3 +96,9 @@
 @mixin apply-heading($level) {
   font-size: get-heading-size($level);
 }
+
+@mixin flex-properties($justify: center, $align: center, $basis: auto) {
+  justify-content: $justify;
+  align-items: $align;
+  flex-basis: $basis;
+}

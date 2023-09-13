@@ -57,22 +57,14 @@
 
 @include respond("laptop") {
   .projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; // centers items on the line
-    align-content: space-around;
-    
     &__tile {
-      flex: 0 1 33%; // Assumes 2rem is the total gap you want horizontally
-      margin: 1rem; // Half of the total gap you want
-      // Rest of your styles...
+      @include flex-properties(space-around, center, calc(50% - 16px));
+      @include tile-size(3, $tile-min-height);
+
     }
   }
-
-  .nav__item {
-    font-size: font-size(2.5);
-  }
 }
+
 
 @include respond("chromebook") {
   body {
