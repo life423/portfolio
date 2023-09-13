@@ -57,7 +57,11 @@
 }
 
 @include respond("laptop") {
+  body {
+    font-size: 60%;
+  }
   .projects {
+    flex-wrap:wrap;
     &__tile {
       @include flex-properties(space-around, center, calc(50% - 16px));
       height: $tile-min-height;
