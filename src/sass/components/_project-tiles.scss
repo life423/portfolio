@@ -8,16 +8,7 @@
   height: 100%;
   overflow: hidden;
 
-  &__subtitle {    
-    max-width: 80%;
-    color: $green-font;
-    align-self: center;
-    line-height: lh(large);
-    font-size: font-size(2);
-    text-align: left;
-    // padding: spacing(3);
-    padding-bottom: spacing(3);
-  }
+  
 
   &__heading-1 {
     // Corrected position
@@ -37,7 +28,24 @@
     text-transform: uppercase;
     font-size: font-size(2);
     max-width: 80%;
+    align-self: center;    
+    flex: 1 1 spacing(13);
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: $green-font;
+    padding-bottom: spacing(2);   
+  }
+
+  &__subtitle {    
+    max-width: 80%;
+    color: $green-font;
     align-self: center;
+    line-height: lh(large);
+    font-size: font-size(2);
+    text-align: left;
+    padding-bottom: spacing(7);   
+    flex:1;
   }
 
   &__tile {
