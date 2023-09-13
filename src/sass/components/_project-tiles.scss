@@ -32,7 +32,7 @@
     line-height: lh(large);
     font-size: font-size(2.5);
     flex: 1;
-
+    text-align: left;
     padding: spacing(3);
   }
 
@@ -67,8 +67,7 @@
       $gradient-end
     );
     @include tile-size(4);
-    @include margin-padding(2.4, 2.4);
-    border-radius: $border-radius;
+    @include margin-padding(2.4, 2.4);    
     box-shadow: $shadow-light, $shadow-dark;
     display: flex;
     align-items: center;
@@ -76,11 +75,9 @@
     text-align: center;
     transform-style: preserve-3d;
     transition: transform 0.5s ease-in-out;
-    will-change: transform;
-    // This will ensure the flip happens around the center.
+    will-change: transform;    
     transform-origin: center;
-
-    // This will make sure the flip transition is smooth.
+    
     &:hover {
       // Rotate the tile 180 degrees around the Y-axis
       transform: rotateY(180deg);
@@ -111,7 +108,7 @@
           url(../../assets/img/lock.png);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         @include image-styles;
-        height: 29.5rem;
+        
       }
 
       &__heading {
