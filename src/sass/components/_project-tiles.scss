@@ -151,19 +151,7 @@
     }
   }
 
-  @include respond("tab-land") {
-    .projects {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      align-items: center;
-    }
-    .container {
-      max-width: 100%;
-      background-color: red;
-    }
-  }
+ 
 
   @include respond("tablet") {
     gap: spacing(4);

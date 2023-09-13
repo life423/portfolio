@@ -24,10 +24,10 @@
     'phone': 600px,
     'tablet': 768px,
     'tab-port': 900px,
+    'chromebook': 1081px,
     'laptop': 1024px,
     'desktop': 1415px,
     'large-desktop': 1533px,
-    'tab-land': 1085px,
     'big-desktop': 1800px,
     'ultrawide': 1999px,
   );
@@ -36,6 +36,7 @@
     @content;
   }
 }
+
 
 
 // Background Image
