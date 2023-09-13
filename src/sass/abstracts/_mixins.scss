@@ -103,9 +103,3 @@
   flex-basis: $basis;
 }
 
-@mixin tile-size($step, $minHeight: null) {
-  // existing logic
-  @if $minHeight {
-    min-height: $minHeight;
-  }
-}

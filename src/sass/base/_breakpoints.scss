@@ -60,7 +60,7 @@
   .projects {
     &__tile {
       @include flex-properties(space-around, center, calc(50% - 16px));
-      @include tile-size(3, $tile-min-height);
+      height: $tile-min-height;
 
     }
   }
