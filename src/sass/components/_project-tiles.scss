@@ -2,8 +2,8 @@
   perspective: 1000px;
   display: flex;
   flex-flow: wrap;
-  justify-content: center;
-  align-items: space-around;
+  justify-content: center; // this will distribute your items horizontally
+  align-content: space-around; // this will distribute the rows of your items vertically, if there's more than one line
   flex: 1 0 auto;
   height: 100%;
   overflow: hidden;
