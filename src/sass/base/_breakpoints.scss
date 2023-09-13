@@ -27,10 +27,10 @@
     font-size: 75%;
   }
   .projects__heading-1 {
-    font-size: font-size(3);
+    font-size: font-size(2.5rem);
   }
   .projects__tile {
-    @include tile-size(3);
+    @include tile-size(3.5);
   }
 }
 
@@ -48,8 +48,8 @@
 
     &__heading-1 {
       font-size: font-size(2);
-      top: 18rem;
-      left: 6rem;
+      top: 20rem;
+      left: 7rem;
       width: 75%;
     }
   }
