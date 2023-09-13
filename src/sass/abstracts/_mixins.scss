@@ -25,12 +25,14 @@
     'big-desktop': 1800px,
     'large-desktop': 1533px,
     'desktop': 1415px,
-    'laptop': 1081px,
-    'chromebook': 1024px,  // 'chromebook' breakpoint here
+    'laptop': 1311px,
+    'chromebook': 1024px,  
     'tab-port': 900px,
     'tablet': 768px,
     'phone': 600px
   );
+  
+  
 
   @media only screen and (max-width: map-get($breakpoints, $breakpoint)) {
     @content;

@@ -15,7 +15,8 @@
 }
 
 @include respond("big-desktop") {
-  .projects__tile {  // fix from .projects__title
+  .projects__tile {
+    // fix from .projects__title
     @include tile-size(3.5);
     background-color: red;
   }
@@ -33,19 +34,17 @@
   }
 }
 
-@include respond("desktop") {
-  body {
-    font-size: 65%;
-  }
+.desktop {
+  font-size: 65%;
 
   .projects {
     flex-wrap: wrap;
     row-gap: spacing(3);
+    align-content: center;
+    padding: 10%; // adjust this value as needed
 
     &__tile {
-      width: 30rem;
-      height: 48rem;
-      flex: 0 1 calc(35% - 1.5rem);
+      @include tile-size(2);
     }
 
     &__heading-1 {
@@ -63,11 +62,11 @@
     flex-wrap: wrap;
     justify-content: center; // centers items on the line
     align-content: center;
+    gap: 1rem;
     &__tile {
       flex: 0 1 33%; // Assumes 2rem is the total gap you want horizontally
       margin: 1rem; // Half of the total gap you want
       // Rest of your styles...
-      
     }
   }
 
