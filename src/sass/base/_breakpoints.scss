@@ -14,6 +14,13 @@
   }
 }
 
+@include respond("big-desktop") {
+  .projects__tile {  // fix from .projects__title
+    @include tile-size(3.5);
+    background-color: red;
+  }
+}
+
 @include respond("large-desktop") {
   body {
     font-size: 75%;
@@ -52,10 +59,16 @@
 
 @include respond("laptop") {
   .projects {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; // centers items on the line
+    align-content: center;
+    &__tile {
+      flex: 0 1 33%; // Assumes 2rem is the total gap you want horizontally
+      margin: 1rem; // Half of the total gap you want
+      // Rest of your styles...
+      
+    }
   }
 
   .nav__item {
@@ -85,13 +98,12 @@
   .header {
     overflow: hidden;
   }
-  .nav .nav-active {
-    .nav__list {
-      transform: translateY(0);
 
-      &::after {
-        content: none;
-      }
+  .nav.nav-active .nav__list {
+    transform: translateY(0);
+
+    &::after {
+      content: none;
     }
   }
 
