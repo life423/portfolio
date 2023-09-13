@@ -46,7 +46,7 @@
     font-weight: bold;
 
     &--1 {
-      transform: scaleX(1.05) scaleY(20);
+      // transform: scaleX(1.05) scaleY(20);
       background-image: linear-gradient(
         to right bottom,
         rgba($green-light, 0.85),
@@ -117,6 +117,10 @@
         box-decoration-break: clone;
         padding: 0.2rem;
       }
+    }
+
+    @include respond("ultrawide") {
+      @include tile-size(3.5);
     }
 
     @include respond("large-desktop") {
