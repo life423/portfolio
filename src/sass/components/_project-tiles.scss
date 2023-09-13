@@ -109,6 +109,13 @@
 
       @include tile-size(3.5);
     }
+
+    .projects__heading-1 {
+      font-size: font-size(3);
+      top: 18rem;
+      left: 6rem;
+      width: 75%;
+    }
   }
   @include respond("large-desktop") {
   }
