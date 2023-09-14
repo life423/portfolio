@@ -82,8 +82,7 @@
     gap: spacing(6);
     align-content: center;
     &__tile {
-      flex: 0 1 calc(42% - 12.1rem); // Reduced width
-      min-height: calc(50% + -8rem);
+      min-height: project-tile-height(2);
     }
     &__heading-1 {
       font-size: 2.1rem;
@@ -100,8 +99,7 @@
   }
   .projects {
     &__tile {
-      min-height: calc(44% + -4rem);
-      flex: 0 1 calc(42% - 7.1rem);
+      min-height: project-tile-height(2.5);
     }
     &__heading-1 {
       font-size: font-size(2.4);
@@ -121,8 +119,7 @@
     flex-direction: column; // adjust as needed (`row` or `column`)
     flex-wrap: wrap;
     &__tile {
-      min-height: calc(44% + -6rem); // Reduced percentage and subtracted factor
-      flex: 0 1 calc(42% - 8.1rem); // Reduced percentage and subtracted factor
+      min-height: project-tile-height(3);
     }
     &__heading-1 {
       font-size: 1.8rem;
@@ -134,10 +131,81 @@
 }
 
 @include respond("phone") {
+  body {
+    height: auto;
+    position: static;
+  }
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; /* stack cards horizontally */
+  align-items: center;
+  justify-content: center;
+}
+
+.projects__tile {
+  box-sizing: border-box;
+  width: 100%; /* full width of the container */
+  margin: 0; /* no outer spacing */
+  padding: 0; /* no inner spacing */
+  /* add any other styles required */
+}
+
+  .header {
+    overflow: hidden;
+  }
+
+  .nav.nav-active .nav__list {
+    transform: translateY(0);
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .nav__toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav__icon {
+    color: $gradient-start;
+
+    &--times {
+      transform: scale(1.2) translateY(-1.2px) translateX(-5px);
+      font-size: font-size(6);
+    }
+
+    &--bars {
+      font-size: font-size(6);
+      transform: translateY(-3.5px);
+    }
+  }
+
+  .nav__list {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 8rem);
+    position: absolute;
+    background-color: $navy-blue;
+    transition: $transition-base;
+    transform: translateY(-100%);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .nav__item {
+    padding: spacing(3);
+  }
 
   .projects__tile {
-    flex-basis: 100%; // take up full width
+    flex-basis: 80%;
     flex-direction: column;
+    // min-height: 40rem;
     margin: spacing(3) 0;
 
     &:first-child {
