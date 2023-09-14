@@ -30,8 +30,7 @@ body {
   position: relative;
   background-color: $blue-lighter;
   flex-grow: 1;
-  width: 100%;
-  overflow-x: hidden;
+  width: 100%;  
   overflow-y: auto;
   max-height: calc(var(--vh, 1vh) * 100);
   @include flex-align(center, center);
