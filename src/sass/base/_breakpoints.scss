@@ -82,7 +82,7 @@
     gap: spacing(6);
     align-content: center;
     &__tile {
-      flex: 0 1 calc(40% - 12.1rem); // Reduced width
+      flex: 0 1 calc(42% - 12.1rem); // Reduced width
       min-height: calc(50% + -8rem);
     }
     &__heading-1 {
