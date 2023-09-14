@@ -100,8 +100,8 @@
   }
   .projects {
     &__tile {
-      height: 36%; // adjust as needed
-      width: 29.8rem;
+      flex: 0 1 calc(40% - 12.1rem); // Reduced width
+      min-height: calc(50% + -8rem);
     }
     &__heading-1 {
       font-size: font-size(2.4);
@@ -112,12 +112,15 @@
   }
 }
 
-@include respond("tab-port") {
-  // Your styles...
+@include respond("ipad"){
+
 }
 
 @include respond("tablet") {
+
 }
+
+
 
 @include respond("phone") {
   body {
@@ -176,17 +179,18 @@
   }
 
   .projects__tile {
-    flex-basis: 80%;
-    flex-direction: column;
-    min-height: 40rem;
-    margin: spacing(3) 0;
+    //   flex-basis: 80%;
+    //   flex-direction: column;
+    //   // min-height: 40rem;
+    //   margin: spacing(3) 0;
 
-    &:first-child {
-      margin-top: spacing(6);
-    }
+    //   &:first-child {
+    //     margin-top: spacing(6);
+    //   }
 
-    &:last-child {
-      margin-bottom: spacing(6);
-    }
+    //   &:last-child {
+    //     margin-bottom: spacing(6);
+    //   }
+    // }
   }
 }
