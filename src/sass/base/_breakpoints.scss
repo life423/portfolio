@@ -43,13 +43,13 @@
   }
   .projects__heading-1 {
     font-size: 1.6rem;
-    top: 16rem;
-    left: 6.5rem;
+    top: 18rem;
+    left: 8rem;
     width: 75%;
   }
 }
 
-.desktop {
+@include respond("desktop") {
   font-size: 65%;
 
   .projects {
@@ -58,7 +58,7 @@
     align-content: center;
 
     &__tile {
-      @include tile-size(2);
+      @include tile-size(2.5);
     }
 
     &__heading-1 {
@@ -82,7 +82,7 @@
     gap: spacing(6);
     align-content: center;
     &__tile {
-      min-height: project-tile-height(2);
+      @include tile-size(2.5);
     }
     &__heading-1 {
       font-size: 2.1rem;
