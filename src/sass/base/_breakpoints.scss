@@ -100,8 +100,7 @@
   }
   .projects {
     &__tile {
-      flex: 0 1 calc(40% - 12.1rem); // Reduced width
-      min-height: calc(50% + -8rem);
+      min-height: calc(44% + -4rem);
     }
     &__heading-1 {
       font-size: font-size(2.4);
@@ -112,15 +111,11 @@
   }
 }
 
-@include respond("ipad"){
-
+@include respond("ipad") {
 }
 
 @include respond("tablet") {
-
 }
-
-
 
 @include respond("phone") {
   body {
