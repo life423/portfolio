@@ -82,13 +82,13 @@
     gap: spacing(6);
     align-content: center;
     &__tile {
-      flex: 0 1 calc(40% - 4.6rem); // Reduced width
-      min-height: calc(50% + -7rem);
+      flex: 0 1 calc(40% - 12.1rem); // Reduced width
+      min-height: calc(50% + -8rem);
     }
     &__heading-1 {
-      font-size: font-size(2.5);
-      top: 20rem;
-      left: 9rem;
+      font-size: font-size(3);
+      top: 18.5rem;
+      left: 9.1rem;
       width: 75%;
     }
   }
@@ -101,12 +101,12 @@
   .projects {
     &__tile {
       height: 36%; // adjust as needed
-      width: auto;
+      width: 29.8rem;
     }
     &__heading-1 {
-      font-size: font-size(2.5);
-      top: 20rem;
-      left: 7rem;
+      font-size: font-size(2.4);
+      top: 18.6rem;
+      left: 9.1rem;
       width: 75%;
     }
   }
