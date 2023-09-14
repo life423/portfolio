@@ -96,7 +96,7 @@
 
 @include respond("chromebook") {
   body {
-    overflow: hidden;
+    overflow:auto;
   }
   .projects {
     &__tile {
@@ -134,81 +134,10 @@
 }
 
 @include respond("phone") {
-  body {
-    height: auto;
-    position: static;
-  }
-
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row; /* stack cards horizontally */
-  align-items: center;
-  justify-content: center;
-}
-
-.projects__tile {
-  box-sizing: border-box;
-  width: 100%; /* full width of the container */
-  margin: 0; /* no outer spacing */
-  padding: 0; /* no inner spacing */
-  /* add any other styles required */
-}
-
-  .header {
-    overflow: hidden;
-  }
-
-  .nav.nav-active .nav__list {
-    transform: translateY(0);
-
-    &::after {
-      content: none;
-    }
-  }
-
-  .nav__toggler {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nav__icon {
-    color: $gradient-start;
-
-    &--times {
-      transform: scale(1.2) translateY(-1.2px) translateX(-5px);
-      font-size: font-size(6);
-    }
-
-    &--bars {
-      font-size: font-size(6);
-      transform: translateY(-3.5px);
-    }
-  }
-
-  .nav__list {
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: calc(100vh - 8rem);
-    position: absolute;
-    background-color: $navy-blue;
-    transition: $transition-base;
-    transform: translateY(-100%);
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .nav__item {
-    padding: spacing(3);
-  }
 
   .projects__tile {
-    flex-basis: 80%;
+    flex-basis: 100%; // take up full width
     flex-direction: column;
-    // min-height: 40rem;
     margin: spacing(3) 0;
 
     &:first-child {
