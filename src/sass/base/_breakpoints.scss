@@ -139,12 +139,21 @@
     position: static;
   }
 
-  .projects {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-  }
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; /* stack cards horizontally */
+  align-items: center;
+  justify-content: center;
+}
+
+.projects__tile {
+  box-sizing: border-box;
+  width: 100%; /* full width of the container */
+  margin: 0; /* no outer spacing */
+  padding: 0; /* no inner spacing */
+  /* add any other styles required */
+}
 
   .header {
     overflow: hidden;
