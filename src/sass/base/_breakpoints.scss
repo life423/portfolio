@@ -105,10 +105,11 @@
 
 //1332
 @include respond("small-laptop") {
-  .projects{
+  .projects {
     display: grid;
-    grid-template-columns: repeat (2, 1fr);
-  }   
+    grid-template-columns: repeat(2, 1fr);
+    padding: spacing(12);
+  }
   
   .projects__tile {
     width: 100%;
@@ -136,14 +137,11 @@
 
 @include respond("ipad") {
   body {
-    overflow: hidden;
+    overflow: auto;
   }
-  .projects {
-    display: flex;
-    flex-direction: column; // adjust as needed (`row` or `column`)
-    flex-wrap: wrap;
+  .projects {    
     &__tile {
-      min-height: project-tile-height(3);
+      height: project-tile-height(2.25);
     }
     &__heading-1 {
       font-size: 1.8rem;
