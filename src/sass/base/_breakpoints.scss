@@ -16,8 +16,10 @@
 }
 //1800
 @include respond("big-desktop") {
+  body {
+    // font-size: 75%;
+  }
   .projects__tile {
-    // fix from .projects__title
     @include tile-size(4);
   }
 
@@ -87,7 +89,7 @@
     align-content: center;
     &__tile {
       height: 38rem;
-      width:28rem;
+      width: 28rem;
     }
     &__heading-1 {
       font-size: 2.1rem;
@@ -100,7 +102,7 @@
 
 @include respond("chromebook") {
   body {
-    overflow:auto;
+    overflow: auto;
   }
   .projects {
     &__tile {
@@ -142,21 +144,21 @@
     position: static;
   }
 
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row; /* stack cards horizontally */
-  align-items: center;
-  justify-content: center;
-}
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; /* stack cards horizontally */
+    align-items: center;
+    justify-content: center;
+  }
 
-.projects__tile {
-  box-sizing: border-box;
-  width: 100%; /* full width of the container */
-  margin: 0; /* no outer spacing */
-  padding: 0; /* no inner spacing */
-  /* add any other styles required */
-}
+  .projects__tile {
+    box-sizing: border-box;
+    width: 100%; /* full width of the container */
+    margin: 0; /* no outer spacing */
+    padding: 0; /* no inner spacing */
+    /* add any other styles required */
+  }
 
   .header {
     overflow: hidden;
