@@ -208,6 +208,10 @@
     padding: spacing(3);
   }
 
+  .main{
+    overflow: visible;
+  }
+
   .projects{
     display: flex;
     flex-direction: column;
