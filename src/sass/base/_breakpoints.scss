@@ -4,7 +4,7 @@
     font-size: 80%;
   }
   .projects__tile {
-    @include tile-size(4.5);
+    @include tile-size(3.75);
   }
 
   .projects__heading-1 {
@@ -17,10 +17,10 @@
 //1800
 @include respond("big-desktop") {
   body {
-    // font-size: 75%;
+    font-size: 75%;
   }
   .projects__tile {
-    @include tile-size(4);
+    @include tile-size(3.25);
   }
 
   .projects__heading-1 {
@@ -42,7 +42,7 @@
     font-size: font-size(1.6);
   }
   .projects__tile {
-    @include tile-size(3.5);
+    @include tile-size(3);
   }
   .projects__heading-1 {
     font-size: 1.6rem;
@@ -64,7 +64,7 @@
     align-content: center;
 
     &__tile {
-      @include tile-size(3.5);
+      @include tile-size(2.75);
     }
 
     &__heading-1 {
@@ -76,6 +76,9 @@
   }
 }
 
+
+
+//1366
 @include respond("laptop") {
   body {
     font-size: 60%;
@@ -100,6 +103,19 @@
   }
 }
 
+//1332
+@include respond("small-laptop") {
+  .projects{
+    display: grid;
+    grid-template-columns: repeat (2, 1fr);
+  }   
+  
+  .projects__tile {
+    width: 100%;
+  }
+}
+
+//1024
 @include respond("chromebook") {
   body {
     overflow: auto;

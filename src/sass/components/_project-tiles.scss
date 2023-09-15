@@ -57,7 +57,7 @@
       $green-light,
       $gradient-end
     );
-    @include tile-size(4.5);
+    @include tile-size(4);
     @include margin-padding(2.4, 2.4);
     box-shadow: $shadow-light, $shadow-dark;
     display: flex;
