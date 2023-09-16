@@ -59,6 +59,7 @@
   }
 
   .projects {
+    height:100%;
     flex-wrap: wrap;
     row-gap: spacing(3);
     align-content: center;
@@ -213,23 +214,29 @@
     overflow: visible;
   }
 
-  .projects {
-    padding:0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-   
-    overflow-y: auto;
-  }
+.projects {
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
 
-  .projects__tile {
+
+  .projects__tile {   
+  flex-basis: 80vw;
+  max-width: 80vw;
+  box-sizing: border-box;
+    width: 100%; // Ensures that the width doesn't exceed 80% of the viewport
     box-sizing: border-box;
     width: 100%; // full width of the container
     height: 100%;
     flex-basis: 80%;
-    flex-direction: column;     
+    display:flex;
+    flex-direction: column;    
   }
 
   .projects__heading-1 {
