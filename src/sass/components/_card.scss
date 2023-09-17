@@ -1,3 +1,12 @@
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;  // Adjust this to control the space between each card
+  height: 100vh;
+}
+
 .card__tile {
   @include flex-align(center, flex-start);
   flex-direction: column;
@@ -7,10 +16,8 @@
   position: relative;
   margin: spacing(3);
   box-shadow: $shadow-light;
-  // Temporary background color to better visualize the card layout
   background-color: $green-light;
 
-  // Styles for front and back of the card
   &__front,
   &__back {
     @include absolute-center;
@@ -21,24 +28,19 @@
   }
 
   &__front {
-    // Temporary background color to better visualize the front of the card
     background-color: $blue-light;
   }
 
   &__back {
     transform: rotateY(180deg);
-    // Temporary background color to better visualize the back of the card
     background-color: $blue-dark;
   }
 
-  // Flip animation
-  &:hover {
-    &__front {
-      transform: rotateY(180deg);
-    }
+  &:hover &__front {
+    transform: rotateY(180deg);
+  }
 
-    &__back {
-      transform: rotateY(360deg);
-    }
+  &:hover &__back {
+    transform: rotateY(360deg);
   }
 }
