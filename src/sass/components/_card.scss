@@ -1,0 +1,44 @@
+.card__tile {
+  @include flex-align(center, flex-start);
+  flex-direction: column;
+  width: project-tile-width(4);
+  height: project-tile-height(4);
+  perspective: 1500px;
+  position: relative;
+  margin: spacing(3);
+  box-shadow: $shadow-light;
+  // Temporary background color to better visualize the card layout
+  background-color: $green-light;
+
+  // Styles for front and back of the card
+  &__front,
+  &__back {
+    @include absolute-center;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.7s ease-out;
+  }
+
+  &__front {
+    // Temporary background color to better visualize the front of the card
+    background-color: $blue-light;
+  }
+
+  &__back {
+    transform: rotateY(180deg);
+    // Temporary background color to better visualize the back of the card
+    background-color: $blue-dark;
+  }
+
+  // Flip animation
+  &:hover {
+    &__front {
+      transform: rotateY(180deg);
+    }
+
+    &__back {
+      transform: rotateY(360deg);
+    }
+  }
+}
