@@ -28,7 +28,7 @@
     height: 100%;
     backface-visibility: hidden;
     transition: transform 0.7s ease-out;
-    border-radius: &border-radius;
+    border-radius: $border-radius;
   }
 
   &__front {
