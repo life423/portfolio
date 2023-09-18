@@ -6,12 +6,12 @@ $green: #229954;
 $white: #f2f3f4;
 $navy-blue: #34495e;
 $black: #000;
-$orange: #F3941E;
+$orange: #f3941e;
 $background-color: #28b42f;
 $gradient-start: #7ed56f;
 $gradient-end: #66bb6a;
-$gradient-green-lightest: #2BE164;
-$gradient-green-darkest: #03A832;
+$gradient-green-lightest: #2be164;
+$gradient-green-darkest: #03a832;
 
 // Blue variations
 $blue-lighter: lighten($blue, 40%);
@@ -35,11 +35,10 @@ $gradient-green-light: 43, 225, 100, 0.6;
 $gradient-green-dark: 3, 168, 50, 0.6;
 
 //Font Colors
-$green-font:#396a3b;
+$green-font: #396a3b;
 // White
 $white-light: lighten($white, 20%);
 $white-dark: darken($white, 20%);
-
 
 //Github Icon Color
 $github: #181717;
@@ -91,9 +90,9 @@ $font-sizes: (
   1: 1rem,
   1.5: 1.4rem,
   2: 1.6rem,
-  2.5: 2rem, 
+  2.5: 2rem,
   3: 2.4rem,
-  3.5: 2.8rem, 
+  3.5: 2.8rem,
   4: 3.2rem,
   5: 4rem,
   6: 4.8rem,
@@ -115,7 +114,7 @@ $font-weights: (
   bold: 700,
 );
 
-//default width for projects__tile
+//default width for card
 $project-tile-width: 30rem;
 $project-tile-height: 30rem;
 
@@ -139,7 +138,7 @@ $project-tile-widths: (
   4.25: 42.5rem,
   4.5: 45rem,
   4.75: 47.5rem,
-  5: 50rem
+  5: 50rem,
 );
 
 $project-tile-heights: (
@@ -159,22 +158,28 @@ $project-tile-heights: (
   4.25: 59.38rem,
   4.5: 62.88rem,
   4.75: 66.38rem,
-  5: 69.85rem
+  5: 69.85rem,
 );
 
 $tile-min-height: 30rem;
 
 //Shadows
-$shadow-light: 0 1rem 2rem rgba(0, 0, 0, 0.19), 0 0.6rem 0.6rem rgba(0, 0, 0, 0.23);
+$shadow-light: 0 1rem 2rem rgba(0, 0, 0, 0.19),
+  0 0.6rem 0.6rem rgba(0, 0, 0, 0.23);
 
 $shadow-dark: 0 0.6rem 0.6rem rgba(0, 0, 0, 0.23);
 
 //Headings
 $heading-sizes: (
-  "h1": font-size(16),  // equivalent to 16rem or 160px 
-  "h2": font-size(14),  // equivalent to 14rem or 140px
-  "h3": font-size(12),  // equivalent to 12rem or 120px 
-  "h4": font-size(4),   // equivalent to 4rem or 40px
-  "h5": font-size(2),   // equivalent to 2rem or 20px
-  "h6": font-size(1.5)  // equivalent to 1.5rem or 15px
+  "h1": font-size(16),
+  // equivalent to 16rem or 160px
+  "h2": font-size(14),
+  // equivalent to 14rem or 140px
+  "h3": font-size(12),
+  // equivalent to 12rem or 120px
+  "h4": font-size(4),
+  // equivalent to 4rem or 40px
+  "h5": font-size(2),
+  // equivalent to 2rem or 20px
+  "h6": font-size(1.5) // equivalent to 1.5rem or 15px,,
 );

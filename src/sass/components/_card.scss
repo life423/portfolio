@@ -1,0 +1,46 @@
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;  // Adjust this to control the space between each card
+  height: 100vh;
+}
+
+.card__tile {
+  @include flex-align(center, flex-start);
+  flex-direction: column;
+  width: project-tile-width(4);
+  height: project-tile-height(4);
+  perspective: 1500px;
+  position: relative;
+  margin: spacing(3);
+  box-shadow: $shadow-light;
+  background-color: $green-light;
+
+  &__front,
+  &__back {
+    @include absolute-center;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.7s ease-out;
+  }
+
+  &__front {
+    background-color: $blue-light;
+  }
+
+  &__back {
+    transform: rotateY(180deg);
+    background-color: $blue-dark;
+  }
+
+  &:hover &__front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__back {
+    transform: rotateY(360deg);
+  }
+}
