@@ -1,13 +1,12 @@
 .card {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;  // Adjust this to control the space between each card
+  gap: 2rem; // Adjust this to control the space between each card
   height: 100%;
   width: 100%;
   overflow: hidden;
-  border-radius: 4px;
 }
 
 .card__tile {
@@ -19,7 +18,10 @@
   // margin: spacing(3);
   box-shadow: $shadow-light;
   background-color: $green-light;
-
+  border-radius: 4px;
+  &:not(:last-child) {
+    margin-right: spacing(7);
+  }
   &__front,
   &__back {
     @include absolute-center;
