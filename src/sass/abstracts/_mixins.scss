@@ -70,9 +70,17 @@
   list-style: none;
 }
 
+// @mixin card-size($step) {
+//   width: project-tile-width($step);
+//   height: project-tile-height($step);
+// }
+
+
 @mixin card-size($step) {
-  width: project-tile-width($step);
-  height: project-tile-height($step);
+  min-width: project-tile-width($step);
+  min-height: project-tile-height($step);
+  max-width: project-tile-width($step);
+  max-height: project-tile-height($step);
 }
 
 @mixin margin-padding($margin, $padding) {

@@ -1,241 +1,241 @@
-//1900
-@include respond("ultrawide") {
-  body {
-    font-size: 80%;
-  }
-  .card {
-    @include card-size(3.75);
-  }
+// //1900
+// @include respond("ultrawide") {
+//   body {
+//     font-size: 80%;
+//   }
+//   .card {
+//     @include card-size(3.75);
+//   }
 
-  .card__heading-1 {
-    font-size: font-size(3);
-    top: 18rem;
-    left: 6rem;
-    width: 75%;
-  }
-}
-//1800
-@include respond("big-desktop") {
-  body {
-    font-size: 75%;
-  }
-  .card {
-    @include card-size(3.25);
-  }
+//   .card__heading-1 {
+//     font-size: font-size(3);
+//     top: 18rem;
+//     left: 6rem;
+//     width: 75%;
+//   }
+// }
+// //1800
+// @include respond("big-desktop") {
+//   body {
+//     font-size: 75%;
+//   }
+//   .card {
+//     @include card-size(3.25);
+//   }
 
-  .card__heading-1 {
-    font-size: 2rem;
-    top: 16rem;
-    left: 6rem;
-    width: 75%;
-  }
-}
-//1573
-@include respond("large-desktop") {
-  body {
-    font-size: 75%;
-  }
-  .card__subheading {
-    font-size: font-size(1.5);
-  }
-  .card__heading-1 {
-    font-size: font-size(1.6);
-  }
-  .card {
-    @include card-size(3);
-  }
-  .card__heading-1 {
-    font-size: 1.6rem;
-    top: 16rem;
-    left: 7rem;
-    width: 72%;
-  }
-}
-//2 by 2 grid
-//1415
-@include respond("desktop") {
-  body {
-    font-size: 70%;
-  }
+//   .card__heading-1 {
+//     font-size: 2rem;
+//     top: 16rem;
+//     left: 6rem;
+//     width: 75%;
+//   }
+// }
+// //1573
+// @include respond("large-desktop") {
+//   body {
+//     font-size: 75%;
+//   }
+//   .card__subheading {
+//     font-size: font-size(1.5);
+//   }
+//   .card__heading-1 {
+//     font-size: font-size(1.6);
+//   }
+//   .card {
+//     @include card-size(3);
+//   }
+//   .card__heading-1 {
+//     font-size: 1.6rem;
+//     top: 16rem;
+//     left: 7rem;
+//     width: 72%;
+//   }
+// }
+// //2 by 2 grid
+// //1415
+// @include respond("desktop") {
+//   body {
+//     font-size: 70%;
+//   }
 
-  .card {
-    height: 100%;
-    flex-wrap: wrap;
-    row-gap: spacing(3);
-    align-content: center;
+//   .card {
+//     height: 100%;
+//     flex-wrap: wrap;
+//     row-gap: spacing(3);
+//     align-content: center;
 
-    &__tile {
-      @include card-size(2.75);
-    }
+//     &__tile {
+//       @include card-size(2.75);
+//     }
 
-    &__heading-1 {
-      font-size: 1.7rem;
-      top: 15.7rem;
-      left: 6.1rem;
-      width: 75%;
-    }
-  }
-}
+//     &__heading-1 {
+//       font-size: 1.7rem;
+//       top: 15.7rem;
+//       left: 6.1rem;
+//       width: 75%;
+//     }
+//   }
+// }
 
-//1366
-@include respond("laptop") {
-  body {
-    font-size: 60%;
-  }
-  .card {
-    flex: 0 0 auto;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    gap: spacing(6);
-    align-content: center;
-    &__tile {
-      height: 38rem;
-      width: 28rem;
-    }
-    &__heading-1 {
-      font-size: 1.8rem;
-      top: 15rem;
-      left: 6rem;
-      width: 75%;
-    }
-  }
-}
+// //1366
+// @include respond("laptop") {
+//   body {
+//     font-size: 60%;
+//   }
+//   .card {
+//     flex: 0 0 auto;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-content: center;
+//     gap: spacing(6);
+//     align-content: center;
+//     &__tile {
+//       height: 38rem;
+//       width: 28rem;
+//     }
+//     &__heading-1 {
+//       font-size: 1.8rem;
+//       top: 15rem;
+//       left: 6rem;
+//       width: 75%;
+//     }
+//   }
+// }
 
-//1332
-@include respond("small-laptop") {
-  .card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: spacing(12);
-  }
+// //1332
+// @include respond("small-laptop") {
+//   .card {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     padding: spacing(12);
+//   }
 
-  .card {
-    width: 100%;
-  }
-  .tiles {
-    transform-style: flat;
-  }
-}
+//   .card {
+//     width: 100%;
+//   }
+//   .tiles {
+//     transform-style: flat;
+//   }
+// }
 
-//1024
-@include respond("chromebook") {
-  body {
-    overflow: auto;
-  }
-  .card {
-    &__tile {
-      height: project-tile-height(2.5);
-      // width:30rem
-    }
-    &__heading-1 {
-      font-size: font-size(2.4);
-      top: 18.6rem;
-      left: 9.1rem;
-      width: 75%;
-    }
-  }
-}
+// //1024
+// @include respond("chromebook") {
+//   body {
+//     overflow: auto;
+//   }
+//   .card {
+//     &__tile {
+//       height: project-tile-height(2.5);
+//       // width:30rem
+//     }
+//     &__heading-1 {
+//       font-size: font-size(2.4);
+//       top: 18.6rem;
+//       left: 9.1rem;
+//       width: 75%;
+//     }
+//   }
+// }
 
-@include respond("ipad") {
-  body {
-    overflow: auto;
-  }
-  .card {
-    &__tile {
-      height: project-tile-height(2.25);
-    }
-    &__heading-1 {
-      font-size: 1.8rem;
-      top: 18.5rem;
-      left: 6.9rem;
-      width: 75%;
-    }
-  }
-}
+// @include respond("ipad") {
+//   body {
+//     overflow: auto;
+//   }
+//   .card {
+//     &__tile {
+//       height: project-tile-height(2.25);
+//     }
+//     &__heading-1 {
+//       font-size: 1.8rem;
+//       top: 18.5rem;
+//       left: 6.9rem;
+//       width: 75%;
+//     }
+//   }
+// }
 
-@include respond("phone") {
-  body {
-    height: auto;
-    position: static;
-  }
+// @include respond("phone") {
+//   body {
+//     height: auto;
+//     position: static;
+//   }
 
-  .header {
-    overflow: hidden;
-  }
+//   .header {
+//     overflow: hidden;
+//   }
 
-  .nav.nav-active .nav__list {
-    transform: translateY(0);
+//   .nav.nav-active .nav__list {
+//     transform: translateY(0);
 
-    &::after {
-      content: none;
-    }
-  }
+//     &::after {
+//       content: none;
+//     }
+//   }
 
-  .nav__toggler {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+//   .nav__toggler {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
 
-  .nav__icon {
-    color: $gradient-start;
+//   .nav__icon {
+//     color: $gradient-start;
 
-    &--times {
-      transform: scale(1.2) translateY(-1.2px) translateX(-5px);
-      font-size: font-size(6);
-    }
+//     &--times {
+//       transform: scale(1.2) translateY(-1.2px) translateX(-5px);
+//       font-size: font-size(6);
+//     }
 
-    &--bars {
-      font-size: font-size(6);
-      transform: translateY(-3.5px);
-    }
-  }
+//     &--bars {
+//       font-size: font-size(6);
+//       transform: translateY(-3.5px);
+//     }
+//   }
 
-  .nav__list {
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: calc(100vh - 8rem);
-    position: absolute;
-    background-color: $navy-blue;
-    transition: $transition-base;
-    transform: translateY(-100%);
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
+//   .nav__list {
+//     top: 0;
+//     right: 0;
+//     width: 100%;
+//     height: calc(100vh - 8rem);
+//     position: absolute;
+//     background-color: $navy-blue;
+//     transition: $transition-base;
+//     transform: translateY(-100%);
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+//   }
 
-  .nav__item {
-    padding: spacing(3);
-  }
+//   .nav__item {
+//     padding: spacing(3);
+//   }
 
-  .main {
-    overflow: visible;
-  }
+//   .main {
+//     overflow: visible;
+//   }
 
-  .card {
-    padding: spacing(2);
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    overflow-y: auto;
-  }
+//   .card {
+//     padding: spacing(2);
+//     display: flex;
+//     flex-wrap: nowrap;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: center;
+//     flex-wrap: wrap;
+//     overflow-y: auto;
+//   }
 
-  .card {
-    box-sizing: border-box;
-    flex-basis: 80%;
-    display: flex;
-    flex-direction: column;
-  }
+//   .card {
+//     box-sizing: border-box;
+//     flex-basis: 80%;
+//     display: flex;
+//     flex-direction: column;
+//   }
 
-  .card__heading-1 {
-    font-size: 1.8rem;
-    top: 18.5rem;
-    left: 6.9rem;
-    width: 75%;
-  }
-}
+//   .card__heading-1 {
+//     font-size: 1.8rem;
+//     top: 18.5rem;
+//     left: 6.9rem;
+//     width: 75%;
+//   }
+// }
