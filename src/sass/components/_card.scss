@@ -1,20 +1,22 @@
 .card {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;  // Adjust this to control the space between each card
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
 }
 
 .card__tile {
   @include flex-align(center, flex-start);
   flex-direction: column;
-  width: project-tile-width(4);
-  height: project-tile-height(4);
+  @include tile-size(3.5);
   perspective: 1500px;
   position: relative;
-  margin: spacing(3);
+  // margin: spacing(3);
   box-shadow: $shadow-light;
   background-color: $green-light;
 
