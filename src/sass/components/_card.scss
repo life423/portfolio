@@ -14,11 +14,10 @@
   flex-direction: column;
   @include tile-size(3.5);
   perspective: 1500px;
-  position: relative;
-  // margin: spacing(3);
+  position: relative;  
   box-shadow: $shadow-light;
   background-color: $green-light;
-  border-radius: 4px;
+  border-radius: &border-radius;
   &:not(:last-child) {
     margin-right: spacing(7);
   }
@@ -29,6 +28,7 @@
     height: 100%;
     backface-visibility: hidden;
     transition: transform 0.7s ease-out;
+    border-radius: &border-radius;
   }
 
   &__front {
