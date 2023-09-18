@@ -12,9 +12,9 @@
 .card__tile {
   @include flex-align(center, flex-start);
   flex-direction: column;
-  @include tile-size(3.5);
+  @include card-size(3.5);
   perspective: 1500px;
-  position: relative;  
+  position: relative;
   box-shadow: $shadow-light;
   background-color: $green-light;
   border-radius: &border-radius;
