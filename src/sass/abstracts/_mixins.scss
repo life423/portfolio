@@ -71,8 +71,8 @@
 }
 
 @mixin card-size($step) {
-  max-width: project-tile-width($step);
-  max-height: project-tile-height($step);
+  width: project-tile-width($step);
+  height: project-tile-height($step);
 }
 
 @mixin margin-padding($margin, $padding) {
