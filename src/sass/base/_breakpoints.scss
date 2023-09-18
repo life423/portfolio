@@ -4,7 +4,7 @@
     font-size: 80%;
   }
   .card {
-    @include tile-size(3.75);
+    @include card-size(3.75);
   }
 
   .card__heading-1 {
@@ -20,7 +20,7 @@
     font-size: 75%;
   }
   .card {
-    @include tile-size(3.25);
+    @include card-size(3.25);
   }
 
   .card__heading-1 {
@@ -42,7 +42,7 @@
     font-size: font-size(1.6);
   }
   .card {
-    @include tile-size(3);
+    @include card-size(3);
   }
   .card__heading-1 {
     font-size: 1.6rem;
@@ -65,7 +65,7 @@
     align-content: center;
 
     &__tile {
-      @include tile-size(2.75);
+      @include card-size(2.75);
     }
 
     &__heading-1 {
