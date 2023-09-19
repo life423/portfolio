@@ -9,7 +9,8 @@
   overflow: hidden;
 
   &__image {
-    height: 23rem;
+    padding-top: 75%; // 16:9 Aspect Ratio
+    position: relative;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -43,7 +44,7 @@
     perspective: 1500px;
     position: relative;
     box-shadow: $shadow-light;
-   
+
     background-color: darken($green-light, 5%);
     border-radius: $border-radius;
 
