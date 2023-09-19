@@ -24,20 +24,20 @@
     }
   }
 
-//   &__heading--1 {
-//   .card-heading-span--1,
-//   .card-heading-span--2 {
-//     color: $white;
-//     font-size: font-size(2);
-//     padding: 1rem 1.5rem; 
-//     box-decoration-break: clone;    
-//     background: linear-gradient(
-//       90deg,
-//       rgba($gradient-green-lightest, .85),
-//       rgba($gradient-green-darkest, .85)
-//     );
-//   }
-// }
+  //   &__heading--1 {
+  //   .card-heading-span--1,
+  //   .card-heading-span--2 {
+  //     color: $white;
+  //     font-size: font-size(2);
+  //     padding: 1rem 1.5rem;
+  //     box-decoration-break: clone;
+  //     background: linear-gradient(
+  //       90deg,
+  //       rgba($gradient-green-lightest, .85),
+  //       rgba($gradient-green-darkest, .85)
+  //     );
+  //   }
+  // }
 
   &__tile {
     &:nth-child(1) {
@@ -77,6 +77,30 @@
         $green-light,
         $gradient-end
       );
+
+      .card__heading--1 {
+        color: $white;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+
+        .card-heading-span--1,
+        .card-heading-span--2 {
+          display: inline;
+          -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+          background: linear-gradient(
+            90deg,
+            rgba($gradient-green-lightest, 0.85),
+            rgba($gradient-green-darkest, 0.85)
+          );
+          letter-spacing: 1px;
+          font-weight: map-get($font-weights, "normal");
+        }
+      }
     }
 
     &__back {
@@ -93,36 +117,10 @@
     }
   }
 
-  &__subheading{
+  &__subheading {
     color: $green-font;
   }
-  &__text{
+  &__text {
     color: $green-font;
   }
 }
-
-.card__heading--1 {
-  color: $white;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  position:relative;  
-  overflow: hidden;
-   
-  .card-heading-span--1,
-  .card-heading-span--2 {
-    display: inline;     
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    background: linear-gradient(
-      90deg,
-      rgba($gradient-green-lightest, .85),
-      rgba($gradient-green-darkest, .85)
-    );
-    letter-spacing: 1px;
-    font-weight: map-get($font-weights, "normal" );
-  }
-}
-
-
