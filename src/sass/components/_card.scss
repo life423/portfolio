@@ -24,6 +24,21 @@
     }
   }
 
+//   &__heading--1 {
+//   .card-heading-span--1,
+//   .card-heading-span--2 {
+//     color: $white;
+//     font-size: font-size(2);
+//     padding: 1rem 1.5rem; 
+//     box-decoration-break: clone;    
+//     background: linear-gradient(
+//       90deg,
+//       rgba($gradient-green-lightest, .85),
+//       rgba($gradient-green-darkest, .85)
+//     );
+//   }
+// }
+
   &__tile {
     &:nth-child(1) {
       z-index: 4; // Highest for the left-most card
@@ -86,18 +101,28 @@
   }
 }
 
-
-.card__heading-1 {
+.card__heading--1 {
+  color: $white;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position:relative;  
+  overflow: hidden;
+   
   .card-heading-span--1,
   .card-heading-span--2 {
-    color: $white;
-    font-size: font-size(2);
-    padding: 1rem 1.5rem; 
-    box-decoration-break: clone;    
+    display: inline;     
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
     background: linear-gradient(
       90deg,
       rgba($gradient-green-lightest, .85),
       rgba($gradient-green-darkest, .85)
     );
+    letter-spacing: 1px;
+    font-weight: map-get($font-weights, "normal" );
   }
 }
+
+
