@@ -92,11 +92,8 @@
   .card-heading-span--2 {
     color: $white;
     font-size: font-size(2);
-    padding: 1rem 1.5rem; // Adjust as needed
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-    // Add your additional styles here, such as background-color, border, etc.
-    // background-color: $green-font;
+    padding: 1rem 1.5rem; 
+    box-decoration-break: clone;    
     background: linear-gradient(
       90deg,
       rgba($gradient-green-lightest, .85),
