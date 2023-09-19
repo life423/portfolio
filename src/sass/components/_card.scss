@@ -16,8 +16,8 @@
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    background-blend-mode: screen;
     &--1 {
+      background-blend-mode: screen;
       background-color: rgba($gradient-start, 0.1);
       background-image: url(../../assets/img/lock.png);
     }
@@ -43,7 +43,8 @@
     perspective: 1500px;
     position: relative;
     box-shadow: $shadow-light;
-    background-color: $green-light;
+    // background-color: lighten($green-light, 10%);
+    background-color: darken($green-light, 5%);
     border-radius: $border-radius;
 
     &__front,
@@ -56,18 +57,17 @@
       border-radius: $border-radius;
     }
 
-    &__front {    
-
-       background-image: linear-gradient(
-      to bottom right,
-      $green-light,
-      $gradient-end
-    );
+    &__front {
+      background-image: linear-gradient(
+        to bottom right,
+        $green-light,
+        $gradient-end
+      );
     }
 
     &__back {
       transform: rotateY(180deg);
-      background-color: $blue-dark;
+      background-color: darken($gradient-end, 5%);
     }
 
     &:hover &__front {
