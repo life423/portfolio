@@ -37,14 +37,12 @@
     &:nth-child(4) {
       z-index: 1; // Lowest for the right-most card
     }
-
     @include flex-align(center, flex-start);
     flex-direction: column;
     @include card-size(3.5);
     perspective: 1500px;
     position: relative;
     box-shadow: $shadow-light;
-
     background-color: darken($green-light, 5%);
     border-radius: $border-radius;
 
@@ -78,5 +76,31 @@
     &:hover &__back {
       transform: rotateY(360deg);
     }
+  }
+
+  &__subheading{
+    color: $green-font;
+  }
+  &__text{
+    color: $green-font;
+  }
+}
+
+
+.card__heading-1 {
+  .card-heading-span--1,
+  .card-heading-span--2 {
+    color: $white;
+    font-size: font-size(2);
+    padding: 1rem 1.5rem; // Adjust as needed
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    // Add your additional styles here, such as background-color, border, etc.
+    // background-color: $green-font;
+    background: linear-gradient(
+      90deg,
+      rgba($gradient-green-lightest, .85),
+      rgba($gradient-green-darkest, .85)
+    );
   }
 }
