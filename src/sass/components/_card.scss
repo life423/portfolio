@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: spacing(9); // Adjust this to control the space between each card
+  gap: spacing(9);
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -18,57 +18,64 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     background-blend-mode: screen;
     &--1 {
+      background-color: rgba($gradient-start, 0.1);
       background-image: url(../../assets/img/lock.png);
     }
   }
-}
 
-.card__tile {
-  &:nth-child(1) {
-    z-index: 4; // Highest for the left-most card
-  }
-  &:nth-child(2) {
-    z-index: 3;
-  }
-  &:nth-child(3) {
-    z-index: 2;
-  }
-  &:nth-child(4) {
-    z-index: 1; // Lowest for the right-most card
-  }
-  @include flex-align(center, flex-start);
-  flex-direction: column;
-  @include card-size(3.5);
-  perspective: 1500px;
-  position: relative;
-  box-shadow: $shadow-light;
-  background-color: $green-light;
-  border-radius: $border-radius;
+  &__tile {
+    &:nth-child(1) {
+      z-index: 4; // Highest for the left-most card
+    }
+    &:nth-child(2) {
+      z-index: 3;
+    }
+    &:nth-child(3) {
+      z-index: 2;
+    }
+    &:nth-child(4) {
+      z-index: 1; // Lowest for the right-most card
+    }
 
-  &__front,
-  &__back {
-    @include absolute-center;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    transition: transform 0.7s ease-out;
+    @include flex-align(center, flex-start);
+    flex-direction: column;
+    @include card-size(3.5);
+    perspective: 1500px;
+    position: relative;
+    box-shadow: $shadow-light;
+    background-color: $green-light;
     border-radius: $border-radius;
-  }
 
-  &__front {
-    background-color: $blue-light;
-  }
+    &__front,
+    &__back {
+      @include absolute-center;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      transition: transform 0.7s ease-out;
+      border-radius: $border-radius;
+    }
 
-  &__back {
-    transform: rotateY(180deg);
-    background-color: $blue-dark;
-  }
+    &__front {    
 
-  &:hover &__front {
-    transform: rotateY(180deg);
-  }
+       background-image: linear-gradient(
+      to bottom right,
+      $green-light,
+      $gradient-end
+    );
+    }
 
-  &:hover &__back {
-    transform: rotateY(360deg);
+    &__back {
+      transform: rotateY(180deg);
+      background-color: $blue-dark;
+    }
+
+    &:hover &__front {
+      transform: rotateY(180deg);
+    }
+
+    &:hover &__back {
+      transform: rotateY(360deg);
+    }
   }
 }
