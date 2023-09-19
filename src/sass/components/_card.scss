@@ -7,6 +7,20 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
+
+  &__image {
+    height: 23rem;  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+  &--1{
+    background-image: url(../../assets/img/lock.png);
+  }
+}
 }
 
 .card__tile {
@@ -30,6 +44,7 @@
   box-shadow: $shadow-light;
   background-color: $green-light;
   border-radius: $border-radius;
+
   &__front,
   &__back {
     @include absolute-center;
@@ -57,3 +72,5 @@
     transform: rotateY(360deg);
   }
 }
+
+
