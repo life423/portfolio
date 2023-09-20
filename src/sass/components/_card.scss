@@ -48,12 +48,12 @@
       box-decoration-break: clone;
       background: linear-gradient(
         90deg,
-        rgba($gradient-green-lightest, 0.85),
-        rgba($gradient-green-darkest, 0.85)
+        rgba($gradient-green-lightest, 0.75),
+        rgba($gradient-green-darkest, 0.75)
       );
       letter-spacing: 1px;
       font-weight: map-get($font-weights, "normal");
-      padding: 0.2rem 0.4rem;
+      padding: 0.2rem 0.6rem;
       letter-spacing: 0.4px;
     }
   }
@@ -86,6 +86,7 @@
     &:nth-child(4) {
       z-index: 1; // Lowest for the right-most card
     }
+
     @include flex-align(center, flex-start);
     flex-direction: column;
     @include card-size(3.5);
