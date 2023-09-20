@@ -25,7 +25,7 @@
       background-image: url(../../assets/img/lock.png);
     }
   }
-  
+
   &__heading {
     &--1 {
       color: $white;
@@ -37,9 +37,9 @@
       overflow: hidden;
 
       position: absolute;
-      top: 16vh; 
-      right: 1vw; 
-      font-size: 0.9vw; 
+      top: 16vh;
+      right: 1vw;
+      font-size: 0.9vw;
     }
     &-span--1,
     &-span--2 {
@@ -58,14 +58,13 @@
     }
   }
 
-  &__subheading{
-    
-    &--1{
-      
+  &__subheading {
+    display: flex;
+    flex-flow: column nowrap;
+    &--1 {
     }
 
-    &--2{
-
+    &--2 {
     }
   }
 
@@ -81,7 +80,7 @@
     position: absolute;
     top: 15.1vh; // Adjust this value as needed
     right: 1vw; // Adjust this value as needed
-    font-size: 2rem; 
+    font-size: 2rem;
   }
 
   &__tile {
@@ -139,10 +138,11 @@
     }
   }
 
-  &__subheading {
-    color: $green-font;
-  }
+  
+
+  &__subheading,
   &__text {
     color: $green-font;
+    margin: 0 10%;
   }
 }
