@@ -8,6 +8,8 @@
   width: 100%;
   overflow: hidden;
 
+  position: relative;
+
   &__image {
     padding-top: 75%; // 16:9 Aspect Ratio
     position: relative;
@@ -23,7 +25,37 @@
       background-image: url(../../assets/img/lock.png);
     }
   }
+  &__heading {
+    &--1 {
+      color: $white;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: relative;
+      overflow: hidden;
 
+      position: absolute;
+      top: 16vh; // Adjust this value as needed
+      right: 1vw; // Adjust this value as needed
+      font-size: 0.9vw; // Scale font size with viewport width
+    }
+    &-span--1,
+    &-span--2 {
+      display: inline;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      background: linear-gradient(
+        90deg,
+        rgba($gradient-green-lightest, 0.85),
+        rgba($gradient-green-darkest, 0.85)
+      );
+      letter-spacing: 1px;
+      font-weight: map-get($font-weights, "normal");
+      padding: 0.2rem 0.4rem;
+      letter-spacing: 0.4px;
+    }
+  }
   &__heading--1 {
     color: $white;
     text-transform: uppercase;
@@ -32,21 +64,28 @@
     align-items: flex-end;
     position: relative;
     overflow: hidden;
+
+    position: absolute;
+    top: 16vh; // Adjust this value as needed
+    right: 1vw; // Adjust this value as needed
+    font-size: 2.4rem; // Scale font size with viewport width
   }
 
-  &-heading-span--1,
-  &-heading-span--2 {
-    display: inline;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    background: linear-gradient(
-      90deg,
-      rgba($gradient-green-lightest, 0.85),
-      rgba($gradient-green-darkest, 0.85)
-    );
-    letter-spacing: 1px;
-    font-weight: map-get($font-weights, "normal");
-  }
+  // &__heading-span--1,
+  // &__heading-span--2 {
+  //   display: inline;
+  //   -webkit-box-decoration-break: clone;
+  //   box-decoration-break: clone;
+  //   background: linear-gradient(
+  //     90deg,
+  //     rgba($gradient-green-lightest, 0.85),
+  //     rgba($gradient-green-darkest, 0.85)
+  //   );
+  //   letter-spacing: 1px;
+  //   font-weight: map-get($font-weights, "normal");
+  //   padding: 0.2rem 0.4rem;
+  //   letter-spacing: 0.4px;
+  // }
 
   &__tile {
     &:nth-child(1) {
