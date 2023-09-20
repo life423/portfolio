@@ -36,9 +36,9 @@
       overflow: hidden;
 
       position: absolute;
-      top: 16vh; // Adjust this value as needed
-      right: 1vw; // Adjust this value as needed
-      font-size: 0.9vw; // Scale font size with viewport width
+      top: 16vh; 
+      right: 1vw; 
+      font-size: 0.9vw; 
     }
     &-span--1,
     &-span--2 {
@@ -68,24 +68,8 @@
     position: absolute;
     top: 16vh; // Adjust this value as needed
     right: 1vw; // Adjust this value as needed
-    font-size: 2.4rem; // Scale font size with viewport width
+    font-size: 2rem; // Scale font size with viewport width
   }
-
-  // &__heading-span--1,
-  // &__heading-span--2 {
-  //   display: inline;
-  //   -webkit-box-decoration-break: clone;
-  //   box-decoration-break: clone;
-  //   background: linear-gradient(
-  //     90deg,
-  //     rgba($gradient-green-lightest, 0.85),
-  //     rgba($gradient-green-darkest, 0.85)
-  //   );
-  //   letter-spacing: 1px;
-  //   font-weight: map-get($font-weights, "normal");
-  //   padding: 0.2rem 0.4rem;
-  //   letter-spacing: 0.4px;
-  // }
 
   &__tile {
     &:nth-child(1) {
