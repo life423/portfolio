@@ -6,12 +6,6 @@
   flex-direction: $direction;
 }
 
-@mixin flex-align($align-items: center, $justify-content: center) {
-  display: flex;
-  align-items: $align-items;
-  justify-content: $justify-content;
-}
-
 // Mixins
 @mixin responsive-container($max-width: 1440px) {
   width: 100%;
@@ -70,10 +64,7 @@
   list-style: none;
 }
 
-// @mixin card-size($step) {
-//   width: project-tile-width($step);
-//   height: project-tile-height($step);
-// }
+
 
 
 @mixin card-size($step) {

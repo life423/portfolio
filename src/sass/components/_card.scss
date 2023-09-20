@@ -6,7 +6,6 @@
   gap: spacing(9);
   height: 100%;
   width: 100%;
-  overflow: hidden;
 
   position: relative;
 
@@ -31,17 +30,15 @@
   &__heading {
     &--1 {
       color: $white;
-      text-transform: uppercase;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      position: relative;
-      overflow: hidden;
-
-      position: absolute;
-      top: 16vh;
-      right: 1vw;
-      font-size: 0.9vw;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;   // position is mentioned twice in your original code, keep only one
+    top: 15.1vh;
+    right: 1vw;
+    font-size: 2rem;
+    overflow: hidden;
     }
 
     &-span--1,
@@ -61,20 +58,20 @@
     }
   }
 
-  &__heading--1 {
-    color: $white;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: relative;
-    overflow: hidden;
+  // &__heading--1 {
+  //   color: $white;
+  //   text-transform: uppercase;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: flex-end;
+  //   position: relative;
+  //   overflow: hidden;
 
-    position: absolute;
-    top: 15.1vh; // Adjust this value as needed
-    right: 1vw; // Adjust this value as needed
-    font-size: 2rem;
-  }
+  //   position: absolute;
+  //   top: 15.1vh; // Adjust this value as needed
+  //   right: 1vw; // Adjust this value as needed
+  //   font-size: 2rem;
+  // }
 
   &__tile {
     &:nth-child(1) {
@@ -90,8 +87,10 @@
       z-index: 1; // Lowest for the right-most card
     }
 
-    @include flex-align(center, flex-start);
+    align-items: center;
+    justify-content: flex-start;
     flex-direction: column;
+    
     @include card-size(3.5);
     perspective: 1500px;
     position: relative;
