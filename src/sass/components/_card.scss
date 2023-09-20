@@ -6,7 +6,6 @@
   gap: spacing(9);
   height: 100%;
   width: 100%;
-  overflow: hidden;
 
   position: relative;
 
@@ -19,11 +18,22 @@
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
     &--1 {
       background-blend-mode: screen;
       background-color: rgba($gradient-start, 0.1);
       background-image: url(../../assets/img/lock.png);
     }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex:1;
+    margin-top: -3.2rem;
+    
   }
 
   &__heading {
@@ -33,14 +43,13 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      position: relative;
-      overflow: hidden;
-
       position: absolute;
-      top: 16vh;
+      top: 15.1vh;
       right: 1vw;
-      font-size: 0.9vw;
+      font-size: 2rem;
+      overflow: hidden;
     }
+
     &-span--1,
     &-span--2 {
       display: inline;
@@ -58,31 +67,6 @@
     }
   }
 
-  &__subheading {
-    display: flex;
-    flex-flow: column nowrap;
-    &--1 {
-    }
-
-    &--2 {
-    }
-  }
-
-  &__heading--1 {
-    color: $white;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: relative;
-    overflow: hidden;
-
-    position: absolute;
-    top: 15.1vh; // Adjust this value as needed
-    right: 1vw; // Adjust this value as needed
-    font-size: 2rem;
-  }
-
   &__tile {
     &:nth-child(1) {
       z-index: 4; // Highest for the left-most card
@@ -97,8 +81,10 @@
       z-index: 1; // Lowest for the right-most card
     }
 
-    @include flex-align(center, flex-start);
+    align-items: center;
+    justify-content: flex-start;
     flex-direction: column;
+
     @include card-size(3.5);
     perspective: 1500px;
     position: relative;
@@ -122,6 +108,8 @@
         $green-light,
         $gradient-end
       );
+      display: flex;
+      flex-direction: column;      
     }
 
     &__back {
@@ -136,11 +124,29 @@
     &:hover &__back {
       transform: rotateY(360deg);
     }
-  }  
+  }
 
   &__subheading,
   &__text {
     color: $green-font;
     margin: 0 10%;
+    line-height: lh(large);
+  }
+
+  &__text {
+    font-size: font-size(2);
+    line-height: lh(large);
+  }
+
+  // &__subheading{
+  //   font-size: font-size(1.5);
+  // }
+
+  &__subheading {
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: font-size(2);
+    line-height: lh(heading);
+    margin-bottom: spacing(2);
   }
 }
