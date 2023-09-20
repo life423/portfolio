@@ -19,6 +19,8 @@
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    margin-bottom: spacing(5);
+
     &--1 {
       background-blend-mode: screen;
       background-color: rgba($gradient-start, 0.1);
@@ -41,6 +43,7 @@
       right: 1vw;
       font-size: 0.9vw;
     }
+
     &-span--1,
     &-span--2 {
       display: inline;
@@ -55,16 +58,6 @@
       font-weight: map-get($font-weights, "normal");
       padding: 0.2rem 0.6rem;
       letter-spacing: 0.4px;
-    }
-  }
-
-  &__subheading {
-    display: flex;
-    flex-flow: column nowrap;
-    &--1 {
-    }
-
-    &--2 {
     }
   }
 
@@ -136,11 +129,31 @@
     &:hover &__back {
       transform: rotateY(360deg);
     }
-  }  
+  }
 
   &__subheading,
   &__text {
     color: $green-font;
     margin: 0 10%;
+    line-height: lh(large);
+  }
+
+  &__text {
+    font-size: font-size(1.5);
+    line-height: 1.5;
+  }
+
+  &__subheading {
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: font-size(2);
+    line-height: lh(heading);
+    margin-bottom: spacing(2);
+
+    &--1 {
+    }
+
+    &--2 {
+    }
   }
 }
