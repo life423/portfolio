@@ -31,9 +31,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    flex:1;
+    flex: 1;
     margin-top: -3.2rem;
-    
   }
 
   &__heading {
@@ -81,6 +80,8 @@
       z-index: 1; // Lowest for the right-most card
     }
 
+    animation: bob 3s infinite;
+
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
@@ -109,7 +110,8 @@
         $gradient-end
       );
       display: flex;
-      flex-direction: column;      
+      flex-direction: column;
+      overflow: hidden;
     }
 
     &__back {
