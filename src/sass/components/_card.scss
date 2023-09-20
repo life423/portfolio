@@ -18,7 +18,6 @@
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    
 
     &--1 {
       background-blend-mode: screen;
@@ -31,6 +30,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+    flex:1;
+    margin-top: -3.2rem;
+    
   }
 
   &__heading {
@@ -105,6 +108,8 @@
         $green-light,
         $gradient-end
       );
+      display: flex;
+      flex-direction: column;      
     }
 
     &__back {
@@ -129,17 +134,19 @@
   }
 
   &__text {
-    font-size: font-size(1.5);
-    line-height: 1.5;
+    font-size: font-size(2);
+    line-height: lh(large);
   }
+
+  // &__subheading{
+  //   font-size: font-size(1.5);
+  // }
 
   &__subheading {
     display: flex;
     flex-flow: column nowrap;
     font-size: font-size(2);
     line-height: lh(heading);
-    
-
-   
+    margin-bottom: spacing(2);
   }
 }
