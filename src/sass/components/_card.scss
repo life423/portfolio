@@ -18,7 +18,7 @@
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    margin-bottom: spacing(5);
+    
 
     &--1 {
       background-blend-mode: screen;
@@ -27,18 +27,24 @@
     }
   }
 
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &__heading {
     &--1 {
       color: $white;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: absolute;   // position is mentioned twice in your original code, keep only one
-    top: 15.1vh;
-    right: 1vw;
-    font-size: 2rem;
-    overflow: hidden;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: absolute;
+      top: 15.1vh;
+      right: 1vw;
+      font-size: 2rem;
+      overflow: hidden;
     }
 
     &-span--1,
@@ -58,21 +64,6 @@
     }
   }
 
-  // &__heading--1 {
-  //   color: $white;
-  //   text-transform: uppercase;
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: flex-end;
-  //   position: relative;
-  //   overflow: hidden;
-
-  //   position: absolute;
-  //   top: 15.1vh; // Adjust this value as needed
-  //   right: 1vw; // Adjust this value as needed
-  //   font-size: 2rem;
-  // }
-
   &__tile {
     &:nth-child(1) {
       z-index: 4; // Highest for the left-most card
@@ -90,7 +81,7 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    
+
     @include card-size(3.5);
     perspective: 1500px;
     position: relative;
@@ -147,12 +138,8 @@
     flex-flow: column nowrap;
     font-size: font-size(2);
     line-height: lh(heading);
-    margin-bottom: spacing(2);
+    
 
-    &--1 {
-    }
-
-    &--2 {
-    }
+   
   }
 }
