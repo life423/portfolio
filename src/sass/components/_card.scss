@@ -67,6 +67,7 @@
   }
 
   &__tile {
+
     &:nth-child(1) {
       z-index: 4; // Highest for the left-most card
     }
@@ -80,28 +81,18 @@
       z-index: 1; // Lowest for the right-most card
     }
 
-    &__qr-container {
-      width: 80%;
-      max-width: 200px; /* adjust as needed */
-
-      .qr-code {
-        width: 100%;
-        height: auto; /* maintain aspect ratio */
-      }
-    }
-
+    
     animation: bob 3s infinite;
-
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-
     @include card-size(3.5);
     perspective: 1500px;
     position: relative;
     box-shadow: $shadow-light;
     background-color: darken($green-light, 5%);
     border-radius: $border-radius;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    height: 60%;
 
     &__front,
     &__back {
@@ -157,4 +148,15 @@
     line-height: lh(heading);
     margin-bottom: spacing(2);
   }
+}
+
+
+.card__qr-container{
+  width: 40%;
+  margin-top: spacing(4);
+}
+
+.card__tile__qr-code{
+  width:100%;
+  height:auto;
 }
