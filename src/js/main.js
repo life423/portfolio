@@ -105,3 +105,6 @@ window.addEventListener('orientationchange', () => {
 
 
 createFaviconFromH1();
+
+
+
