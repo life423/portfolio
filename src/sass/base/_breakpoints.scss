@@ -14,22 +14,20 @@
 //     width: 75%;
 //   }
 // }
-// //1800
-// @include respond("big-desktop") {
-//   body {
-//     font-size: 75%;
-//   }
-//   .card {
-//     @include card-size(3.25);
-//   }
+//1747
+@include respond("big-desktop") {
+  html {
+    font-size: 58.5%;
+  }
+  
+}
 
-//   .card__heading-1 {
-//     font-size: 2rem;
-//     top: 16rem;
-//     left: 6rem;
-//     width: 75%;
-//   }
-// }
+@include respond("large-desktop") {
+  html {
+    font-size: 58.5%;
+  }
+  
+}
 // //1573
 // @include respond("large-desktop") {
 //   body {
