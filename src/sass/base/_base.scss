@@ -12,7 +12,8 @@ body {
   height: auto;
   color: $gray-dark;
   background: linear-gradient(to right, $gradient-start, $gradient-end);
-  scrollbar-width: none;  
+  scrollbar-width: none;
+  overflow: hidden;  
 }
 
 .container {
@@ -29,7 +30,7 @@ body {
   background-color: $blue-lighter;
   flex-grow: 1;
   width: 100%;  
-  overflow-y: auto;
+  
   @include flex-align(center, center);
   transition: all $transition-duration ease-in-out;
   background: linear-gradient(
@@ -40,5 +41,6 @@ body {
     url("../../assets/img/life-background.png");
   background-size: cover;
   background-position: 50% 44%;
+  
 }
 
