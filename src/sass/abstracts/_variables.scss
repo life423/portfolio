@@ -35,7 +35,7 @@ $gradient-green-light: 43, 225, 100, 0.6;
 $gradient-green-dark: 3, 168, 50, 0.6;
 
 //Font Colors
-$green-font: #274C28;
+$green-font: #274c28;
 // White
 $white-light: lighten($white, 20%);
 $white-dark: darken($white, 20%);
@@ -114,7 +114,7 @@ $font-weights: (
   bold: 700,
 );
 
-//default width for card
+//default width for cards
 $project-tile-width: 30rem;
 $project-tile-height: 30rem;
 
@@ -182,5 +182,5 @@ $heading-sizes: (
   // equivalent to 4rem or 40px
   "h5": font-size(2),
   // equivalent to 2rem or 20px
-  "h6": font-size(1.5) // equivalent to 1.5rem or 15px,,
+  "h6": font-size(1.5) // equivalent to 1.5rem or 15px,,,
 );

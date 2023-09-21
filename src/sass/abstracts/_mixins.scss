@@ -70,10 +70,7 @@
   list-style: none;
 }
 
-
-
-
-@mixin card-size($step) {
+@mixin cards-size($step) {
   min-width: project-tile-width($step);
   min-height: project-tile-height($step);
   max-width: project-tile-width($step);

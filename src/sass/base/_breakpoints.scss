@@ -16,15 +16,15 @@
   }
 
   @include respond("desktop") {
-    .card {
+    .cards {
       display: flex; /* Ensure the parent is a flex container */
       flex-wrap: wrap; /* Enable wrapping of items */
     }
-    .card__tile {
+    .cards__tile {
       flex-basis: calc(
         50% - 2rem
-      ); /* Each card takes up half of the container width, minus margin */
-      margin: 1rem; /* Add some even margin around cards */
+      ); /* Each cards takes up half of the container width, minus margin */
+      margin: 1rem; /* Add some even margin around cardss */
     }
   }
 }
@@ -34,15 +34,15 @@
     font-size: 52%; // Reduced by approx. 6%
   }
 
-  // New code to switch card layout to 2x2 grid
-  .card {
-    flex-wrap: wrap; // Allows cards to wrap to the next line
+  // New code to switch cards layout to 2x2 grid
+  .cards {
+    flex-wrap: wrap; // Allows cardss to wrap to the next line
 
-    .card__tile {
+    .cards__tile {
       flex-basis: calc(
         50% - 20px
-      ); // Each card takes up 50% of the container width, minus a small margin
-      margin: 10px; // Add some margin to separate the cards
+      ); // Each cards takes up 50% of the container width, minus a small margin
+      margin: 10px; // Add some margin to separate the cardss
     }
   }
 }
@@ -113,7 +113,7 @@
 //     overflow: visible;
 //   }
 
-//   .card {
+//   .cards {
 //     padding: spacing(2);
 //     display: flex;
 //     flex-wrap: nowrap;
@@ -124,14 +124,14 @@
 //     overflow-y: auto;
 //   }
 
-//   .card {
+//   .cards {
 //     box-sizing: border-box;
 //     flex-basis: 80%;
 //     display: flex;
 //     flex-direction: column;
 //   }
 
-//   .card__heading-1 {
+//   .cards__heading-1 {
 //     font-size: 1.8rem;
 //     top: 18.5rem;
 //     left: 6.9rem;
