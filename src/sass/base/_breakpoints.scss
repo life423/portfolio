@@ -1,156 +1,45 @@
-// //1900
-// @include respond("ultrawide") {
-//   body {
-//     font-size: 80%;
-//   }
-//   .card {
-//     @include card-size(3.75);
-//   }
 
-//   .card__heading-1 {
-//     font-size: font-size(3);
-//     top: 18rem;
-//     left: 6rem;
-//     width: 75%;
-//   }
-// }
-//1747
 @include respond("big-desktop") {
   html {
     font-size: 58.5%;
   }
-  
 }
 
 @include respond("large-desktop") {
   html {
-    font-size: 58.5%;
+    font-size: 54.8%;
   }
-  
 }
-// //1573
-// @include respond("large-desktop") {
-//   body {
-//     font-size: 75%;
-//   }
-//   .card__subheading {
-//     font-size: font-size(1.5);
-//   }
-//   .card__heading-1 {
-//     font-size: font-size(1.6);
-//   }
-//   .card {
-//     @include card-size(3);
-//   }
-//   .card__heading-1 {
-//     font-size: 1.6rem;
-//     top: 16rem;
-//     left: 7rem;
-//     width: 72%;
-//   }
-// }
-// //2 by 2 grid
-// //1415
-// @include respond("desktop") {
-//   body {
-//     font-size: 70%;
-//   }
 
-//   .card {
-//     height: 100%;
-//     flex-wrap: wrap;
-//     row-gap: spacing(3);
-//     align-content: center;
+@include respond("desktop") {
+  html {
+    font-size: 55%; // Reduced by approx. 6%
+  }
+}
 
-//     &__tile {
-//       @include card-size(2.75);
-//     }
+@include respond("laptop") {
+  html {
+    font-size: 52%; // Reduced by approx. 6%
+  }
 
-//     &__heading-1 {
-//       font-size: 1.7rem;
-//       top: 15.7rem;
-//       left: 6.1rem;
-//       width: 75%;
-//     }
-//   }
-// }
+  // New code to switch card layout to 2x2 grid
+  .card {
+    flex-wrap: wrap; // Allows cards to wrap to the next line
 
-// //1366
-// @include respond("laptop") {
-//   body {
-//     font-size: 60%;
-//   }
-//   .card {
-//     flex: 0 0 auto;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//     align-content: center;
-//     gap: spacing(6);
-//     align-content: center;
-//     &__tile {
-//       height: 38rem;
-//       width: 28rem;
-//     }
-//     &__heading-1 {
-//       font-size: 1.8rem;
-//       top: 15rem;
-//       left: 6rem;
-//       width: 75%;
-//     }
-//   }
-// }
+    .card__tile {
+      flex-basis: calc(50% - 20px); // Each card takes up 50% of the container width, minus a small margin
+      margin: 10px; // Add some margin to separate the cards
+    }
+  }
+}
 
-// //1332
-// @include respond("small-laptop") {
-//   .card {
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     padding: spacing(12);
-//   }
+@include respond("small-laptop") {
+  html {
+    font-size: 49%; // Reduced by approx. 6%
+  }
+}
 
-//   .card {
-//     width: 100%;
-//   }
-//   .tiles {
-//     transform-style: flat;
-//   }
-// }
 
-// //1024
-// @include respond("chromebook") {
-//   body {
-//     overflow: auto;
-//   }
-//   .card {
-//     &__tile {
-//       height: project-tile-height(2.5);
-//       // width:30rem
-//     }
-//     &__heading-1 {
-//       font-size: font-size(2.4);
-//       top: 18.6rem;
-//       left: 9.1rem;
-//       width: 75%;
-//     }
-//   }
-// }
-
-// @include respond("ipad") {
-//   body {
-//     overflow: auto;
-//   }
-//   .card {
-//     &__tile {
-//       height: project-tile-height(2.25);
-//     }
-//     &__heading-1 {
-//       font-size: 1.8rem;
-//       top: 18.5rem;
-//       left: 6.9rem;
-//       width: 75%;
-//     }
-//   }
-// }
 
 // @include respond("phone") {
 //   body {

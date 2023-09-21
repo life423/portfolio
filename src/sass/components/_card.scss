@@ -91,6 +91,7 @@
     }
 
     @include card-size(3.5);
+    
     perspective: 1500px;
     position: relative;
     box-shadow: $shadow-light;
