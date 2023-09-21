@@ -9,11 +9,11 @@ body::before {
 
 body {
   position: relative;
-  height: auto;
+  height:100%;
   color: $gray-dark;
   background: linear-gradient(to right, $gradient-start, $gradient-end);
   scrollbar-width: none;
-  overflow: hidden;  
+  overflow:hidden; 
 }
 
 .container {
@@ -23,6 +23,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .main {
