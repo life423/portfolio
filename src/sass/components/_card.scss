@@ -67,7 +67,6 @@
   }
 
   &__tile {
-
     &:nth-child(1) {
       z-index: 4; // Highest for the left-most card
     }
@@ -81,17 +80,14 @@
       z-index: 1; // Lowest for the right-most card
     }
 
-    
-   
     animation: bob 3s ease-in-out 1s 3;
 
     &:hover {
       animation: bob 3s ease-in-out 1s 3;
-      
     }
 
     @include card-size(3.5);
-    
+
     perspective: 1500px;
     position: relative;
     box-shadow: $shadow-light;
@@ -99,7 +95,7 @@
     border-radius: $border-radius;
     display: flex;
     justify-content: center;
-   
+
     height: 60%;
 
     &__front,
@@ -124,7 +120,8 @@
     }
 
     &__back {
-      transform: rotateY(180deg);
+      @include absolute-center; // This will apply the mixin
+      transform: translate(-50%, -50%) rotateY(180deg); // Combine transformations
       background-color: darken($gradient-end, 5%);
     }
 
@@ -133,7 +130,7 @@
     }
 
     &:hover &__back {
-      transform: rotateY(360deg);
+      transform: translate(-50%, -50%) rotateY(360deg); // Combine transformations
     }
   }
 
@@ -158,13 +155,12 @@
   }
 }
 
-
-.card__qr-container{
+.card__qr-container {
   width: 40%;
   margin-top: spacing(6);
 }
 
-.card__tile__qr-code{
-  width:100%;
-  height:auto;
+.card__tile__qr-code {
+  width: 100%;
+  height: auto;
 }
