@@ -82,7 +82,14 @@
     }
 
     
-    animation: bob 3s infinite;
+    // animation: bob 3s 5;
+    animation: bob 3s ease-in-out 1s 5;
+
+    &:hover {
+      animation: bob 3s ease-in-out 1s 3;
+      
+    }
+
     @include card-size(3.5);
     perspective: 1500px;
     position: relative;
