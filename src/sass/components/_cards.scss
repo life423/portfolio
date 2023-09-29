@@ -1,7 +1,10 @@
 .card {
-  perspective: 1500px; // Adjust as needed
-  width: 300px; // specify a width
-  height: 300px; // specify a height
+  perspective: 1500px;
+  width: 300px;
+  height: 300px;
+  border-radius: $border-radius;
+  box-shadow: $shadow-light;
+  transition: box-shadow $transition-duration, border-color $transition-duration;
 
   .card__face {
     width: 100%;
@@ -28,6 +31,16 @@
     }
 
     .card__face--back {
+      color: #fff;
+      text-align: center; 
+      line-height: spacing(2);
+      padding: spacing(2);
+      color: #fff;
+      text-align: center;
+      /* Add these new styles */
+      
+      line-height: $line-height-base;
+      padding: 15px;
       .qr-code-wrapper {
         /* Styles for qr code wrapper. eg. positioning of QR code */
       }

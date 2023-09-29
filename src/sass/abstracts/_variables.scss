@@ -1,4 +1,5 @@
 @use "sass:map";
+
 // Base Colors
 $blue: #2874a6;
 $gray: #808b96;
@@ -45,7 +46,7 @@ $github: #181717;
 
 // Fonts
 $font-main: "Lato", sans-serif;
-$font-size-base: 62.5%; // 1rem = 10px
+$font-size-base: 62.5%; 
 
 // Line Heights
 $line-height: (
