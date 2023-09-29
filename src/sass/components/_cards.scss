@@ -1,0 +1,40 @@
+.card {
+  perspective: 1500px; // Adjust as needed
+  width: 300px; // specify a width
+  height: 300px; // specify a height
+  
+  .card__face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform $transition-duration; // Using the $transition-duration variable you've defined 
+
+    &--front {
+      background-color: $white;
+      // Add this for testing
+      color: #000;
+      text-align: center;
+      padding-top: 50%;
+    }
+
+    &--back {
+      background-color: $gray;
+      // Add this for testing
+      color: #FFF;
+      text-align: center;
+      padding-top: 50%;
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover {
+    .card__face--front {
+      transform: rotateY(180deg);
+    }
+
+    .card__face--back {
+      transform: rotateY(0);
+    }
+  }
+}
