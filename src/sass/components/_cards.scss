@@ -11,7 +11,7 @@
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
-    transition: transform $transition-duration; // Using the $transition-duration variable you've defined
+    transition: transform $transition-duration; 
 
     &--front {
       background-color: $white;
@@ -23,10 +23,9 @@
 
     &--back {
       background-color: $gray;
-      // Add this for testing
+      
       color: #fff;
-      text-align: center;
-      padding-top: 50%;
+      text-align: center;      
       transform: rotateY(180deg);
     }
 
@@ -34,18 +33,19 @@
       color: #fff;
       text-align: center;
       line-height: spacing(2);
-      padding: spacing(2);
-      color: #fff;
+      padding: spacing(2);      
       text-align: center;
-      /* Add these new styles */
+      line-height: 1.5;      
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-      line-height: $line-height-base;
-      padding: 15px;
       .qr-code-wrapper {
         /* Styles for qr code wrapper. eg. positioning of QR code */
       }
       .qr-code {
-        /* Styles for qr code. eg. size of QR code */
+        width: 60%;
       }
       .details-button {
         /* Styles for details button. eg. size, colors, margins etc. */
