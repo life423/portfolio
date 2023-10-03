@@ -11,8 +11,8 @@ body {
     90deg,
     rgba($gradient-green-lightest, 0.85),
     rgba($gradient-green-darkest, 0.85)
-  );
-  // padding: 1.5px 3px;
+  );  
   letter-spacing: 1px;
   font-weight: map-get($font-weights, "normal");
+  padding: .15rem .5rem;
 }
