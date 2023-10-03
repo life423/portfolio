@@ -51,6 +51,7 @@
   }
 
   &__tile {
+    position: relative;
     border-radius: $border-radius;
     background-image: linear-gradient(
       to bottom right,
