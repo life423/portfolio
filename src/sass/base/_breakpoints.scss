@@ -1,140 +1,243 @@
+//1900
+@include respond("ultrawide") {
+  body {
+    font-size: 80%;
+  }
+  .projects__tile {
+    @include tile-size(3.75);
+  }
+
+  .projects__heading-1 {
+    font-size: font-size(3);
+    top: 18rem;
+    left: 6rem;
+    width: 75%;
+  }
+}
+//1800
 @include respond("big-desktop") {
-  html {
-    font-size: 58.5%;
+  body {
+    font-size: 75%;
+  }
+  .projects__tile {
+    @include tile-size(3.25);
+  }
+
+  .projects__heading-1 {
+    font-size: 2rem;
+    top: 16rem;
+    left: 6rem;
+    width: 75%;
   }
 }
-
+//1573
 @include respond("large-desktop") {
-  html {
-    font-size: 54.8%;
+  body {
+    font-size: 75%;
+  }
+  
+  .projects__subheading {
+    font-size: font-size(1.5);
+  }
+  .projects__heading-1 {
+    font-size: font-size(1.6);
+  }
+  .projects__tile {
+    @include tile-size(3);
+  }
+  .projects__heading-1 {
+    font-size: 1.6rem;
+    top: 18rem;
+    left: 8rem;
+    width: 75%;
   }
 }
-
+//2 by 2 grid
+//1415
 @include respond("desktop") {
-  html {
-    font-size: 55%; // Reduced by approx. 6%
+  body {
+    font-size: 70%;
   }
 
-  @include respond("desktop") {
-    .cards {
-      display: flex; /* Ensure the parent is a flex container */
-      flex-wrap: wrap; /* Enable wrapping of items */
+  .projects {
+    height:100%;
+    flex-wrap: wrap;
+    row-gap: spacing(3);
+    align-content: center;
+
+    &__tile {
+      @include tile-size(2.75);
     }
-    .cards__tile {
-      flex-basis: calc(
-        50% - 2rem
-      ); /* Each cards takes up half of the container width, minus margin */
-      margin: 1rem; /* Add some even margin around cardss */
+
+    &__heading-1 {
+      font-size: font-size(2);
+      top: 20rem;
+      left: 7rem;
+      width: 75%;
     }
   }
 }
 
+//1366
 @include respond("laptop") {
-  html {
-    font-size: 52%; // Reduced by approx. 6%
+  body {
+    font-size: 60%;
   }
-
-  // New code to switch cards layout to 2x2 grid
-  .cards {
-    flex-wrap: wrap; // Allows cardss to wrap to the next line
-
-    .cards__tile {
-      flex-basis: calc(
-        50% - 20px
-      ); // Each cards takes up 50% of the container width, minus a small margin
-      margin: 10px; // Add some margin to separate the cardss
+  .projects {
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: spacing(6);
+    align-content: center;
+    &__tile {
+      height: 38rem;
+      width: 28rem;
+    }
+    &__heading-1 {
+      font-size: 2.1rem;
+      top: 18.5rem;
+      left: 7.3rem;
+      width: 75%;
     }
   }
 }
 
+//1332
 @include respond("small-laptop") {
-  html {
-    font-size: 49%; // Reduced by approx. 6%
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: spacing(12);
+  }
+
+  .projects__tile {
+    width: 100%;
+  }
+  .tiles {
+    transform-style: flat;
   }
 }
 
-// @include respond("phone") {
-//   body {
-//     height: auto;
-//     position: static;
-//   }
+//1024
+@include respond("chromebook") {
+  body {
+    overflow: auto;
+  }
+  .projects {
+    &__tile {
+      height: project-tile-height(2.5);
+      // width:30rem
+    }
+    &__heading-1 {
+      font-size: font-size(2.4);
+      top: 18.6rem;
+      left: 9.1rem;
+      width: 75%;
+    }
+  }
+}
 
-//   .header {
-//     overflow: hidden;
-//   }
+@include respond("ipad") {
+  body {
+    overflow: auto;
+  }
+  .projects {
+    &__tile {
+      height: project-tile-height(2.25);
+    }
+    &__heading-1 {
+      font-size: 1.8rem;
+      top: 18.5rem;
+      left: 6.9rem;
+      width: 75%;
+    }
+  }
+}
 
-//   .nav.nav-active .nav__list {
-//     transform: translateY(0);
+@include respond("phone") {
+  body {
+    height: auto;
+    position: static;
+  }
 
-//     &::after {
-//       content: none;
-//     }
-//   }
+  .header {
+    overflow: hidden;
+  }
 
-//   .nav__toggler {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
+  .nav.nav-active .nav__list {
+    transform: translateY(0);
 
-//   .nav__icon {
-//     color: $gradient-start;
+    &::after {
+      content: none;
+    }
+  }
 
-//     &--times {
-//       transform: scale(1.2) translateY(-1.2px) translateX(-5px);
-//       font-size: font-size(6);
-//     }
+  .nav__toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-//     &--bars {
-//       font-size: font-size(6);
-//       transform: translateY(-3.5px);
-//     }
-//   }
+  .nav__icon {
+    color: $gradient-start;
 
-//   .nav__list {
-//     top: 0;
-//     right: 0;
-//     width: 100%;
-//     height: calc(100vh - 8rem);
-//     position: absolute;
-//     background-color: $navy-blue;
-//     transition: $transition-base;
-//     transform: translateY(-100%);
-//     align-items: center;
-//     justify-content: center;
-//     flex-direction: column;
-//   }
+    &--times {
+      transform: scale(1.2) translateY(-1.2px) translateX(-5px);
+      font-size: font-size(6);
+    }
 
-//   .nav__item {
-//     padding: spacing(3);
-//   }
+    &--bars {
+      font-size: font-size(6);
+      transform: translateY(-3.5px);
+    }
+  }
 
-//   .main {
-//     overflow: visible;
-//   }
+  .nav__list {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 8rem);
+    position: absolute;
+    background-color: $navy-blue;
+    transition: $transition-base;
+    transform: translateY(-100%);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-//   .cards {
-//     padding: spacing(2);
-//     display: flex;
-//     flex-wrap: nowrap;
-//     flex-direction: row;
-//     align-items: center;
-//     justify-content: center;
-//     flex-wrap: wrap;
-//     overflow-y: auto;
-//   }
+  .nav__item {
+    padding: spacing(3);
+  }
 
-//   .cards {
-//     box-sizing: border-box;
-//     flex-basis: 80%;
-//     display: flex;
-//     flex-direction: column;
-//   }
+  .main {
+    overflow: visible;
+  }
 
-//   .cards__heading-1 {
-//     font-size: 1.8rem;
-//     top: 18.5rem;
-//     left: 6.9rem;
-//     width: 75%;
-//   }
-// }
+.projects {
+  padding: spacing(2);
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+
+  .projects__tile {     
+    box-sizing: border-box;    
+    flex-basis: 80%;
+    display:flex;
+    flex-direction: column;    
+  }
+
+  .projects__heading-1 {
+    font-size: 1.8rem;
+    top: 18.5rem;
+    left: 6.9rem;
+    width: 75%;
+  }
+}

@@ -1,3 +1,5 @@
+$transition-duration: 0.3s;
+
 html {
   font-size: $font-size-base;
   height: 100%;
@@ -9,11 +11,10 @@ body::before {
 
 body {
   position: relative;
-  height:100%;
+  height: auto;
   color: $gray-dark;
   background: linear-gradient(to right, $gradient-start, $gradient-end);
-  scrollbar-width: none;
-  overflow:hidden; 
+  scrollbar-width: none;  
 }
 
 .container {
@@ -23,7 +24,6 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
 }
 
 .main {
@@ -31,7 +31,8 @@ body {
   background-color: $blue-lighter;
   flex-grow: 1;
   width: 100%;  
-  
+  overflow-y: auto;
+  // max-height: calc(var(--vh, 1vh) * 100);
   @include flex-align(center, center);
   transition: all $transition-duration ease-in-out;
   background: linear-gradient(
@@ -42,7 +43,5 @@ body {
     url("../../assets/img/life-background.png");
   background-size: cover;
   background-position: 50% 44%;
-  overflow-x: hidden;
-  
 }
 

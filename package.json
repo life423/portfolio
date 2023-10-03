@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "My professional web development portfolio showcasing my skills and cards.",
+  "description": "My professional web development portfolio showcasing my skills and projects.",
   "main": "app.mjs",
   "type": "module",
   "scripts": {
