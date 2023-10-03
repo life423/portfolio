@@ -1,0 +1,124 @@
+.projects {
+  width: 100%;
+  perspective: 1000px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 0 auto;
+  height: 100%;
+
+  &__heading-1 {
+    // font-weight: 300;
+    // text-align: right;
+    // position: absolute;
+    // top: 21rem;
+    // left: 8rem;
+    // width: 75%;
+    // padding: 0.2rem;
+    // font-size: font-size(3);
+    // line-height: 1.4;
+    color: $white;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    overflow: hidden;
+    font-weight: 300;
+    text-align: right;
+    position: absolute;
+    top: 21rem;
+    left: 8rem;
+    width: 75%;
+    padding: 0.2rem;
+    font-size: font-size(3);
+    line-height: 1.4;
+    justify-content: flex-strt;
+  }
+
+  &__subheading {
+    text-transform: uppercase;
+    font-size: font-size(2);
+    width: 80%;
+    align-self: center;
+    flex: 1 1 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: $green-font;
+    padding-bottom: spacing(2.5);
+
+    &__1,
+    &__2 {
+      max-width: 80%;
+    }
+  }
+
+  &__subtitle {
+    max-width: 80%;
+    color: $green-font;
+    align-self: center;
+    line-height: lh(large);
+    font-size: font-size(2);
+    text-align: left;
+    flex: 1 1 31%;
+  }
+
+  &__tile {
+    position: relative;
+    border-radius: $border-radius;
+    background-image: linear-gradient(
+      to bottom right,
+      $green-light,
+      $gradient-end
+    );
+    @include tile-size(4);
+    @include margin-padding(2.4, 2.4);
+    box-shadow: $shadow-light, $shadow-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    transform-origin: center;
+
+    &:hover {
+      transform: rotateY(180deg);
+    }
+
+    &__front,
+    &__back {
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+    }
+
+    &__front {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &--image-1 {
+        flex: 0 1 54%;
+        border-radius: $border-radius;
+        overflow: hidden;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        background-color: rgba($gradient-start, 0.1);
+        background-image: url(../../assets/img/lock.png);
+        background-blend-mode: lighten;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        @include image-styles;
+      }
+    }
+
+    &__back {
+      transform: rotateY(180deg);
+    }
+  }
+}
