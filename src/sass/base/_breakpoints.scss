@@ -68,8 +68,6 @@
     &__tile {
       @include tile-size(2.75);
     }
-
-    
   }
 }
 
@@ -100,7 +98,7 @@
 
 //1332
 @include respond("small-laptop") {
-  html{
+  html {
     font-size: 50%;
   }
   .projects {
@@ -122,18 +120,19 @@
   html {
     font-size: 45%;
   }
-  
+
   // }
 }
 
 @include respond("ipad") {
-  font-size:40%;
+  html {
+    font-size: 40%;
+  }
 
   .projects {
     &__tile {
       height: project-tile-height(2.25);
     }
-    
   }
 }
 
