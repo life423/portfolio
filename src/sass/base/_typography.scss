@@ -2,15 +2,8 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.secondary-heading {
- 
-  color: $white;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  position:relative;  
-  overflow: hidden;
+
+
 
   .tile-heading-span {
     // line-height: 1.4;
@@ -26,4 +19,3 @@ body {
     letter-spacing: 1px;
     font-weight: map-get($font-weights, "normal" );
   }
-}
