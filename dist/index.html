@@ -20,17 +20,15 @@
   </head>
 
   <body class="body">
-    <div class="container">
+    <section class="container">
       <header class="header primary-heading">
         <nav class="nav">
           <div class="nav__logo">
             <h1 class="nav__header">DC</h1>
           </div>
           <div class="nav__toggler">
-            <!-- Hamburger icon -->
             <div class="nav__icon nav__icon--bars">&#9776;</div>
 
-            <!-- Close icon -->
             <div class="nav__icon nav__icon--times">&times;</div>
           </div>
           <ul class="nav__list">
@@ -51,57 +49,13 @@
       </header>
 
       <main class="main">
-        <section class="projects">
-          <article class="projects__tile">
-            <div class="projects__tile__front">
-              <div
-                class="projects__tile__front--image-1"
-                aria-label="Project Image"
-              ></div>
-              <h2 class="projects__heading-1">
-                <span class="tile-heading-span">Unpack</span>
-                <span class="tile-heading-span">Cipher Complexity</span>
-              </h2>
-
-              <h3 class="projects__subheading">
-                <span class="projects__subheading--1">Polymorphic Cipher</span>
-                <span class="projects__subheading--2"
-                  >Cryptography Redefined</span
-                >
-              </h3>
-              <p class="projects__subtitle">
-                More than just dedication - a testament to the skills mastered
-                and problems solved in the field of cryptography.
-              </p>
-            </div>
-            <div class="projects__tile__back">
-              <!-- Back content goes here. -->
-            </div>
-          </article>
-          <article class="projects__tile">
-            <div class="projects__tile__front">
-              <!-- Front content goes here. -->
-            </div>
-            <div class="projects__tile__back">
-              <!-- Back content goes here. -->
-            </div>
-          </article>
-          <article class="projects__tile">
-            <div class="projects__tile__front">
-              <!-- Front content goes here. -->
-            </div>
-            <div class="projects__tile__back">
-              <!-- Back content goes here. -->
-            </div>
-          </article>
-          <article class="projects__tile">
-            <div class="projects__tile__front">
-              <!-- Front content goes here. -->
-            </div>
-            <div class="projects__tile__back">
-              <!-- Back content goes here. -->
-            </div>
-          </article>
+        <section class="card">
+          <div class="card__face card__face--front">
+            Front content goes here
+          </div>
+          <div class="card__face card__face--back">            
+            <button class="details-button">More Details</button>
+          </div>
         </section>
       </main>
 
@@ -110,14 +64,14 @@
           <a
             href="https://twitter.com/WebDevAIAndrew"
             class="footer__social-link"
-            alt="Twitter"
+            aria-label="Twitter"
           >
             <i class="fab fa-twitter footer__social--icon"></i>
           </a>
           <a
             href="https://github.com/life423"
             class="footer__social-link"
-            alt="github"
+            aria-label="github"
           >
             <i class="fab fa-github footer__social--icon"></i>
           </a>
@@ -129,6 +83,6 @@
           </p>
         </div>
       </footer>
-    </div>
+    </section>
   </body>
 </html>
