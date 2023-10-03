@@ -2,20 +2,17 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-
-
-
-  .tile-heading-span {
-    // line-height: 1.4;
-    display: inline;     
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    background: linear-gradient(
-      90deg,
-      rgba($gradient-green-lightest, .85),
-      rgba($gradient-green-darkest, .85)
-    );
-    // padding: 1.5px 3px;
-    letter-spacing: 1px;
-    font-weight: map-get($font-weights, "normal" );
-  }
+.tile-heading-span {
+  // line-height: 1.4;
+  display: inline;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background: linear-gradient(
+    90deg,
+    rgba($gradient-green-lightest, 0.85),
+    rgba($gradient-green-darkest, 0.85)
+  );
+  // padding: 1.5px 3px;
+  letter-spacing: 1px;
+  font-weight: map-get($font-weights, "normal");
+}
