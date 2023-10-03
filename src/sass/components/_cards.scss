@@ -1,0 +1,63 @@
+.card {
+  perspective: 1500px;
+  @include cards-size(3.5);
+  border-radius: $border-radius;
+  box-shadow: $shadow-light;
+  transition: box-shadow $transition-duration, border-color $transition-duration;
+
+  .card__face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform $transition-duration; 
+
+    &--front {
+      background-color: $white;      
+      color: #000;
+      text-align: center;
+      padding-top: 50%;
+    }
+
+    &--back {
+      background-color: $gray;
+      
+      color: #fff;
+      text-align: center;      
+      transform: rotateY(180deg);
+    }
+
+    .card__face--back {
+      color: #fff;
+      text-align: center;
+      line-height: lh(2);
+      padding: spacing(2);      
+      text-align: center;
+      line-height: 1.5;    
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .qr-code-wrapper {
+        /* Styles for qr code wrapper. eg. positioning of QR code */
+      }
+      .qr-code {
+        width: 60%;
+      }
+      .details-button {
+        /* Styles for details button. eg. size, colors, margins etc. */
+      }
+    }
+  }
+
+  &:hover {    
+    .card__face--front {
+      transform: rotateY(180deg);
+    }
+
+    .card__face--back {
+      transform: rotateY(0);
+    }
+  }
+}

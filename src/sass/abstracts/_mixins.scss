@@ -21,18 +21,16 @@
 
 @mixin respond($breakpoint) {
   $breakpoints: (
-    'ultrawide': 1999px,
-    'big-desktop': 1800px,
-    'large-desktop': 1573px,
-    'desktop': 1415px,
-    'laptop': 1366px,    
-    'small-laptop': 1332px,    
-    'chromebook': 1024px,  
-    'ipad': 944px,
-    'phone': 600px
+    "ultra-wide": 1999px,
+    "big-desktop": 1747px,
+    "large-desktop": 1604px,
+    "desktop": 1417px,
+    "laptop": 1366px,
+    "small-laptop": 1332px,
+    "chromebook": 1024px,
+    "ipad": 944px,
+    "phone": 600px,
   );
-  
-  
 
   @media only screen and (max-width: map-get($breakpoints, $breakpoint)) {
     @content;
@@ -72,9 +70,11 @@
   list-style: none;
 }
 
-@mixin tile-size($step) {
-  width: project-tile-width($step);
-  height: project-tile-height($step);
+@mixin cards-size($step) {
+  min-width: project-tile-width($step);
+  min-height: project-tile-height($step);
+  max-width: project-tile-width($step);
+  max-height: project-tile-height($step);
 }
 
 @mixin margin-padding($margin, $padding) {
@@ -101,4 +101,3 @@
   align-items: $align;
   flex-basis: $basis;
 }
-
