@@ -7,12 +7,12 @@
     @include tile-size(3.75);
   }
 
-  .projects__heading-1 {
-    font-size: font-size(3);
-    top: 18rem;
-    left: 6rem;
-    width: 75%;
-  }
+  // .projects__heading-1 {
+  //   font-size: font-size(3);
+  //   top: 18rem;
+  //   left: 6rem;
+  //   width: 75%;
+  // }
 }
 //1800
 @include respond("big-desktop") {
@@ -23,12 +23,12 @@
     @include tile-size(3.25);
   }
 
-  .projects__heading-1 {
-    font-size: 2rem;
-    top: 16rem;
-    left: 6rem;
-    width: 75%;
-  }
+  // .projects__heading-1 {
+  //   font-size: 2rem;
+  //   top: 16rem;
+  //   left: 6rem;
+  //   width: 75%;
+  // }
 }
 //1573
 @include respond("large-desktop") {
@@ -36,21 +36,21 @@
     font-size: 75%;
   }
   
-  .projects__subheading {
-    font-size: font-size(1.5);
-  }
-  .projects__heading-1 {
-    font-size: font-size(1.6);
-  }
-  .projects__tile {
-    @include tile-size(3);
-  }
-  .projects__heading-1 {
-    font-size: 1.6rem;
-    top: 18rem;
-    left: 8rem;
-    width: 75%;
-  }
+  // .projects__subheading {
+  //   font-size: font-size(1.5);
+  // }
+  // .projects__heading-1 {
+  //   font-size: font-size(1.6);
+  // }
+  // .projects__tile {
+  //   @include tile-size(3);
+  // }
+  // .projects__heading-1 {
+  //   font-size: 1.6rem;
+  //   top: 18rem;
+  //   left: 8rem;
+  //   width: 75%;
+  // }
 }
 //2 by 2 grid
 //1415
@@ -69,12 +69,12 @@
       @include tile-size(2.75);
     }
 
-    &__heading-1 {
-      font-size: font-size(2);
-      top: 20rem;
-      left: 7rem;
-      width: 75%;
-    }
+    // &__heading-1 {
+    //   font-size: font-size(2);
+    //   top: 20rem;
+    //   left: 7rem;
+    //   width: 75%;
+    // }
   }
 }
 
@@ -83,24 +83,24 @@
   body {
     font-size: 60%;
   }
-  .projects {
-    flex: 0 0 auto;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    gap: spacing(6);
-    align-content: center;
-    &__tile {
-      height: 38rem;
-      width: 28rem;
-    }
-    &__heading-1 {
-      font-size: 2.1rem;
-      top: 18.5rem;
-      left: 7.3rem;
-      width: 75%;
-    }
-  }
+  // .projects {
+  //   flex: 0 0 auto;
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  //   align-content: center;
+  //   gap: spacing(6);
+  //   align-content: center;
+  //   &__tile {
+  //     height: 38rem;
+  //     width: 28rem;
+  //   }
+  //   &__heading-1 {
+  //     font-size: 2.1rem;
+  //     top: 18.5rem;
+  //     left: 7.3rem;
+  //     width: 75%;
+  //   }
+  // }
 }
 
 //1332
@@ -124,18 +124,18 @@
   body {
     overflow: auto;
   }
-  .projects {
-    &__tile {
-      height: project-tile-height(2.5);
-      // width:30rem
-    }
-    &__heading-1 {
-      font-size: font-size(2.4);
-      top: 18.6rem;
-      left: 9.1rem;
-      width: 75%;
-    }
-  }
+  // .projects {
+  //   &__tile {
+  //     height: project-tile-height(2.5);
+  //     // width:30rem
+  //   }
+  //   &__heading-1 {
+  //     font-size: font-size(2.4);
+  //     top: 18.6rem;
+  //     left: 9.1rem;
+  //     width: 75%;
+  //   }
+  // }
 }
 
 @include respond("ipad") {
@@ -146,12 +146,12 @@
     &__tile {
       height: project-tile-height(2.25);
     }
-    &__heading-1 {
-      font-size: 1.8rem;
-      top: 18.5rem;
-      left: 6.9rem;
-      width: 75%;
-    }
+    // &__heading-1 {
+    //   font-size: 1.8rem;
+    //   top: 18.5rem;
+    //   left: 6.9rem;
+    //   width: 75%;
+    // }
   }
 }
 
@@ -234,10 +234,10 @@
     flex-direction: column;    
   }
 
-  .projects__heading-1 {
-    font-size: 1.8rem;
-    top: 18.5rem;
-    left: 6.9rem;
-    width: 75%;
-  }
+  // .projects__heading-1 {
+  //   font-size: 1.8rem;
+  //   top: 18.5rem;
+  //   left: 6.9rem;
+  //   width: 75%;
+  // }
 }
