@@ -80,14 +80,14 @@
       -webkit-box-decoration-break: clone;
       font-weight: map-get($font-weights, "normal");      
       position: relative;     
-      margin-top: -7vh;
-      margin-left: 8rem;
+      top: -0.7rem;
+      left: -0.7rem;
       width: 75%;      
       padding: 0.4rem 1.2rem;     
       background-image: linear-gradient(
         to right bottom,
-        rgba($gradient-start, 0.78),
-        rgba($gradient-green-darkest, 0.78)
+        rgba($gradient-start, 0.85),
+        rgba($gradient-green-darkest, 0.75)
       );      
       box-shadow: 0.5rem 1rem 2rem rgba($gradient-green-darkest, 0.2);
       letter-spacing: 1px;
@@ -101,6 +101,8 @@
     text-align: right;
     color: $white;
     position:relative;
+    margin-top: -7rem;
+    box-decoration-break: clone;
   }
 
   &__subheading {
