@@ -19,7 +19,7 @@ body {
 
 .container {
   background-color: $white;
-  max-width: 2000px;
+  max-width: 200rem;
   height: calc(var(--vh, 1vh) * 100);
   margin: 0 auto;
   display: flex;
@@ -31,7 +31,7 @@ body {
   background-color: $blue-lighter;
   flex-grow: 1;
   width: 100%;  
-  overflow-y: auto;
+  overflow-y: hidden;
   // max-height: calc(var(--vh, 1vh) * 100);
   @include flex-align(center, center);
   transition: all $transition-duration ease-in-out;
