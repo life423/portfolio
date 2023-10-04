@@ -2,36 +2,33 @@
 @include respond("ultrawide") {
   html {
     font-size: 62.5%;
-  }
-  
+  }  
 }
 
 //1800
 @include respond("big-desktop") {
   html {
     font-size: 51%;
-  }
-
- 
+  } 
 }
 //1573
 @include respond("large-desktop") {
   html {
-    font-size: 70%;
+    font-size: 47%;
   }
 }
 
 //1415
 @include respond("desktop") {
   html {
-    font-size: 65%;
+    font-size: 44%;
   }
 }
 
 //1366
 @include respond("laptop") {
   html {
-    font-size: 60%;
+    font-size: 40%;
   }
 }
 
