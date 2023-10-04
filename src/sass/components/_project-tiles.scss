@@ -86,14 +86,7 @@
     position: absolute;
     top: 21vh;
     left: 8rem;
-    width: 75%;
-
-    &-span {
-      &--1 {
-        
-        
-      }
-    }
+    width: 75%;   
 
  .projects__tile__heading-span--1{
   padding: .4rem 1.2rem;
@@ -104,6 +97,7 @@
           rgba($gradient-start, 0.78),
           rgba($gradient-green-darkest, 0.78)
         );
+        box-shadow: 0.5rem 1rem 2rem rgba($gradient-green-darkest, 0.2);
  }
   
  
