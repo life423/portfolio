@@ -15,6 +15,7 @@
       $green-light,
       $gradient-end
     );
+
     @include tile-size(4);
     @include margin-padding(2.4, 2.4);
     box-shadow: $shadow-light, $shadow-dark;
@@ -27,18 +28,17 @@
     will-change: transform;
     transform-origin: center;
 
-    &__heading-span{
-
-      &--1{
-        color: $green-font;
-        font-size: font-size(2.5);
-        font-weight: 300;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        line-height: 1.2;
-        margin-bottom: spacing(1);
-      }
-    }
+    // &__heading-span {
+    //   &--1 {
+    //     color: $green-font;
+    //     font-size: font-size(2.5);
+    //     font-weight: 300;
+    //     text-transform: uppercase;
+    //     letter-spacing: 1px;
+    //     line-height: 1.2;
+    //     margin-bottom: spacing(1);
+    //   }
+    // }
 
     &:hover {
       transform: rotateY(180deg);
@@ -77,32 +77,47 @@
     }
   }
 
-&__heading-1 {  
-  font-size: font-size(3.5);
-  color: $white;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  position: absolute;
-  overflow: hidden;
-  font-weight: 300;
-  text-align: right;
-  top: 21rem;
-  left: 8rem;
-  width: 75%;
-  line-height: 1 1.2;
-  box-decoration-break: clone;
-  background: linear-gradient(
-    90deg,
-    rgba($gradient-green-lightest, 0.85),
-    rgba($gradient-green-darkest, 0.85)
-  );
-  letter-spacing: 1px;
-  font-weight: map-get($font-weights, "normal");
-}
+  &__heading {
+    // font-size: font-size(3.5);
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $white;
+    position: absolute;
+    top: 21rem;
+    left: 8rem;
+    width: 75%;
 
+    &-span {
+      &--1 {
+        background-image: linear-gradient(
+          90deg,
+          rgba($gradient-green-lightest, 0.85),
+          rgba($gradient-green-darkest, 0.85)
+        );
+        padding: 1rem 1.5rem;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        background-image: linear-gradient(
+          90deg,
+          rgba($gradient-green-lightest, 0.85),
+          rgba($gradient-green-darkest, 0.85)
+        );
+      }
+    }
 
+    // display: flex;
+    // flex-direction: column;
+    // align-items: flex-end;
+    // overflow: hidden;
+    // font-weight: 300;
+    // line-height: 1 1.2;
+    // box-decoration-break: clone;
+
+    // letter-spacing: 1px;
+    // font-weight: map-get($font-weights, "normal");
+  }
 
   &__subheading {
     text-transform: uppercase;

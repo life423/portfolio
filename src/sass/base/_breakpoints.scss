@@ -19,6 +19,7 @@
   html {
     font-size: 75%;
   }
+
   .projects__tile {
     @include tile-size(3.25);
   }
@@ -33,7 +34,7 @@
 //1573
 @include respond("large-desktop") {
   html {
-    font-size: 75%;
+    font-size: 70%;
   }
 
   // .projects__subheading {
@@ -52,11 +53,12 @@
   //   width: 75%;
   // }
 }
+
 //2 by 2 grid
 //1415
 @include respond("desktop") {
   html {
-    font-size: 70%;
+    font-size: 65%;
   }
 
   .projects {
