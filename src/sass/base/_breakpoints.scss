@@ -1,22 +1,18 @@
 //1999
 @include respond("ultrawide") {
   html {
-    font-size: 80%;
+    font-size: 62.5%;
   }
-  .projects__tile {
-    @include tile-size(3.75);
-  }
+  
 }
 
 //1800
 @include respond("big-desktop") {
   html {
-    font-size: 75%;
+    font-size: 51%;
   }
 
-  .projects__tile {
-    @include tile-size(3.25);
-  }
+ 
 }
 //1573
 @include respond("large-desktop") {
@@ -24,7 +20,6 @@
     font-size: 70%;
   }
 }
-
 
 //1415
 @include respond("desktop") {
