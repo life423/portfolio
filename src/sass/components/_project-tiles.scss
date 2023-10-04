@@ -83,24 +83,27 @@
     text-transform: uppercase;
     text-align: right;
     color: $white;
-
-    position: relative;
-
+      
     .projects__tile__heading-span--1 {
-      padding: 0.4rem 1.2rem;
-      box-decoration-break: clone;
+       box-decoration-break: clone;
       -webkit-box-decoration-break: clone;
+      font-weight: map-get($font-weights, "normal");
+      /* Use relative positioning */
+      position: relative;
+      /* Move the text using margin instead of top/left properties */
+      margin-top: -7vh;
+      margin-left: 8rem;
+      width: 75%;
+      /* Padding for the text */
+      padding: 0.4rem 1.2rem;
+      /* Applying background gradient */
       background-image: linear-gradient(
         to right bottom,
         rgba($gradient-start, 0.78),
         rgba($gradient-green-darkest, 0.78)
       );
+      /* Applying box-shadow */
       box-shadow: 0.5rem 1rem 2rem rgba($gradient-green-darkest, 0.2);
-      font-weight: map-get($font-weights, "normal");
-      position: absolute;
-      top: -7vh;
-      left: 8rem;
-      width: 75%;
     }
 
     // overflow: hidden;
