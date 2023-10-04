@@ -28,17 +28,6 @@
     will-change: transform;
     transform-origin: center;
 
-    // &__heading-span {
-    //   &--1 {
-    //     color: $green-font;
-    //     font-size: font-size(2.5);
-    //     font-weight: 300;
-    //     text-transform: uppercase;
-    //     letter-spacing: 1px;
-    //     line-height: 1.2;
-    //     margin-bottom: spacing(1);
-    //   }
-    // }
 
     &:hover {
       transform: rotateY(180deg);

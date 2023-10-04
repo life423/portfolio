@@ -1,4 +1,4 @@
-//1900
+//1999
 @include respond("ultrawide") {
   html {
     font-size: 80%;
@@ -6,13 +6,6 @@
   .projects__tile {
     @include tile-size(3.75);
   }
-
-  // .projects__heading-1 {
-  //   font-size: font-size(3);
-  //   top: 18rem;
-  //   left: 6rem;
-  //   width: 75%;
-  // }
 }
 //1800
 @include respond("big-desktop") {
@@ -23,35 +16,12 @@
   .projects__tile {
     @include tile-size(3.25);
   }
-
-  // .projects__heading-1 {
-  //   font-size: 2rem;
-  //   top: 16rem;
-  //   left: 6rem;
-  //   width: 75%;
-  // }
 }
 //1573
 @include respond("large-desktop") {
   html {
     font-size: 70%;
   }
-
-  // .projects__subheading {
-  //   font-size: font-size(1.5);
-  // }
-  // .projects__heading-1 {
-  //   font-size: font-size(1.6);
-  // }
-  // .projects__tile {
-  //   @include tile-size(3);
-  // }
-  // .projects__heading-1 {
-  //   font-size: 1.6rem;
-  //   top: 18rem;
-  //   left: 8rem;
-  //   width: 75%;
-  // }
 }
 
 //2 by 2 grid
@@ -60,17 +30,6 @@
   html {
     font-size: 65%;
   }
-
-  .projects {
-    height: 100%;
-    flex-wrap: wrap;
-    row-gap: spacing(3);
-    align-content: center;
-
-    &__tile {
-      @include tile-size(2.75);
-    }
-  }
 }
 
 //1366
@@ -78,42 +37,16 @@
   html {
     font-size: 60%;
   }
-  // .projects {
-  //   flex: 0 0 auto;
-  //   flex-wrap: wrap;
-  //   justify-content: center;
-  //   align-content: center;
-  //   gap: spacing(6);
-  //   align-content: center;
-  //   &__tile {
-  //     height: 38rem;
-  //     width: 28rem;
-  //   }
-  //   &__heading-1 {
-  //     font-size: 2.1rem;
-  //     top: 18.5rem;
-  //     left: 7.3rem;
-  //     width: 75%;
-  //   }
-  // }
 }
 
 //1332
 @include respond("small-laptop") {
   html {
-    font-size: 50%;
-  }
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: spacing(12);
+    font-size: 55%;
   }
 
   .projects__tile {
-    width: 100%;
-  }
-  .tiles {
-    transform-style: flat;
+    @include tile-size(2.75);
   }
 }
 
@@ -122,19 +55,11 @@
   html {
     font-size: 45%;
   }
-
-  // }
 }
 
 @include respond("ipad") {
   html {
     font-size: 40%;
-  }
-
-  .projects {
-    &__tile {
-      height: project-tile-height(2.25);
-    }
   }
 }
 
