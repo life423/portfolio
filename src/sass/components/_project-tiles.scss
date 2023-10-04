@@ -104,6 +104,7 @@
       );
       /* Applying box-shadow */
       box-shadow: 0.5rem 1rem 2rem rgba($gradient-green-darkest, 0.2);
+      letter-spacing: 1px;
     }
 
     // overflow: hidden;
@@ -111,7 +112,7 @@
     // line-height: 1 1.2;
     // box-decoration-break: clone;
 
-    // letter-spacing: 1px;
+    
   }
 
   &__subheading {
