@@ -78,8 +78,7 @@
   }
 
   &__heading {
-    // font-size: font-size(3.5);
-    font-size: 2.8rem;
+    font-size: font-size(3.5);
     font-weight: 300;
     text-transform: uppercase;
     text-align: right;
@@ -91,25 +90,23 @@
 
     &-span {
       &--1 {
-        background-image: linear-gradient(
-          90deg,
-          rgba($gradient-green-lightest, 0.85),
-          rgba($gradient-green-darkest, 0.85)
-        );
-        padding: 1rem 1.5rem;
-        box-decoration-break: clone;
-        -webkit-box-decoration-break: clone;
-        background-image: linear-gradient(
-          90deg,
-          rgba($gradient-green-lightest, 0.85),
-          rgba($gradient-green-darkest, 0.85)
-        );
+        
+        
       }
     }
 
-    // display: flex;
-    // flex-direction: column;
-    // align-items: flex-end;
+ .projects__tile__heading-span--1{
+  padding: 1rem 1.5rem;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($gradient-green-lightest, 0.95),
+          rgba($gradient-green-darkest, 0.55)
+        );
+ }
+  
+ 
     // overflow: hidden;
     // font-weight: 300;
     // line-height: 1 1.2;
