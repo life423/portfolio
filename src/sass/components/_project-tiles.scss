@@ -96,13 +96,13 @@
     }
 
  .projects__tile__heading-span--1{
-  padding: 1rem 1.5rem;
+  padding: .4rem 1.2rem;
         box-decoration-break: clone;
         -webkit-box-decoration-break: clone;
         background-image: linear-gradient(
           to right bottom,
-          rgba($gradient-green-lightest, 0.95),
-          rgba($gradient-green-darkest, 0.55)
+          rgba($gradient-start, 0.78),
+          rgba($gradient-green-darkest, 0.78)
         );
  }
   
