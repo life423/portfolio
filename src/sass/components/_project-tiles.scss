@@ -98,6 +98,7 @@
           rgba($gradient-green-darkest, 0.78)
         );
         box-shadow: 0.5rem 1rem 2rem rgba($gradient-green-darkest, 0.2);
+        font-weight: map-get($font-weights, "normal");
  }
   
  
@@ -107,7 +108,7 @@
     // box-decoration-break: clone;
 
     // letter-spacing: 1px;
-    // font-weight: map-get($font-weights, "normal");
+    
   }
 
   &__subheading {
