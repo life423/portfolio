@@ -39,11 +39,7 @@
 @include respond("small-laptop") {
   html {
     font-size: 55%;
-  }
-
-  .projects__tile {
-    @include tile-size(2.75);
-  }
+  }  
 }
 
 //1024
