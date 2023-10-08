@@ -53,6 +53,12 @@
   }
 }
 
+@include respond("small-tablet"){
+  html{
+    font-size: 45%;
+  }
+}
+
 //600
 @include respond("phone") {
   body {
