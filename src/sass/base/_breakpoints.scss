@@ -10,6 +10,10 @@
   html {
     font-size: 51%;
   }
+
+  .projects__tile{
+    @include tile-size(3.75);
+  }
 }
 //1573
 @include respond("large-desktop") {
