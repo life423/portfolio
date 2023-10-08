@@ -59,11 +59,15 @@
   .projects {
     gap: 4rem 0rem;
   }
-}
 
+  .projects__tile{
+    @include tile-size(3.75);
+  }
+}
+//768
 @include respond("small-tablet") {
   html {
-    font-size: 36%;
+    font-size: 43%;
   }
 }
 
