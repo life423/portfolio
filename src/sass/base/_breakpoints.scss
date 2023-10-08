@@ -2,14 +2,14 @@
 @include respond("ultrawide") {
   html {
     font-size: 62.5%;
-  }  
+  }
 }
 
 //1800
 @include respond("big-desktop") {
   html {
     font-size: 51%;
-  } 
+  }
 }
 //1573
 @include respond("large-desktop") {
@@ -36,7 +36,7 @@
 @include respond("small-laptop") {
   html {
     font-size: 36%;
-  }  
+  }
 }
 
 //1024
@@ -49,17 +49,17 @@
 //944
 @include respond("ipad") {
   html {
-    font-size: 51%;
+    font-size: 42%;
   }
 
-  .projects{
+  .projects {
     gap: 4rem 0rem;
   }
 }
 
-@include respond("small-tablet"){
-  html{
-    font-size: 45%;
+@include respond("small-tablet") {
+  html {
+    font-size: 36%;
   }
 }
 
