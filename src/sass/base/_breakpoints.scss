@@ -1,3 +1,4 @@
+
 //1999
 @include respond("ultrawide") {
   html {
@@ -11,7 +12,7 @@
     font-size: 51%;
   }
 
-  .projects__tile{
+  .projects__tile {
     @include tile-size(3.25);
   }
 }
@@ -52,17 +53,17 @@
 
 //944
 @include respond("ipad") {
-  html {
-    font-size: 46%;
-  }
-
   .projects {
-    gap: 4rem 0rem;
-  }
+    padding: 2.4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem 0rem;
+    justify-items: center;
+    align-items: center;
 
-  .projects__tile{
-    @include tile-size(3);
-    
+    &__tile {
+      @include tile-size(4);
+    }
   }
 }
 //768
@@ -72,7 +73,7 @@
   }
 }
 
-//600
+//628
 @include respond("phone") {
   body {
     height: auto;
@@ -136,18 +137,17 @@
   .projects {
     padding: spacing(2);
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     overflow-y: auto;
-  }
 
-  .projects__tile {
-    box-sizing: border-box;
-    flex-basis: 80%;
-    display: flex;
-    flex-direction: column;
+    &__tile {
+      box-sizing: border-box;
+      flex-basis: 80%;
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
