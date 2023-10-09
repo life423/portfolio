@@ -53,7 +53,7 @@
 //944
 @include respond("ipad") {
   html {
-    font-size: 46%;
+    font-size: 48%;
   }
 
   .projects {
@@ -61,7 +61,9 @@
   }
 
   .projects__tile{
-    @include tile-size(4);
+    // @include tile-size(4);
+    width: 31rem;
+    height:43.78rem;
   }
 }
 //768
