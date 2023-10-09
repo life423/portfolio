@@ -55,6 +55,7 @@
 @include respond("ipad") {
   .projects {
     padding: 2.4rem;
+    //use grid u ntil mobile
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.4rem 0rem;
