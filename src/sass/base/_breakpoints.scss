@@ -57,13 +57,12 @@
   }
 
   .projects {
-    // gap: 4rem 0rem;
+    gap: 4rem 0rem;
   }
 
   .projects__tile{
-    // @include tile-size(3.5);
-    height: 48.91em;
-    width: 38rem
+    @include tile-size(3);
+    
   }
 }
 //768
