@@ -1,9 +1,0 @@
-{
-  "routes": [
-    {
-      "route": "/cipher",
-      "redirect": "https://github.com/life423/polyalphabetic-and-caesar_cipher/releases/tag/v1.0.0",
-      "statusCode": 301
-    }
-  ]
-}

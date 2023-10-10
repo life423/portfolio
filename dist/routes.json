@@ -1,0 +1,9 @@
+{
+  "routes": [
+    {
+      "route": "/cipher",
+      "redirect": "https://github.com/life423/polyalphabetic-and-caesar_cipher/releases/download/v1.0.0/cipher_gui.zip",
+      "statusCode": 301
+    }
+  ]
+}
