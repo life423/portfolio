@@ -135,8 +135,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    margin: 0 auto;
+    width: 80%;
     height: 100%;
+
     text-transform: uppercase;
   }
   &__download-button {
