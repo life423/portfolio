@@ -9,10 +9,9 @@
   height: 100%;
   // padding:5rem 0rem;
 
-  &__tile {
+  &__tile {    
     // animation: bob 3s ease-in-out infinite;
-    animation: bob 3s ease-in-out infinite;
-    animation-delay: calc(0.3s * var(--i));
+    // animation-delay: calc(0.3s * var(--i));
     position: relative;
     border-radius: $border-radius;
     background-image: linear-gradient(
