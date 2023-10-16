@@ -107,10 +107,3 @@ window.addEventListener('orientationchange', () => {
 createFaviconFromH1();
 
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const cards = document.querySelectorAll(".projects__tile");
-//   for (let i = 0; i < cards.length; i++) {
-//     const card = cards[i];
-//     card.style.setProperty("--i", i + 1);
-//   }
-// });
