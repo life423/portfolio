@@ -122,10 +122,10 @@
   body {
     height: auto;
     position: static;
-  }
+  }  
 
-  main{
-    margin: spacing(2) 0rem;
+  .main {
+    overflow: visible;
   }
 
   .header {
@@ -178,29 +178,25 @@
     padding: spacing(3);
   }
 
-  .main {
-    overflow: visible;
-  }
+  
 
   .projects {
     padding: spacing(2);
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     overflow-y: auto;
 
     &__heading {
       font-size: 2.6rem;
       margin-top: -6.5rem;
-      
     }
 
-    &__subtitle{
-      flex:auto;
-      margin-bottom:1.6rem;
+    &__subtitle {
+      flex: auto;
+      margin-bottom: 1.6rem;
     }
 
     &__subheading {
@@ -208,23 +204,21 @@
       margin-bottom: spacing(1);
     }
 
-    &__tile__front--image-1 {
-      flex: 0 1 100%;
-    }
+    &__tile {
+      box-sizing: border-box;
+      flex-basis: 80%;
+      display: flex;
+      flex-direction: column;
+      height: 52.48rem;
 
-    &__download-button{
-      //adjust the padding
-      padding: 1.4rem 2.2rem;
-      font-size: 1.5rem;
-     
-    }
-  }
+      &__front--image-1 {
+        flex: 0 1 100%;
+      }
 
-  .projects__tile {
-    box-sizing: border-box;
-    flex-basis: 80%;
-    display: flex;
-    flex-direction: column;
-    height: 52.48rem;
+      &__download-button {
+        padding: 1.4rem 2.2rem;
+        font-size: 1.5rem;
+      }
+    }
   }
 }
