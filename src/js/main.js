@@ -7,10 +7,8 @@ const header = document.querySelector(".header");
 const main = document.querySelector(".main");
 const bodyElement = document.querySelector(".body");
 
-
 const barsIcon = document.querySelector(".nav__icon--bars");
 const timesIcon = document.querySelector(".nav__icon--times");
-
 
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty("--vh", `${vh}px`);
@@ -27,19 +25,19 @@ navToggler.addEventListener("click", () => {
     nav.classList.remove("nav-active");
     main.style.transform = "";
     navList.style.transform = "";
-    navList.style.height = ""; 
+    navList.style.height = "";
     barsIcon.style.display = "block";
     timesIcon.style.display = "none";
     bodyElement.classList.remove("no-scroll");
   } else {
-    nav.classList.add("nav-active");    
+    nav.classList.add("nav-active");
     const height = "100vh";
     const mainTranslateDistance = height;
     navList.style.height = height;
     main.style.transform = `translateY(${mainTranslateDistance})`;
     barsIcon.style.display = "none";
     timesIcon.style.display = "block";
-    bodyElement.classList.add("no-scroll"); 
+    bodyElement.classList.add("no-scroll");
   }
 });
 
@@ -53,7 +51,7 @@ window.addEventListener("resize", () => {
     )}px)`;
   } else {
     main.style.transform = "";
-    
+
     navList.style.transform = "";
   }
 });
@@ -70,9 +68,9 @@ const createFaviconFromH1 = () => {
   canvas.width = 16;
   canvas.height = 16;
   const ctx = canvas.getContext("2d");
-  
+
   ctx.fillStyle = "#28b42f";
-  
+
   ctx.font = "10px Arial";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
@@ -90,20 +88,45 @@ const createFaviconFromH1 = () => {
 };
 
 // add event listener for device orientation change
-window.addEventListener('orientationchange', () => {
-    if (nav.classList.contains('nav-active')) {
-        nav.classList.remove('nav-active');
-        main.style.transform = '';
-        barsIcon.style.display = 'block';
-        timesIcon.style.display = 'none';
-        bodyElement.classList.remove('no-scroll');
+window.addEventListener("orientationchange", () => {
+  if (nav.classList.contains("nav-active")) {
+    nav.classList.remove("nav-active");
+    main.style.transform = "";
+    barsIcon.style.display = "block";
+    timesIcon.style.display = "none";
+    bodyElement.classList.remove("no-scroll");
 
-        // reset height of the navigation list
-        navList.style.height = '';
-    }
+    // reset height of the navigation list
+    navList.style.height = "";
+  }
 });
-
 
 createFaviconFromH1();
 
 
+// Function to alter classes
+const checkScreenWidth = e => {
+  // Get all download button containers
+  const downloadButtonContainers = Array.from(document.querySelectorAll(".projects__tile__front .projects__download-buttons"));
+
+  downloadButtonContainers.forEach(container => {
+    if (e.matches) {
+      // If media query matches i.e., width is less than or equal to 944px
+      container.classList.remove("hidden"); // Remove 'hidden' class
+      container.classList.add("visible"); // Add 'visible' class
+    } else {
+      // If media query does not match i.e., width is more than 944px
+      container.classList.remove("visible"); // Remove 'visible' class
+      container.classList.add("hidden"); // Add 'hidden' class
+    }
+  });
+}
+
+// Create a MediaQueryList object
+const breakpoint = window.matchMedia("(max-width: 944px)");
+
+// Call listener function at run time
+checkScreenWidth(breakpoint);
+
+// Attach listener function on state changes
+breakpoint.addEventListener('change', checkScreenWidth);

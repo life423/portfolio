@@ -58,18 +58,28 @@
 
   .projects {
     gap: 4rem 0rem;
-  }
 
-  .projects__tile {
-    width: 35.2rem;
-    height: 43.78rem;
-    &:hover {
-      transform: none;
+    &__tile {
+      width: 35.2rem;
+      height: 43.78rem;
+      // height: auto;
+      justify-content: space-between; // distribute space evenly
+      align-items: center; // center children horizontally
+      &:hover {
+        transform: none;
+      }
+
+      &__back {
+        transform: none;
+        display: none;
+      }
     }
-
-    &__back {
-      transform: none;
-      display: none;
+    &__download-buttons {
+      width: 100%; // full width of the parent
+       
+    }
+    &__download-button {
+      display: inline-flex; // make the buttons inline flexboxes
     }
   }
 }

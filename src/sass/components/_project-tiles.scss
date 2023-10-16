@@ -6,7 +6,7 @@
   justify-content: space-around;
   align-items: center;
   flex: 1 0 auto;
-  height: 100%;  
+  height: 100%;
 
   &__tile {
     position: relative;
@@ -142,9 +142,12 @@
   }
 
   &__download-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
-    font-size: font-size(2); 
-    padding: spacing(2) spacing(3); 
+    font-size: font-size(2);
+    padding: spacing(2) spacing(3);
     margin: spacing(2);
     color: $white;
     background-image: linear-gradient(
@@ -158,12 +161,9 @@
     transition: all $transition-duration;
 
     &:hover {
-      background-color: darken(
-        $gradient-green-darkest,
-        10%
-      ); 
-      color: $white; 
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+      background-color: darken($gradient-green-darkest, 10%);
+      color: $white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
   }
 }
