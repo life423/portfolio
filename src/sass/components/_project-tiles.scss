@@ -6,12 +6,9 @@
   justify-content: space-around;
   align-items: center;
   flex: 1 0 auto;
-  height: 100%;
-  // padding:5rem 0rem;
+  height: 100%;  
 
-  &__tile {    
-    // animation: bob 3s ease-in-out infinite;
-    // animation-delay: calc(0.3s * var(--i));
+  &__tile {
     position: relative;
     border-radius: $border-radius;
     background-image: linear-gradient(
@@ -141,28 +138,32 @@
     margin: 0 auto;
     width: 80%;
     height: 100%;
-
     text-transform: uppercase;
   }
+
   &__download-button {
     text-decoration: none;
-    font-size: font-size(2); /* Adjust as needed */
-    padding: spacing(2) spacing(3); /* Adjust as needed */
+    font-size: font-size(2); 
+    padding: spacing(2) spacing(3); 
     margin: spacing(2);
     color: $white;
     background-image: linear-gradient(
       to right bottom,
       rgba($gradient-start, 0.95),
       rgba($gradient-green-darkest, 0.75)
-    );    
+    );
     border-radius: $border-radius;
-    cursor: pointer;    
-    border:none;
+    cursor: pointer;
+    border: none;
     transition: all $transition-duration;
+
     &:hover {
-      background-image: none;
-      color: $gradient-green-darkest;      
-      box-shadow: 0 0 0 2px $white;
+      background-color: darken(
+        $gradient-green-darkest,
+        10%
+      ); 
+      color: $white; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
     }
   }
 }
