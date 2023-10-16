@@ -11,7 +11,7 @@
     font-size: 51%;
   }
 
-  .projects__tile{
+  .projects__tile {
     @include tile-size(3.25);
   }
 }
@@ -60,9 +60,17 @@
     gap: 4rem 0rem;
   }
 
-  .projects__tile{    
+  .projects__tile {
     width: 35.2rem;
-    height:43.78rem;    
+    height: 43.78rem;
+    &:hover {
+      transform: none;
+    }
+
+    &__back {
+      transform: none;
+      display: none;
+    }
   }
 }
 //768
