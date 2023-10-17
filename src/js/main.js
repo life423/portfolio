@@ -9,8 +9,8 @@ const bodyElement = document.querySelector(".body");
 
 const barsIcon = document.querySelector(".nav__icon--bars");
 const timesIcon = document.querySelector(".nav__icon--times");
-
-let vh = window.innerHeight * 0.01;
+console.log(timesIcon)
+const vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty("--vh", `${vh}px`);
 
 window.addEventListener("resize", () => {
@@ -122,11 +122,60 @@ const checkScreenWidth = e => {
   });
 }
 
-// Create a MediaQueryList object
-const breakpoint = window.matchMedia("(max-width: 944px)");
+// // Create a MediaQueryList object
+// const breakpoint = window.matchMedia("(max-width: 944px)");
 
-// Call listener function at run time
-checkScreenWidth(breakpoint);
+// // Call listener function at run time
+// checkScreenWidth(breakpoint);
 
-// Attach listener function on state changes
-breakpoint.addEventListener('change', checkScreenWidth);
+// // Attach listener function on state changes
+// breakpoint.addEventListener('change', checkScreenWidth);
+
+// const navbar = document.querySelector(".nav");
+// const footer = document.querySelector(".footer");
+// const tile = document.querySelector(".projects__tile");
+
+function setTileMargins() {
+  const navbarHeight = document.querySelector('.nav').offsetHeight;
+  const footerHeight = document.querySelector('.footer').offsetHeight;
+  const viewportHeight = window.innerHeight;
+
+  const availableSpace = viewportHeight - navbarHeight - footerHeight;
+  const margin = availableSpace / 2;  // This is the equal white space above and below the tile.
+
+  const tile = document.querySelector('.projects__tile');
+  tile.style.marginTop = `${margin}px`;
+  tile.style.marginBottom = `${margin}px`;
+}
+
+setTileMargins(); // Call the function to set the margins
+
+function setCardDimensions() {
+  // get dimensions of navbar, footer, and viewport
+  const navbarHeight = document.querySelector('navbar').offsetHeight
+  const footerHeight = document.querySelector('footer').offsetHeight
+  const viewportHeight = window.innerHeight
+  const viewportWidth = window.innerWidth
+
+  // calculate available height and margin for the card
+  const availableSpace = viewportHeight - navbarHeight - footerHeight
+  const margin = availableSpace / 2
+
+  // calculate width and height for the card
+  const cardWidth = viewportWidth / 2 // adjust this as needed
+  const cardHeight = availableSpace - 2 * margin // subtract the top and bottom margins
+
+  // get the card and set its dimensions and margins
+  const tile = document.querySelector('.projects__tile')
+  console.log(tile)
+  tile.style.width = `${cardWidth}px`
+  tile.style.height = `${cardHeight}px`
+  tile.style.marginTop = `${margin}px`
+  tile.style.marginBottom = `${margin}px`
+}
+console.log(tile)
+// Call the function to set the dimensions and margins
+setCardDimensions()
+
+// Update dimensions and margins when the window is resized
+window.addEventListener('resize', setCardDimensions)

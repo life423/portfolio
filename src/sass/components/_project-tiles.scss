@@ -17,36 +17,6 @@
       $gradient-end
     );
 
-    // @include tile-size(4);
-    @include card-dimensions(55.88rem, $aspect-ratio);
-    max-width: 40rem;
-    max-height:48.91rem;
-    @include margin-padding(2.4, 2.4);
-    box-shadow: $shadow-light, $shadow-dark;
-    display: flex;
-    align-items: center;
-    // justify-content: center;
-    text-align: center;
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease-in-out;
-    will-change: transform;
-    transform-origin: center;
-
-    &:hover {
-      transform: rotateY(180deg);
-    }
-
-    &__front,
-    &__back {
-      backface-visibility: hidden;
-      transform-style: preserve-3d;
-      position: absolute; // add position absolute here
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
     &__front {
       width: 100%;
       height: 100%;
@@ -67,6 +37,25 @@
         @include image-styles;
       }
     }
+
+   
+
+    &:hover {
+      transform: rotateY(180deg);
+    }
+
+    &__front,
+    &__back {
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      position: absolute; // add position absolute here
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    
 
     &__back {
       transform: rotateY(180deg);
@@ -92,8 +81,10 @@
   }
 
   &__heading {
-    font-size: font-size(3.5);
+    // font-size: 3.2em;
     font-weight: 300;
+    top: 10vh;
+    left:5%;
     text-transform: uppercase;
     text-align: right;
     color: $white;

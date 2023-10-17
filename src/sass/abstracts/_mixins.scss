@@ -12,12 +12,7 @@
   justify-content: $justify-content;
 }
 
-// Mixins
-@mixin responsive-container($max-width: 1440px) {
-  width: 100%;
-  max-width: $max-width;
-  margin: 0 auto;
-}
+
 
 @mixin respond($breakpoint) {
   $breakpoints: (
@@ -71,10 +66,7 @@
   list-style: none;
 }
 
-@mixin tile-size($step) {
-  width: project-tile-width($step);
-  height: project-tile-height($step);
-}
+
 
 @mixin margin-padding($margin, $padding) {
   margin: spacing($margin);
@@ -91,9 +83,7 @@
   border-top-right-radius: $border-radius;
 }
 
-@mixin apply-heading($level) {
-  font-size: get-heading-size($level);
-}
+
 
 @mixin flex-properties($justify: center, $align: center, $basis: auto) {
   justify-content: $justify;
@@ -101,7 +91,3 @@
   flex-basis: $basis;
 }
 
-@mixin card-dimensions($height, $aspect-ratio) {
-  height: $height * 1rem;
-  width: $height * $aspect-ratio *1rem;
-}

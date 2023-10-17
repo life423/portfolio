@@ -1,57 +1,53 @@
 //1999
-@include respond("ultrawide") {
+@include respond('ultrawide') {
   html {
     font-size: 62.5%;
   }
 }
 
 //1800
-@include respond("big-desktop") {
+@include respond('big-desktop') {
   html {
     font-size: 51%;
   }
-
-  .projects__tile {
-    @include tile-size(3.25);
-  }
 }
 //1573
-@include respond("large-desktop") {
+@include respond('large-desktop') {
   html {
     font-size: 47%;
   }
 }
 
 //1415
-@include respond("desktop") {
+@include respond('desktop') {
   html {
     font-size: 44%;
   }
 }
 
 //1366
-@include respond("laptop") {
+@include respond('laptop') {
   html {
     font-size: 40%;
   }
 }
 
 //1332
-@include respond("small-laptop") {
+@include respond('small-laptop') {
   html {
     font-size: 36%;
   }
 }
 
 //1024
-@include respond("chromebook") {
+@include respond('chromebook') {
   html {
     font-size: 32%;
   }
 }
 
 //944
-@include respond("ipad") {
+@include respond('ipad') {
   html {
     font-size: 48%;
   }
@@ -81,8 +77,6 @@
     }
 
     &__tile {
-      width: 35.2rem;
-      height: 50.98rem;
       justify-content: space-between;
       align-items: center;
 
@@ -111,18 +105,18 @@
   }
 }
 //768
-@include respond("small-tablet") {
+@include respond('small-tablet') {
   html {
     font-size: 46%;
   }
 }
 
 //600
-@include respond("phone") {
+@include respond('phone') {
   body {
     height: auto;
     position: static;
-  }  
+  }
 
   .main {
     overflow: visible;
@@ -177,8 +171,6 @@
   .nav__item {
     padding: spacing(3);
   }
-
-  
 
   .projects {
     padding: spacing(2);
