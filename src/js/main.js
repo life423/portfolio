@@ -135,7 +135,7 @@ breakpoint.addEventListener('change', checkScreenWidth)
 
 
 function setTileMargins() {
-  const navbarHeight = document.querySelector('.nav').offsetHeight
+  const navbarHeight = document.querySelector('.header').offsetHeight
   const footerHeight = document.querySelector('.footer').offsetHeight
   const viewportHeight = window.innerHeight
 
@@ -147,34 +147,38 @@ function setTileMargins() {
   tile.style.marginBottom = `${margin}px`
 }
 
-setTileMargins() // Call the function to set the margins
+setTileMargins()
+
+document.addEventListener('DOMContentLoaded', function () {
+
 
 function setCardDimensions() {
-  // get dimensions of navbar, footer, and viewport
-  const navbarHeight = document.querySelector('navbar').offsetHeight
-  const footerHeight = document.querySelector('footer').offsetHeight
+  const navbarHeight = document.querySelector('.nav').offsetHeight
+  const footerHeight = document.querySelector('.footer').offsetHeight
   const viewportHeight = window.innerHeight
   const viewportWidth = window.innerWidth
 
-  // calculate available height and margin for the card
   const availableSpace = viewportHeight - navbarHeight - footerHeight
-  const margin = availableSpace / 2
 
-  // calculate width and height for the card
-  const cardWidth = viewportWidth / 2 // adjust this as needed
-  const cardHeight = availableSpace - 2 * margin // subtract the top and bottom margins
+  // Calculate margin as 2% of the available space for example
+  const margin = availableSpace * 0.02
 
-  // get the card and set its dimensions and margins
-  const tile = document.querySelector('.projects__tile')
-  console.log(tile)
-  tile.style.width = `${cardWidth}px`
-  tile.style.height = `${cardHeight}px`
-  tile.style.marginTop = `${margin}px`
-  tile.style.marginBottom = `${margin}px`
+  // Calculate card dimensions based on a 1.4:1 ratio
+  // Four cards, three margins between them, and margins on both ends
+  const cardWidth = (viewportWidth - 6 * margin) / 4
+  const cardHeight = cardWidth * 1.2
+
+  // Get all tiles and set their dimensions and margins
+  const tiles = document.querySelectorAll('.projects__tile')
+  tiles.forEach((tile) => {
+    tile.style.width = `${cardWidth}px`
+    tile.style.height = `${cardHeight}px`
+    tile.style.margin = `${margin}px`
+  })
 }
-console.log(tile)
-// Call the function to set the dimensions and margins
-setCardDimensions()
 
-// Update dimensions and margins when the window is resized
-window.addEventListener('resize', setCardDimensions)
+
+
+  setCardDimensions()
+  window.addEventListener('resize', setCardDimensions)
+})

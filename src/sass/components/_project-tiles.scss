@@ -2,8 +2,8 @@
   width: 100%;
   perspective: 1500px;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   align-items: center;
   flex: 1 0 auto;
   height: 100%;
