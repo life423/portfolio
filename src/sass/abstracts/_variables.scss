@@ -1,4 +1,4 @@
-@use "sass:map";
+@use 'sass:map';
 
 // Base Colors
 $blue: #2874a6;
@@ -45,15 +45,15 @@ $white-dark: darken($white, 20%);
 $github: #181717;
 
 // Fonts
-$font-main: "Lato", sans-serif;
-$font-size-base: 62.5%; 
+$font-main: 'Lato', sans-serif;
+$font-size-base: 62.5%;
 
 // Line Heights
 $line-height: (
   large: 1.7,
   base: 1.5,
   heading: 1.2,
-  heading-small: 1.1,
+  heading-small: 1.1
 );
 
 // Transitions
@@ -83,7 +83,7 @@ $spacing: (
   17: 13.6rem,
   18: 14.4rem,
   19: 15.2rem,
-  20: 16rem,
+  20: 16rem
 );
 
 // Font Sizes
@@ -106,13 +106,13 @@ $font-sizes: (
   13: 11rem,
   14: 12rem,
   15: 13rem,
-  16: 14rem,
+  16: 14rem
 );
 
 $font-weights: (
   light: 300,
   normal: 400,
-  bold: 700,
+  bold: 700
 );
 
 //default width for cards
@@ -120,6 +120,7 @@ $project-tile-width: 30rem;
 $project-tile-height: 30rem;
 
 $ratio: 0.716;
+$aspect-ratio: 3 / 2;
 
 // Project Tile Widths
 $project-tile-widths: (
@@ -139,7 +140,7 @@ $project-tile-widths: (
   4.25: 42.5rem,
   4.5: 45rem,
   4.75: 47.5rem,
-  5: 50rem,
+  5: 50rem
 );
 
 $project-tile-heights: (
@@ -159,7 +160,7 @@ $project-tile-heights: (
   4.25: 59.38rem,
   4.5: 62.88rem,
   4.75: 66.38rem,
-  5: 69.85rem,
+  5: 69.85rem
 );
 
 $tile-min-height: 30rem;
@@ -173,17 +174,15 @@ $shadow-dark: 0 0.6rem 0.6rem rgba(0, 0, 0, 0.23);
 
 //Headings
 $heading-sizes: (
-  "h1": font-size(16),
+  'h1': font-size(16),
   // equivalent to 16rem or 160px
-  "h2": font-size(14),
+  'h2': font-size(14),
   // equivalent to 14rem or 140px
-  "h3": font-size(12),
+  'h3': font-size(12),
   // equivalent to 12rem or 120px
-  "h4": font-size(4),
+  'h4': font-size(4),
   // equivalent to 4rem or 40px
-  "h5": font-size(2),
+  'h5': font-size(2),
   // equivalent to 2rem or 20px
-  "h6": font-size(1.5) // equivalent to 1.5rem or 15px,,,
+  'h6': font-size(1.5) // equivalent to 1.5rem or 15px,,,
 );
-
-

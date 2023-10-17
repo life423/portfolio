@@ -17,12 +17,15 @@
       $gradient-end
     );
 
-    @include tile-size(4);
+    // @include tile-size(4);
+    @include card-dimensions(55.88rem, $aspect-ratio);
+    max-width: 40rem;
+    max-height:48.91rem;
     @include margin-padding(2.4, 2.4);
     box-shadow: $shadow-light, $shadow-dark;
     display: flex;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
     text-align: center;
     transform-style: preserve-3d;
     transition: transform 0.5s ease-in-out;

@@ -101,3 +101,7 @@
   flex-basis: $basis;
 }
 
+@mixin card-dimensions($height, $aspect-ratio) {
+  height: $height * 1rem;
+  width: $height * $aspect-ratio *1rem;
+}
