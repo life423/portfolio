@@ -1,12 +1,14 @@
-.projects {
-  width: 100%;
+.projects {  
   perspective: 1500px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  flex: 1 0 auto;
-  height: 100%;
+  flex-basis: 100%;
+  // margin: 0 auto;
+  
+  
+  
 
   &__tile {
     position: relative;
@@ -22,7 +24,7 @@
     box-shadow: $shadow-light, $shadow-dark;
     display: flex;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
     text-align: center;
     transform-style: preserve-3d;
     transition: transform 0.5s ease-in-out;
@@ -36,7 +38,7 @@
     &__front,
     &__back {
       backface-visibility: hidden;
-      transform-style: preserve-3d;
+      // transform-style: preserve-3d;
       position: absolute; // add position absolute here
       top: 0;
       left: 0;
@@ -67,6 +69,7 @@
 
     &__back {
       transform: rotateY(180deg);
+      display: flex;
     }
 
     &__heading-span--1 {
@@ -89,13 +92,14 @@
   }
 
   &__heading {
-    font-size: font-size(3.5);
+    // font-size: font-size(3.5);
+    font-size:2.6em;
     font-weight: 300;
     text-transform: uppercase;
     text-align: right;
     color: $white;
     position: relative;
-    margin-top: -7rem;
+    margin-top: -6.7rem;
     box-decoration-break: clone;
   }
 
@@ -114,6 +118,7 @@
     color: $green-font;
     padding-bottom: spacing(2.5);
     letter-spacing: 0.7px;
+    margin-bottom: -1.6rem;
 
     &__1,
     &__2 {
@@ -128,7 +133,7 @@
     line-height: lh(large);
     font-size: font-size(2);
     text-align: left;
-    flex: 1 1 31%;
+    flex: 0 1 26%;
   }
   &__download-buttons {
     display: flex;
@@ -136,28 +141,29 @@
     justify-content: center;
     align-items: stretch;
     margin: 0 auto;
-    width: 80%;
-    height: 100%;
+    // width: 80%;
+    // height: 100%;
     text-transform: uppercase;
+    flex-basis: 73%;
   }
 
   &__download-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // text-decoration: none;
     font-size: font-size(2);
     padding: spacing(2) spacing(3);
-    margin: spacing(2);
+    // margin: spacing(2) 0;
     color: $white;
     background-image: linear-gradient(
       to right bottom,
-      rgba($gradient-start, 0.95),
-      rgba($gradient-green-darkest, 0.75)
+      rgba($gradient-start, 1),
+      rgba($gradient-green-darkest, 0.85)
     );
     border-radius: $border-radius;
     cursor: pointer;
-    border: none;
+    // border: none;
     transition: all $transition-duration;
 
     &:hover {
