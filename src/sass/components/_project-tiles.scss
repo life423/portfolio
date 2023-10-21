@@ -70,6 +70,7 @@
 
     &__back {
       transform: rotateY(180deg);
+      display: flex;
     }
 
     &__heading-span--1 {
@@ -140,19 +141,20 @@
     justify-content: center;
     align-items: stretch;
     margin: 0 auto;
-    width: 80%;
-    height: 100%;
+    // width: 80%;
+    // height: 100%;
     text-transform: uppercase;
+    flex-basis: 73%;
   }
 
   &__download-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // text-decoration: none;
     font-size: font-size(2);
     padding: spacing(2) spacing(3);
-    margin: spacing(2);
+    margin: spacing(2) 0;
     color: $white;
     background-image: linear-gradient(
       to right bottom,

@@ -52,6 +52,13 @@
     font-size: 48%;
   }
 
+  .projects{
+
+    %__tile{
+      padding: spacing(2);
+    }
+  }
+
   // .projects {
   //   gap: 4rem 0rem;
 
