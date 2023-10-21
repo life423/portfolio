@@ -184,7 +184,16 @@
 
   .projects{
     padding: 6.4rem 0;
+    overflow-y: auto;
+     
+    
   }
+
+  .projects__tile{
+      transform: none !important;
+      flex-basis: 75%;
+    }
+
   
 
   // .projects {
