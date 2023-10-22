@@ -57,13 +57,13 @@
   //   max-height: calc((100vh - 6.4vh - 5.6vh)/2)- 2.4vh;
   // }
 
-  .header{
-    //set a height for the header in vh
-    height: 6.4vh;
-  }
+  // .header{
+  //   //set a height for the header in vh
+  //   height: 6.4vh;
+  // }
 
   .projects{
-    justify-content: center;
+    
     gap: 2.4vh;
     align-content: center;
    
@@ -75,14 +75,18 @@
     .projects__tile{
       transform: none !important;
       gap:0rem;
-       max-height: calc((100vh - 6.4vh - 5.6vh)/2)- 2.4vh;
+      //  max-height: calc((100vh - 6.4vh - 5.6vh)/2)- 2.4vh;
   overflow-y: auto;
+  //set a size of the tile so that it fits on an ipad in chrome and edge
+  width: 35.2rem;
+  height: 50.98rem;
+  
     }
 
-    .footer{
-      //set a height for the footer in vh
-      height: 5.6vh;
-    }
+    // .footer{
+    //   //set a height for the footer in vh
+    //   height: 5.6vh;
+    // }
 
   // .projects {
   //   gap: 4rem 0rem;
@@ -215,9 +219,12 @@
 
   .projects__tile{
       transform: none !important;
-      flex-basis: 80%;
-      height: 55.8rem;
-      // max-height: 55.8rem;
+      // flex-basis: 71%;
+      // max-height: 100%;
+      // height: 55.8rem;
+      // width: 42.2rem;
+      @include tile-size(4.25);
+      
     }
 
   
