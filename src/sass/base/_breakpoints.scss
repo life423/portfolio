@@ -1,53 +1,53 @@
 //1999
-@include respond("ultrawide") {
+@include respond('ultrawide') {
   html {
     font-size: 62.5%;
   }
 }
 
 //1800
-@include respond("big-desktop") {
+@include respond('big-desktop') {
   html {
     font-size: 51%;
-  }  
+  }
 }
 //1573
-@include respond("large-desktop") {
+@include respond('large-desktop') {
   html {
     font-size: 47%;
   }
 }
 
 //1415
-@include respond("desktop") {
+@include respond('desktop') {
   html {
     font-size: 44%;
   }
 }
 
 //1366
-@include respond("laptop") {
+@include respond('laptop') {
   html {
     font-size: 40%;
   }
 }
 
 //1332
-@include respond("small-laptop") {
+@include respond('small-laptop') {
   html {
     font-size: 36%;
   }
 }
 
 //1024
-@include respond("chromebook") {
+@include respond('chromebook') {
   html {
     font-size: 32%;
   }
 }
 
 //944
-@include respond("ipad") {
+@include respond('ipad') {
   html {
     font-size: 48%;
   }
@@ -62,31 +62,30 @@
   //   height: 6.4vh;
   // }
 
-  .projects{
-    
+  .projects {
     gap: 2.4vh;
     align-content: center;
-   
-    %__tile{
+
+    %__tile {
       padding: spacing(2);
     }
   }
 
-    .projects__tile{
-      transform: none !important;
-      gap:0rem;
-      //  max-height: calc((100vh - 6.4vh - 5.6vh)/2)- 2.4vh;
-  overflow-y: auto;
-  //set a size of the tile so that it fits on an ipad in chrome and edge
-  width: 35.2rem;
-  height: 50.98rem;
-  
-    }
+  .projects__tile {
+    transform: none !important;
+    gap: 0rem;
+    //  max-height: calc((100vh - 6.4vh - 5.6vh)/2)- 2.4vh;
+    overflow-y: auto;
+    //set a size of the tile so that it fits on an ipad in chrome and edge
+    // width: 35.2rem;
+    // height: 50.98rem;
+    @include tile-size(2);
+  }
 
-    // .footer{
-    //   //set a height for the footer in vh
-    //   height: 5.6vh;
-    // }
+  // .footer{
+  //   //set a height for the footer in vh
+  //   height: 5.6vh;
+  // }
 
   // .projects {
   //   gap: 4rem 0rem;
@@ -143,18 +142,18 @@
   // }
 }
 // 768
-@include respond("small-tablet") {
+@include respond('small-tablet') {
   html {
     font-size: 43%;
   }
 }
 
 //600
-@include respond("phone") {
+@include respond('phone') {
   body {
     height: auto;
     position: static;
-  }  
+  }
 
   .main {
     overflow: visible;
@@ -210,24 +209,19 @@
     padding: spacing(3);
   }
 
-  .projects{
+  .projects {
     padding: 6.4rem 0;
     overflow-y: auto;
-     
-    
   }
 
-  .projects__tile{
-      transform: none !important;
-      // flex-basis: 71%;
-      // max-height: 100%;
-      // height: 55.8rem;
-      // width: 42.2rem;
-      @include tile-size(4.25);
-      
-    }
-
-  
+  .projects__tile {
+    transform: none !important;
+    // flex-basis: 71%;
+    // max-height: 100%;
+    // height: 55.8rem;
+    // width: 42.2rem;
+    @include tile-size(4.25);
+  }
 
   // .projects {
   //   padding: spacing(2);
