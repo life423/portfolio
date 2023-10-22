@@ -65,6 +65,7 @@
   .projects {
     gap: 2.4rem;
     align-content: center;
+    justify-content: center;
 
     %__tile {
       padding: spacing(2);
@@ -153,7 +154,7 @@
 @include respond('phone') {
 
   html {
-    font-size: 45.5%;
+    font-size: 48%;
   }
   body {
     height: auto;
