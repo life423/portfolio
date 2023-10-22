@@ -217,9 +217,9 @@
 
   .projects__tile {
     transform: none !important;
-    // flex-basis: 71%;
+    flex-basis: 70%;
     // max-height: 100%;
-    // height: 55.8rem;
+    height: 55.8rem;
     // width: 42.2rem;
     @include tile-size(4.25);
   }
