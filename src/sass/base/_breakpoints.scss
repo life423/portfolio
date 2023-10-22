@@ -55,6 +55,7 @@
   .projects{
     justify-content: center;
     gap: 6.4rem;
+    align-content: center;
     %__tile{
       padding: spacing(2);
     }
@@ -121,7 +122,7 @@
 //768
 @include respond("small-tablet") {
   html {
-    font-size: 46%;
+    font-size: 35%;
   }
 }
 
