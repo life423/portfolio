@@ -52,10 +52,16 @@
     font-size: 48%;
   }
 
+  .header{
+    //set a height for the header in vh
+    height: 6.4vh;
+  }
+
   .projects{
     justify-content: center;
-    gap: 6.4rem;
+    gap: 2.4vh;
     align-content: center;
+   
     %__tile{
       padding: spacing(2);
     }
@@ -63,6 +69,14 @@
 
     .projects__tile{
       transform: none !important;
+      gap:0rem;
+       max-height: calc((100vh - 6.4vh - 5.6vh)/2)-2.4vh;
+  overflow-y: auto;
+    }
+
+    .footer{
+      //set a height for the footer in vh
+      height: 5.6vh;
     }
 
   // .projects {
@@ -120,11 +134,11 @@
   // }
 }
 //768
-@include respond("small-tablet") {
-  html {
-    font-size: 35%;
-  }
-}
+// @include respond("small-tablet") {
+//   html {
+//     font-size: 35%;
+//   }
+// }
 
 //600
 @include respond("phone") {
