@@ -63,7 +63,7 @@
   // }
 
   .projects {
-    gap: 2.4vh;
+    gap: 2.4rem;
     align-content: center;
 
     %__tile {
@@ -80,6 +80,7 @@
     // width: 35.2rem;
     // height: 50.98rem;
     @include tile-size(3.25);
+    width:34rem;
   }
 
   // .footer{
