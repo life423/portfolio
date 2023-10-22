@@ -52,6 +52,11 @@
     font-size: 48%;
   }
 
+  // .main{
+  //   overflow-y: auto;
+  //   max-height: calc((100vh - 6.4vh - 5.6vh)/2)- 2.4vh;
+  // }
+
   .header{
     //set a height for the header in vh
     height: 6.4vh;
@@ -70,7 +75,7 @@
     .projects__tile{
       transform: none !important;
       gap:0rem;
-       max-height: calc((100vh - 6.4vh - 5.6vh)/2)-2.4vh;
+       max-height: calc((100vh - 6.4vh - 5.6vh)/2)- 2.4vh;
   overflow-y: auto;
     }
 
@@ -133,12 +138,12 @@
   //   }
   // }
 }
-//768
-// @include respond("small-tablet") {
-//   html {
-//     font-size: 35%;
-//   }
-// }
+// 768
+@include respond("small-tablet") {
+  html {
+    font-size: 43%;
+  }
+}
 
 //600
 @include respond("phone") {
