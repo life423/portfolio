@@ -63,9 +63,10 @@
   // }
 
   .projects {
-    gap: 2.4rem;
-    align-content: center;
-    justify-content: center;
+    // gap: 2.4rem;
+    height: 100%;
+    align-content: space-evenly;
+    // justify-content: center;
 
     %__tile {
       padding: spacing(2);
@@ -80,8 +81,8 @@
     //set a size of the tile so that it fits on an ipad in chrome and edge
     // width: 35.2rem;
     // height: 50.98rem;
-    @include tile-size(3.25);
-    width:34rem;
+    // @include tile-size(3.25);
+    // width:34rem;
   }
 
   // .footer{
