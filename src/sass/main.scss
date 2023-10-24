@@ -1,9 +1,12 @@
+
 @import 'abstracts/functions';
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
 @import 'base/animations';
 @import 'base/base';
+//import normalize
+@import 'base/normalize';
 @import 'base/reset';
 @import 'base/typography';
 @import 'base/utilities';
