@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-around;
   align-content: center;
-
-  padding: spacing(1) 0; 
+  // padding: spacing(1) 0; 
+  height: $footer-height;
   background-color: $navy-blue; 
 
   &__social {
