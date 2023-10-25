@@ -49,7 +49,7 @@
 //944
 @include respond('ipad') {
   html {
-    font-size: 42%;
+    font-size: 43%;
   }
 
   // .main{
@@ -64,17 +64,28 @@
 
   .projects {
     //set a gap between the tiles to ensure they are not touching
-    gap:spacing(15);
+    // gap:spacing(5);
 
     // gap: spacing(7);
-    // height: 100%;
-    align-content: center;
-    justify-content: center;
+    height: 100%;
+    // align-content: center;
+    // justify-content: center;
+    align-content: space-evenly;
+    justify-content: space-evenly;
 
     %__tile {
       padding: spacing(2);
     }
   }
+
+//   .header {
+//   margin-bottom: spacing(15); // or the value you used for gap
+// }
+
+// .footer {
+//   margin-top: spacing(15); // or the same value you used for gap
+// }
+
 
   .projects__tile {
     transform: none !important;
