@@ -49,7 +49,7 @@
 //944
 @include respond('ipad') {
   html {
-    font-size: 48%;
+    font-size: 42%;
   }
 
   // .main{
@@ -63,10 +63,13 @@
   // }
 
   .projects {
-    // gap: 2.4rem;
-    height: 100%;
-    align-content: space-evenly;
-    // justify-content: center;
+    //set a gap between the tiles to ensure they are not touching
+    gap:spacing(15);
+
+    // gap: spacing(7);
+    // height: 100%;
+    align-content: center;
+    justify-content: center;
 
     %__tile {
       padding: spacing(2);
@@ -145,11 +148,11 @@
   // }
 }
 // 768
-@include respond('small-tablet') {
-  html {
-    font-size: 48%;
-  }
-}
+// @include respond('small-tablet') {
+//   html {
+//     font-size: 48%;
+//   }
+// }
 
 //600
 @include respond('phone') {
