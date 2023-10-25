@@ -11,12 +11,12 @@
     justify-content: space-between;
     align-items: center;
     column-gap: spacing(3); 
-    color: $gradient-end; // Assuming you have this variable
+    color: $gradient-end;
     font-size: font-size(4);
 
     &--link {
-      transition: $transition-base; // Assuming you have this variable
-      font-size: font-size(4); // Assuming you have a font-size function
+      transition: $transition-base;
+      font-size: font-size(4);
 
       &:hover {
         transform: scale(1.2) rotate(10deg); 
@@ -27,6 +27,7 @@
     &--icon {
       color: $gradient-end; 
       transition: $transition-base;
+
       &:hover {
         color: $white; 
       }
@@ -57,8 +58,6 @@
     &:last-child {
       display: flex;
       flex-direction: row;
-      
     }
   }
 }
-
