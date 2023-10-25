@@ -144,3 +144,10 @@
     }
   }
 }
+
+@include respond('small-phone'){
+    html {
+    font-size: 37%;
+  }
+}
+

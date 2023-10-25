@@ -30,7 +30,8 @@
     'chromebook': 1024px,  
     'ipad': 944px,
     'small-tablet': 768px,
-    'phone': 628px
+    'phone': 628px,
+    'small-phone': 374px,
   );  
 
   @media only screen and (max-width: map-get($breakpoints, $breakpoint)) {
