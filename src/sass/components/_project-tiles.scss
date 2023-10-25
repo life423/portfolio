@@ -1,4 +1,4 @@
-.projects {  
+.projects {
   perspective: 1500px;
   display: flex;
   flex-flow: row wrap;
@@ -7,14 +7,13 @@
   flex-basis: 100%;
 
   &__tile {
-    position: relative;
-    border-radius: $border-radius;
     background-image: linear-gradient(
       to bottom right,
       $green-light,
       $gradient-end
     );
-
+    position: relative;
+    border-radius: $border-radius;   
     @include tile-size(4);
     @include margin-padding(2.4, 2.4);
     box-shadow: $shadow-light, $shadow-dark;
@@ -86,7 +85,6 @@
   }
 
   &__heading {
-
     font-size:2.6em;
     font-weight: 300;
     text-transform: uppercase;
