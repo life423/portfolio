@@ -1,0 +1,19 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "gulp build",
+        "watch": "gulp watch",
+        "dev": "gulp watch"
+    },
+    "devDependencies": {
+        "browser-sync": "^3.0.3",
+        "gulp": "^4.0.2",
+        "gulp-sass": "^5.1.0",
+        "gulp-terser": "^2.1.0",
+        "sass": "^1.83.0"
+    },
+    "dependencies": {
+        "normalize.css": "^8.0.1"
+    }
+}
