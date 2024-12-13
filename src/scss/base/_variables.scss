@@ -1,3 +1,22 @@
-$primary-color: #333;
-$accent-color: #0073e6;
-$font-stack: 'Helvetica Neue', Arial, sans-serif;
+// Typography
+$font-family-base: 'Lato', sans-serif;
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+// Colors
+$color-primary: #66CC7B; // New primary green, slightly deeper and more modern;
+$color-primary-dark: #2E7C48; // Darker green for hover states or strong contrast;
+$color-primary-light: #8EE09B; // A lighter variant of the primary for subtle highlights;
+$color-primary-lighter: #B3F0C1; // An even lighter tint for backgrounds or gentle accents;
+
+$color-bg: #F7F7F7; // General page background
+$color-text: #333333; // Main text color
+$color-text-light: #666666; // Secondary text
+$color-highlight-bg: #E8F4FA; // Optional subtle secondary background
+
+// Bright accent (rare use for special elements)
+$color-accent-orange: #FF7E29; // Bright orange for rare accenting
