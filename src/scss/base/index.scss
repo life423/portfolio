@@ -1,4 +1,31 @@
-@forward 'variables';
 @forward 'mixins';
-@forward 'reset';
+@forward 'variables';
 @forward 'typography';
+
+@use './variables' as vars;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  font-family: vars.$font-family-base;
+  color: vars.$color-text;
+}
+
+body {
+  margin: 0;
+  background: vars.$color-bg;
+  line-height: 1.5;
+}
+
+// Global link styles, heading resets, accessibility helpers, etc.
+a {
+  color: vars.$color-primary;
+  text-decoration: none;
+
+  &:hover {
+    color: vars.$color-primary-dark;
+  }
+}

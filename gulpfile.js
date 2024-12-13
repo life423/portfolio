@@ -1,3 +1,5 @@
+// gulpfile.js
+
 const { src, dest, series, parallel, watch } = require('gulp')
 const sass = require('gulp-sass')(require('sass'))
 const terser = require('gulp-terser')
@@ -16,7 +18,7 @@ function buildSass() {
     return src('src/scss/main.scss')
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(dest(paths.cssDest))
-        .pipe(browserSync.stream()) // Inject updated CSS into browser without full reload
+        .pipe(browserSync.stream())
 }
 
 // Minify JavaScript
@@ -24,15 +26,16 @@ function buildJs() {
     return src('src/js/main.js')
         .pipe(terser())
         .pipe(dest(paths.jsDest))
-        .pipe(browserSync.stream()) // After JS updates, reload the browser
+        .pipe(browserSync.stream())
 }
 
 // BrowserSync serve
 function serve() {
     browserSync.init({
         server: {
-            baseDir: './', // The base directory for your site, adjust if necessary
+            baseDir: './', // Serve from the root of the project
         },
+        port: 3000,
     })
 }
 
@@ -40,9 +43,15 @@ function serve() {
 function watchFiles() {
     watch(paths.scss, buildSass)
     watch(paths.js, buildJs)
-    watch('./*.html').on('change', browserSync.reload) // Watch HTML changes and reload browser
+    watch('./*.html').on('change', browserSync.reload)
 }
 
-exports.build = series(parallel(buildSass, buildJs))
-exports.watch = series(exports.build, parallel(serve, watchFiles))
-exports.default = exports.build
+// Define complex tasks
+const build = series(parallel(buildSass, buildJs))
+const watchTask = series(build, parallel(serve, watchFiles))
+
+// Export tasks
+exports.build = build
+exports.watch = watchTask
+exports.dev = watchTask
+exports.default = build
